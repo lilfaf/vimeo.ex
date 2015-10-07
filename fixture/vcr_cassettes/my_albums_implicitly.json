@@ -1,0 +1,40 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Authorization": "Bearer cba46e2736be0718206689bd3ce7a78c",
+        "Content-type": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.vimeo.com/me/albums?"
+    },
+    "response": {
+      "body": "{\"total\":1,\"page\":1,\"per_page\":25,\"paging\":{\"next\":null,\"previous\":null,\"first\":\"/me/albums?page=1\",\"last\":\"/me/albums?page=1\"},\"data\":[{\"uri\":\"/users/4443526/albums/3599116\",\"name\":\"test\",\"description\":null,\"link\":\"https://vimeo.com/album/3599116\",\"duration\":209,\"created_time\":\"2015-10-07T21:30:18+00:00\",\"modified_time\":\"2015-10-07T21:30:18+00:00\",\"user\":{\"uri\":\"/users/4443526\",\"name\":\"new_username_1\",\"link\":\"https://vimeo.com/user4443526\",\"location\":null,\"bio\":null,\"created_time\":\"2010-08-07T14:22:57+00:00\",\"account\":\"basic\",\"pictures\":[{\"type\":\"portrait\",\"width\":30,\"height\":30,\"link\":\"https://secure.gravatar.com/avatar/8693e24361d64d626c948e69237acc34?d=https%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-gray_30x30.png&s=30\"},{\"type\":\"portrait\",\"width\":75,\"height\":75,\"link\":\"https://secure.gravatar.com/avatar/8693e24361d64d626c948e69237acc34?d=https%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-gray_75x75.png&s=75\"},{\"type\":\"portrait\",\"width\":100,\"height\":100,\"link\":\"https://secure.gravatar.com/avatar/8693e24361d64d626c948e69237acc34?d=https%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-gray_100x100.png&s=100\"},{\"type\":\"portrait\",\"width\":300,\"height\":300,\"link\":\"https://secure.gravatar.com/avatar/8693e24361d64d626c948e69237acc34?d=https%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-gray_300x300.png&s=300\"}],\"websites\":[],\"metadata\":{\"connections\":{\"activities\":\"/users/4443526/activities\",\"albums\":\"/users/4443526/albums\",\"channels\":\"/users/4443526/channels\",\"feed\":\"/users/4443526/feed\",\"followers\":\"/users/4443526/followers\",\"following\":\"/users/4443526/following\",\"groups\":\"/users/4443526/groups\",\"likes\":\"/users/4443526/likes\",\"portfolios\":\"/users/4443526/portfolios\",\"videos\":\"/users/4443526/videos\",\"watchlater\":\"/users/4443526/watchlater\",\"shared\":\"/users/4443526/shared/videos\",\"pictures\":\"/users/4443526/pictures\",\"violations\":null}},\"preferences\":{\"videos\":{\"privacy\":\"anybody\"}},\"content_filter\":[\"language\",\"drugs\",\"violence\",\"nudity\",\"safe\",\"unrated\"],\"stats\":{}},\"privacy\":{\"view\":\"anybody\"},\"pictures\":[{\"type\":\"thumbnail\",\"width\":1280,\"height\":720,\"link\":null},{\"type\":\"thumbnail\",\"width\":960,\"height\":540,\"link\":null},{\"type\":\"thumbnail\",\"width\":640,\"height\":360,\"link\":null},{\"type\":\"thumbnail\",\"width\":295,\"height\":166,\"link\":null},{\"type\":\"thumbnail\",\"width\":200,\"height\":150,\"link\":null},{\"type\":\"thumbnail\",\"width\":100,\"height\":75,\"link\":null}],\"metadata\":{\"connections\":{\"videos\":\"/albums/3599116/videos\"}},\"stats\":{\"videos\":2}}]}",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "application/vnd.vimeo.album+json",
+        "Cache-Control": "no-cache, max-age=315360000",
+        "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
+        "Expires": "Sat, 04 Oct 2025 21:34:36 GMT",
+        "Via": "1.1 varnish",
+        "Set-Cookie": "clip_v=1; expires=Sun, 06 Dec 2015 21:34:36 GMT; path=/;",
+        "Fastly-Debug-Digest": "381f35e7ac1908ac04f9dc1f7b1f81e3d6956c868d5164b14262476337b24943",
+        "Content-Length": "2469",
+        "Accept-Ranges": "bytes",
+        "Date": "Wed, 07 Oct 2015 21:34:36 GMT",
+        "Age": "0",
+        "Connection": "keep-alive",
+        "X-Served-By": "cache-iad2140-IAD, cache-lhr6324-LHR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1444253676.560626,VS0,VE152",
+        "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

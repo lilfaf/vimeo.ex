@@ -1,0 +1,39 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Authorization": "Bearer "
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.vimeo.com/me?"
+    },
+    "response": {
+      "body": "{\"error\":\"You must provide a valid authenticated access token.\"}",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "application/vnd.vimeo.error+json",
+        "Cache-Control": "no-cache, max-age=315360000",
+        "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
+        "WWW-Authenticate": "Bearer error=\"invalid_token\"",
+        "Expires": "Sat, 04 Oct 2025 16:13:41 GMT",
+        "Via": "1.1 varnish",
+        "Set-Cookie": "clip_v=1; expires=Sun, 06 Dec 2015 16:13:41 GMT; path=/;",
+        "Fastly-Debug-Digest": "531aae54deb58da92694b00e6e57afc3f91eafa656f2a974be6d34f493c05e8b",
+        "Content-Length": "64",
+        "Accept-Ranges": "bytes",
+        "Date": "Wed, 07 Oct 2015 16:13:41 GMT",
+        "Connection": "keep-alive",
+        "X-Served-By": "cache-iad2123-IAD, cache-lhr6331-LHR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1444234421.209800,VS0,VE114",
+        "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
+      },
+      "status_code": 401,
+      "type": "ok"
+    }
+  }
+]
