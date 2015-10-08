@@ -13,13 +13,6 @@ defmodule Vimeo.API.Me do
   end
 
   @doc """
-  Update authenticated user informations.
-  """
-  def my_info_update(data, token \\ :global) do
-    patch("me", token, Poison.encode!(data))
-  end
-
-  @doc """
   Get list of authenticated user albums.
   """
   def my_albums(token \\ :global) do
@@ -31,5 +24,19 @@ defmodule Vimeo.API.Me do
   """
   def my_album(id, token \\ :global) do
     get("me/albums/#{id}", token) |> parse_album
+  end
+
+  @doc """
+  Get a list of the channels the authenticated user follows
+  """
+  def my_channels(token \\ :global) do
+    get("me/channels", token).data |> Enum.map(&(parse_channel(&1)))
+  end
+
+  @doc """
+  Update authenticated user informations.
+  """
+  def update_profile(data, token \\ :global) do
+    patch("me", token, Poison.encode!(data))
   end
 end

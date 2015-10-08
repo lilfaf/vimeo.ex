@@ -33,7 +33,8 @@ defmodule Vimeo.Mixfile do
       {:inch_ex, "~> 0.4.0", only: [:dev, :docs]},
       {:excoveralls, "~> 0.3", only: [:dev, :test]},
       {:exvcr, "~> 0.3", only: [:dev, :test]},
-      {:dotenv, "~> 2.0.0", only: [:dev, :test]}
+      {:dotenv, "~> 2.0.0", only: [:dev, :test]},
+      {:shouldi, only: :test}
     ]
   end
 end

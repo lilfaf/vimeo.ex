@@ -1,0 +1,41 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Authorization": "Bearer cba46e2736be0718206689bd3ce7a78c",
+        "Content-type": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.vimeo.com/me/channels?"
+    },
+    "response": {
+      "body": "{\"total\":1,\"page\":1,\"per_page\":25,\"paging\":{\"next\":null,\"previous\":null,\"first\":\"/me/channels?page=1\",\"last\":\"/me/channels?page=1\"},\"data\":[{\"uri\":\"/channels/25562\",\"name\":\"Themgoods\",\"description\":null,\"link\":\"https://vimeo.com/channels/themgoods\",\"created_time\":\"2008-12-16T02:51:54+00:00\",\"modified_time\":\"2015-10-08T12:21:17+00:00\",\"user\":{\"uri\":\"/users/1044190\",\"name\":\"Themgoods\",\"link\":\"https://vimeo.com/themgoods1\",\"location\":\"Santa Ana, CA\",\"bio\":\"Themgoods Brand distributors of premium blading goods since 2008\\n\\nhttp://themgoods.com\\nhttp://valo-brand.com\",\"created_time\":\"2008-12-16T02:51:21+00:00\",\"account\":\"pro\",\"pictures\":[{\"type\":\"portrait\",\"width\":30,\"height\":30,\"link\":\"https://i.vimeocdn.com/portrait/8024456_30x30.jpg\"},{\"type\":\"portrait\",\"width\":75,\"height\":75,\"link\":\"https://i.vimeocdn.com/portrait/8024456_75x75.jpg\"},{\"type\":\"portrait\",\"width\":100,\"height\":100,\"link\":\"https://i.vimeocdn.com/portrait/8024456_100x100.jpg\"},{\"type\":\"portrait\",\"width\":300,\"height\":300,\"link\":\"https://i.vimeocdn.com/portrait/8024456_300x300.jpg\"}],\"websites\":[],\"metadata\":{\"connections\":{\"activities\":\"/users/1044190/activities\",\"albums\":\"/users/1044190/albums\",\"channels\":\"/users/1044190/channels\",\"feed\":\"/users/1044190/feed\",\"followers\":\"/users/1044190/followers\",\"following\":\"/users/1044190/following\",\"groups\":\"/users/1044190/groups\",\"likes\":\"/users/1044190/likes\",\"portfolios\":\"/users/1044190/portfolios\",\"videos\":\"/users/1044190/videos\",\"shared\":\"/users/1044190/shared/videos\",\"pictures\":\"/users/1044190/pictures\",\"violations\":null,\"watchlater\":null},\"interactions\":{\"follow\":{\"added\":false,\"added_time\":null,\"uri\":\"/users/4443526/following/1044190\"}}},\"preferences\":{\"videos\":{\"privacy\":null}},\"stats\":{}},\"pictures\":[{\"width\":1280,\"height\":720,\"link\":\"https://i.vimeocdn.com/video/538358523_1280.jpg\",\"type\":\"thumbnail\"},{\"width\":960,\"height\":540,\"link\":\"https://i.vimeocdn.com/video/538358523_960.jpg\",\"type\":\"thumbnail\"},{\"width\":640,\"height\":360,\"link\":\"https://i.vimeocdn.com/video/538358523_640.jpg\",\"type\":\"thumbnail\"},{\"width\":295,\"height\":166,\"link\":\"https://i.vimeocdn.com/video/538358523_295x166.jpg\",\"type\":\"thumbnail\"},{\"width\":200,\"height\":150,\"link\":\"https://i.vimeocdn.com/video/538358523_200x150.jpg\",\"type\":\"thumbnail\"},{\"width\":100,\"height\":75,\"link\":\"https://i.vimeocdn.com/video/538358523_100x75.jpg\",\"type\":\"thumbnail\"},{\"width\":980,\"height\":0,\"link\":\"https://i.vimeocdn.com/channel/491910_980?mh=250\",\"type\":\"header\"}],\"privacy\":{\"view\":\"anybody\"},\"metadata\":{\"connections\":{\"users\":\"/channels/25562/users\",\"videos\":\"/channels/25562/videos\"},\"interactions\":{\"follow\":{\"added\":true,\"added_time\":\"2015-10-08T12:21:17+00:00\",\"type\":\"subscriber\",\"uri\":\"/users/4443526/channels/25562\"}}},\"stats\":{\"videos\":220,\"users\":650}}]}",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "application/vnd.vimeo.channel+json",
+        "Last-Modified": "Thu, 08 Oct 2015 10:13:33 -0400",
+        "Cache-Control": "no-cache, max-age=315360000",
+        "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
+        "Expires": "Sun, 05 Oct 2025 14:14:38 GMT",
+        "Via": "1.1 varnish",
+        "Set-Cookie": "clip_v=1; expires=Mon, 07 Dec 2015 14:14:38 GMT; path=/;",
+        "Fastly-Debug-Digest": "07b83b5e97ae92cbf2d2b3e5577b792136e3cc22dd3f4ac21cc9ade3d1202025",
+        "Content-Length": "2763",
+        "Accept-Ranges": "bytes",
+        "Date": "Thu, 08 Oct 2015 14:14:38 GMT",
+        "Age": "0",
+        "Connection": "keep-alive",
+        "X-Served-By": "cache-iad2129-IAD, cache-lhr6321-LHR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1444313678.665417,VS0,VE176",
+        "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

@@ -18,4 +18,11 @@ defmodule Vimeo.API.Channels do
   def channel(id, token \\ :global, params \\ []) do
     get("channels/#{id}", token, params) |> parse_channel
   end
+
+  @doc """
+  Create a new Channel.
+  """
+  def create_channel(data, token \\ :global, params \\ []) do
+    post("channels", token, Poison.encode!(data), params)
+  end
 end

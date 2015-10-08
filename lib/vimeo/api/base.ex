@@ -33,7 +33,7 @@ defmodule Vimeo.API.Base do
   # and optionally data Map and list of params.
   # """
   def patch(url, token, data \\ "", params \\ []) do
-    request!(:patch , url, data, build_headers(token), [params: params]) 
+    request!(:patch , url, data, build_headers(token), [params: params])
     |> handle_response
   end
 
@@ -57,8 +57,9 @@ defmodule Vimeo.API.Base do
   # Returns the response on successfull request or raise an exception as Vimeo.Error
   defp handle_response(response) do
     case response do
-      %HTTPoison.Response{status_code: 200, body: body} -> 
+      %HTTPoison.Response{status_code: 200, body: body} ->
         Poison.decode!(body, keys: :atoms)
+      %HTTPoison.Response{status_code: 201} -> :ok
       %HTTPoison.Response{status_code: 204} -> :ok
       %HTTPoison.Response{body: body} ->
         body = Poison.decode!(body, keys: :atoms)

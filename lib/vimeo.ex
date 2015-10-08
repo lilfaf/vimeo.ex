@@ -210,6 +210,14 @@ defmodule Vimeo do
   """
   defdelegate channel(id, token), to: Vimeo.API.Channels, as: :channel
 
+  @doc """
+  """
+  defdelegate create_channel(data), to: Vimeo.API.Channels, as: :create_channel
+
+  @doc """
+  """
+  defdelegate create_channel(data, token), to: Vimeo.API.Channels, as: :create_channel
+
 
   ## ---------- Me
 
@@ -232,23 +240,6 @@ defmodule Vimeo do
   """
   defdelegate my_info(token), to: Vimeo.API.Me, as: :my_info
 
-  @doc """
-  Updates authenticated user informations.
-
-  ## Examples
-      iex(1)> Vimeo.my_info_update(%{name: "test"})
-      :ok
-  """
-  defdelegate my_info_update(data), to: Vimeo.API.Me, as: :my_info_update
-
-  @doc """
-  Same as `Vimeo.my_info_update/1`, except takes an explicit access token.
-
-  ## Example
-      iex(1)> Vimeo.my_info_update(%{name: "test"}, "XXXXXXXXXXXXXXXXX")
-      :ok
-  """
-  defdelegate my_info_update(data, token), to: Vimeo.API.Me, as: :my_info_update
 
   @doc """
   Returns authenticated user albums as List of `%Elixtagram.Model.Album`
@@ -285,5 +276,41 @@ defmodule Vimeo do
       %Elixtagram.Model.Album{...}
   """
   defdelegate my_album(id, token), to: Vimeo.API.Me, as: :my_album
+
+  @doc """
+  Returns channels the authenticated user follow as a List of `%Elixtagram.Model.Channel`
+
+  ## Example
+      iex(1)> Vimeo.my_channels()
+      [%Elixtagram.Model.Channel{...}, %Elixtagram.Model.Channel{...}]
+  """
+  defdelegate my_channels, to: Vimeo.API.Me, as: :my_channels
+
+  @doc """
+  Same as `Vimeo.my_channels/0`, except takes an explicit access token.
+
+  ## Example
+      iex(1)> Vimeo.my_channels("XXXXXXXXXXXXXXXXX")
+      [%Elixtagram.Model.Channel{...}, %Elixtagram.Model.Channel{...}]
+  """
+  defdelegate my_channels(token), to: Vimeo.API.Me, as: :my_channels
+
+  @doc """
+  Updates authenticated user informations.
+
+  ## Examples
+      iex(1)> Vimeo.update_profile(%{name: "test"})
+      :ok
+  """
+  defdelegate update_profile(data), to: Vimeo.API.Me, as: :update_profile
+
+  @doc """
+  Same as `Vimeo.update_profile/1`, except takes an explicit access token.
+
+  ## Example
+      iex(1)> Vimeo.update_profile(%{name: "test"}, "XXXXXXXXXXXXXXXXX")
+      :ok
+  """
+  defdelegate update_profile(data, token), to: Vimeo.API.Me, as: :update_profile
 
 end

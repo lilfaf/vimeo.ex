@@ -1,5 +1,5 @@
 defmodule VimeoTest do
-  use ExUnit.Case
+  use ShouldI
   use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
 
   doctest Vimeo
@@ -38,206 +38,227 @@ defmodule VimeoTest do
     end
   end
 
+  with "explicit access token" do
 
-  # ------- Categories
+    # ------- Explicitly authenticated
+
+    setup context do
+      Dict.put context, :token, System.get_env("VIMEO_ACCESS_TOKEN")
+    end
 
 
-  test "gets a list of categories (explicitly authenticated)" do
-    token = System.get_env("VIMEO_ACCESS_TOKEN")
+    # ------- Categories
 
-    use_cassette "categories_auth_explicit" do
-      categories = Vimeo.categories(token)
-      assert length(categories) == 16
+
+    should "return a list of categories", context do
+      use_cassette "categories_expl" do
+        categories = Vimeo.categories(context[:token])
+        assert length(categories) == 16
+      end
+    end
+
+    should "return a category for id", context do
+      use_cassette "category_expl" do
+        category = Vimeo.category(:animation, context[:token])
+        assert category.name == "Animation"
+      end
+    end
+
+    should "return a list of channels for category id", context do
+      use_cassette "category_channels_expl" do
+        channels = Vimeo.category_channels(:animation, context[:token])
+        assert length(channels) == 24
+      end
+    end
+
+    should "return a list of groups for category id", context do
+      use_cassette "category_groups_expl" do
+        groups = Vimeo.category_groups(:animation, context[:token])
+        assert length(groups) == 25
+      end
+    end
+
+    should "return a list of videos for category id", context do
+      use_cassette "category_videos_expl" do
+        videos = Vimeo.category_videos(:animation, context[:token])
+        assert length(videos) == 25
+      end
+    end
+
+
+    # ------- Channels
+
+
+    should "return a list of channels", context do
+      use_cassette "channels_expl" do
+        channels = Vimeo.channels(context[:token])
+        assert length(channels) == 25
+      end
+    end
+
+    should "return a channel for id", context do
+      use_cassette "channel_expl" do
+        channel = Vimeo.channel(2981, context[:token])
+        assert channel.name == "Everything Animated"
+      end
+    end
+
+    should "create a new channel", context do
+      use_cassette "create_channel" do
+        data = %{name: "foo", description: "foo desc", privacy: "anybody"}
+        assert Vimeo.create_channel(data, context[:token]) == :ok
+
+        channel = List.first(Vimeo.my_channels(context[:token]))
+        assert channel.name == "foo"
+        assert channel.description == "foo desc"
+      end
+    end
+
+
+    # ------- Me
+
+
+    should "update current user informations", context do
+      new_username = "foo"
+      use_cassette "update_info_expl" do
+        assert Vimeo.update_profile(%{name: new_username}, context[:token]) == :ok
+        assert Vimeo.my_info(context[:token]).name == new_username
+      end
+    end
+
+    should "return a list of albums for the authenticated user", context do
+      use_cassette "my_albums_expl" do
+        albums = Vimeo.my_albums(context[:token])
+        assert length(albums) == 1
+        assert List.first(albums).name == "foo"
+      end
+    end
+
+    should "return an album by id for the authenticated user", context do
+      use_cassette "my_album_expl" do
+        album = Vimeo.my_album(3600066, context[:token])
+        assert album.name == "foo"
+      end
+    end
+
+    test "return followed channels for authenticated user", context do
+      use_cassette "my_channels_expl" do
+        channels = Vimeo.my_channels(context[:token])
+        assert length(channels) == 1
+        assert List.first(channels).name == "Themgoods"
+      end
     end
   end
 
-  test "gets a list of categories (implicitly authenticated)" do
-    token = System.get_env("VIMEO_ACCESS_TOKEN")
-    Vimeo.configure(:global, token)
+  with "globally configured access token" do
 
-    use_cassette "categories_auth_implicit" do
-      categories = Vimeo.categories()
-      assert length(categories) == 16
+    # ------- Globally authenticated
+
+    setup context do
+      Vimeo.configure(:global, System.get_env("VIMEO_ACCESS_TOKEN"))
+
+      context
     end
-  end
 
-  test "gets a category by id (explicitly authenticated)" do
-    token = System.get_env("VIMEO_ACCESS_TOKEN")
+    # ------- Categories (globally authenticated)
 
-    use_cassette "category_auth_explicit" do
-      category = Vimeo.category(:animation, token)
-      assert category.name == "Animation"
+    should "return a list of categories" do
+      use_cassette "categories_glob" do
+        categories = Vimeo.categories
+        assert length(categories) == 16
+      end
     end
-  end
 
-  test "gets a category by id (implicitly authenticated)" do
-    token = System.get_env("VIMEO_ACCESS_TOKEN")
-    Vimeo.configure(:global, token)
-
-    use_cassette "category_auth_implicit" do
-      category = Vimeo.category(:animation)
-      assert category.name == "Animation"
+    should "return a category for id" do
+      use_cassette "category_glob" do
+        category = Vimeo.category(:animation)
+        assert category.name == "Animation"
+      end
     end
-  end
 
-  test "gets a list channels for category id (explicitly authenticated)" do
-    token = System.get_env("VIMEO_ACCESS_TOKEN")
-
-    use_cassette "category_channels_auth_explicit" do
-      channels = Vimeo.category_channels("Animation", token)
-      assert length(channels) == 24
+    should "return a list of channels for category id" do
+      use_cassette "category_channels_glob" do
+        channels = Vimeo.category_channels(:animation)
+        assert length(channels) == 24
+      end
     end
-  end
 
-  test "gets a list channels for category id (implicitly authenticated)" do
-    token = System.get_env("VIMEO_ACCESS_TOKEN")
-    Vimeo.configure(:global, token)
-
-    use_cassette "category_channels_auth_implicit" do
-      channels = Vimeo.category_channels("Animation")
-      assert length(channels) == 24
+    should "return a list of groups for category id" do
+      use_cassette "category_groups_glob" do
+        groups = Vimeo.category_groups(:animation)
+        assert length(groups) == 25
+      end
     end
-  end
 
-  test "gets a list groups for category id (explicitly authenticated)" do
-    token = System.get_env("VIMEO_ACCESS_TOKEN")
-
-    use_cassette "category_groups_auth_explicit" do
-      groups = Vimeo.category_groups("Animation", token)
-      assert length(groups) == 25
+    should "return a list videos for category id" do
+      use_cassette "category_videos_glob" do
+        videos = Vimeo.category_videos(:animation)
+        assert length(videos) == 25
+      end
     end
-  end
 
-  test "gets a list groups for category id (implicitly authenticated)" do
-    token = System.get_env("VIMEO_ACCESS_TOKEN")
-    Vimeo.configure(:global, token)
 
-    use_cassette "category_groups_auth_implicit" do
-      groups = Vimeo.category_groups("Animation")
-      assert length(groups) == 25
+    # ------- Channels
+
+
+    should "return a list of channels" do
+      use_cassette "channels_glob" do
+        channels = Vimeo.channels()
+        assert length(channels) == 25
+      end
     end
-  end
 
-  test "gets a list videos for category id (explicitly authenticated)" do
-    token = System.get_env("VIMEO_ACCESS_TOKEN")
-
-    use_cassette "category_videos_auth_explicit" do
-      videos = Vimeo.category_videos("Animation", token)
-      assert length(videos) == 25
+    should "return a channel for id" do
+      use_cassette "channel_glob" do
+        channel = Vimeo.channel(2981)
+        assert channel.name == "Everything Animated"
+      end
     end
-  end
 
-  test "gets a list videos for category id (implicitly authenticated)" do
-    token = System.get_env("VIMEO_ACCESS_TOKEN")
-    Vimeo.configure(:global, token)
+    should "create a new channel" do
+      use_cassette "create_channel" do
+        data = %{name: "foo", description: "foo desc", privacy: "anybody"}
+        assert Vimeo.create_channel(data) == :ok
 
-    use_cassette "category_videos_auth_implicit" do
-      videos = Vimeo.category_videos("Animation")
-      assert length(videos) == 25
+        channel = List.first(Vimeo.my_channels())
+        assert channel.name == "foo"
+        assert channel.description == "foo desc"
+      end
     end
-  end
 
 
-  # ------- Channels
+    # ------- Me
 
-  test "gets a list channels (explicitly authenticated)" do
-    token = System.get_env("VIMEO_ACCESS_TOKEN")
 
-    use_cassette "channels_auth_explicit" do
-      channels = Vimeo.channels(token)
-      assert length(channels) == 25
+    should "update current user informations" do
+      new_username = "bar"
+      use_cassette "update_profile_glob" do
+        assert Vimeo.update_profile(%{name: new_username}) == :ok
+        assert Vimeo.my_info.name == new_username
+      end
     end
-  end
 
-  test "gets a list channels (implicitly authenticated)" do
-    token = System.get_env("VIMEO_ACCESS_TOKEN")
-    Vimeo.configure(:global, token)
-
-    use_cassette "channels_auth_implicit" do
-      channels = Vimeo.channels()
-      assert length(channels) == 25
+    should "return a list of albums for the current user" do
+      use_cassette "my_albums_glob" do
+        albums = Vimeo.my_albums
+        assert length(albums) == 1
+        assert List.first(albums).name == "foo"
+      end
     end
-  end
 
-  test "gets a channel by id (explicitly authenticated)" do
-    token = System.get_env("VIMEO_ACCESS_TOKEN")
-
-    use_cassette "channel_auth_explicit" do
-      channel = Vimeo.channel(2981, token)
-      assert channel.name == "Everything Animated"
+    should "return an album by id for the current user" do
+      use_cassette "my_album_glob" do
+        album = Vimeo.my_album(3600066)
+        assert album.name == "foo"
+      end
     end
-  end
 
-  test "gets a channel by id (implicitly authenticated)" do
-    token = System.get_env("VIMEO_ACCESS_TOKEN")
-    Vimeo.configure(:global, token)
-
-    use_cassette "channel_auth_implicit" do
-      channel = Vimeo.channel(2981)
-      assert channel.name == "Everything Animated"
-    end
-  end
-
-
-  # ------- Me
-
-
-  test "updates user informations (explicitly authenticated)" do
-    token = System.get_env("VIMEO_ACCESS_TOKEN")
-    new_username = "new_username_1"
-
-    use_cassette "my_info_update_explicit" do
-      assert Vimeo.my_info_update(%{name: new_username}, token) == :ok
-      assert Vimeo.my_info(token).name == new_username
-    end
-  end
-
-  test "updates user informations (implicitly authenticated)" do
-    token = System.get_env("VIMEO_ACCESS_TOKEN")
-    Vimeo.configure(:global, token)
-    new_username = "new_username_2"
-
-    use_cassette "my_info_update_implicit" do
-      assert Vimeo.my_info_update(%{name: new_username}) == :ok
-      assert Vimeo.my_info(token).name == new_username
-    end
-  end
-
-  test "gets a list of user albums (explicitly authenticated)" do
-    token = System.get_env("VIMEO_ACCESS_TOKEN")
-
-    use_cassette "my_albums_explicit" do
-      albums = Vimeo.my_albums(token)
-      assert length(albums) == 1
-    end
-  end
-
-  test "gets a list of user albums (implicitly authenticated)" do
-    token = System.get_env("VIMEO_ACCESS_TOKEN")
-    Vimeo.configure(:global, token)
-
-    use_cassette "my_albums_implicitly" do
-      albums = Vimeo.my_albums
-      assert length(albums) == 1
-    end
-  end
-
-  test "gets user album by id (explicitly authenticated)" do
-    token = System.get_env("VIMEO_ACCESS_TOKEN")
-
-    use_cassette "my_album_explicit" do
-      album = Vimeo.my_album(3599116, token)
-      assert album.name == "test"
-    end
-  end
-
-  test "gets user album by id (implicitly authenticated)" do
-    token = System.get_env("VIMEO_ACCESS_TOKEN")
-    Vimeo.configure(:global, token)
-
-    use_cassette "my_album_implicitly" do
-      album = Vimeo.my_album(3599116)
-      assert album.name == "test"
+    should "return followed channels for authenticated user" do
+      use_cassette "my_channels_glob" do
+        channels = Vimeo.my_channels
+        assert length(channels) == 1
+        assert List.first(channels).name == "Themgoods"
+      end
     end
   end
 end

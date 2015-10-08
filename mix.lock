@@ -14,4 +14,5 @@
   "oauth2": {:hex, :oauth2, "0.3.0"},
   "plug": {:hex, :plug, "1.0.2"},
   "poison": {:hex, :poison, "1.5.0"},
+  "shouldi": {:hex, :shouldi, "0.2.3"},
   "ssl_verify_hostname": {:hex, :ssl_verify_hostname, "1.0.5"}}
