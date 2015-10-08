@@ -91,15 +91,13 @@ All of the available methods and the ways to call them are [in the docs](https:/
 
 Work in progress, many things are missing:
 
-* Channels endpoint
 * Groups endpoint
-* Languages endpoint
 * Me endpoint
 * Tags endpoint
 * Users endpoint
 * Videos endpoint
-* Pagination of results for certain data types
-* Real time subscriptions
+* Handle pagination metadata
+* Improve documentation about Vimeo API query params
 
 ## Thanks
 

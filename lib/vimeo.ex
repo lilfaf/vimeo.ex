@@ -218,6 +218,62 @@ defmodule Vimeo do
   """
   defdelegate create_channel(data, token), to: Vimeo.API.Channels, as: :create_channel
 
+  @doc """
+  """
+  defdelegate update_channel(id, data), to: Vimeo.API.Channels, as: :update_channel
+
+  @doc """
+  """
+  defdelegate update_channel(id, data, token), to: Vimeo.API.Channels, as: :update_channel
+
+  @doc """
+  """
+  defdelegate delete_channel(id), to: Vimeo.API.Channels, as: :delete_channel
+
+  @doc """
+  """
+  defdelegate delete_channel(id, token), to: Vimeo.API.Channels, as: :delete_channel
+
+  @doc """
+  """
+  defdelegate channel_users(id), to: Vimeo.API.Channels, as: :channel_users
+
+  @doc """
+  """
+  defdelegate channel_users(id, token), to: Vimeo.API.Channels, as: :channel_users
+
+  @doc """
+  """
+  defdelegate channel_videos(id), to: Vimeo.API.Channels, as: :channel_videos
+
+  @doc """
+  """
+  defdelegate channel_videos(id, token), to: Vimeo.API.Channels, as: :channel_videos
+
+  @doc """
+  """
+  defdelegate channel_video(channel_id, video_id), to: Vimeo.API.Channels, as: :channel_video
+
+  @doc """
+  """
+  defdelegate channel_video(channel_id, video_id, token), to: Vimeo.API.Channels, as: :channel_video
+
+  @doc """
+  """
+  defdelegate add_channel_video(channel_id, video_id), to: Vimeo.API.Channels, as: :add_channel_video
+
+  @doc """
+  """
+  defdelegate add_channel_video(channel_id, video_id, token), to: Vimeo.API.Channels, as: :add_channel_video
+
+  @doc """
+  """
+  defdelegate remove_channel_video(channel_id, video_id), to: Vimeo.API.Channels, as: :remove_channel_video
+
+  @doc """
+  """
+  defdelegate remove_channel_video(channel_id, video_id, token), to: Vimeo.API.Channels, as: :remove_channel_video
+
 
   ## ---------- Me
 

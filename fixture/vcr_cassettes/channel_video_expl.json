@@ -1,0 +1,40 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Authorization": "Bearer cba46e2736be0718206689bd3ce7a78c",
+        "Content-type": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.vimeo.com/channels/themgoods/videos/141379107?"
+    },
+    "response": {
+      "body": "{\"uri\":\"/videos/141379107\",\"name\":\"Maneuver Monday with Seba D\\u017cbik Nysa, Poland\",\"description\":\"Maneuver Monday with Seba D\\u017cbik Nysa, Poland\\n\\nwww.vimeo.com/channels/683694\\nwww.valo-brand.com\\nwww.themgoods.com\\nwww.themgoods.bigcartel.com\",\"link\":\"https://vimeo.com/141379107\",\"duration\":54,\"width\":1920,\"language\":null,\"height\":1080,\"embed\":{\"html\":\"<iframe src=\\\"https://player.vimeo.com/video/141379107?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0\\\" width=\\\"1920\\\" height=\\\"1080\\\" frameborder=\\\"0\\\" title=\\\"Maneuver Monday with Seba D\\u017cbik Nysa, Poland\\\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>\"},\"created_time\":\"2015-10-05T06:35:19+00:00\",\"modified_time\":\"2015-10-08T11:13:49+00:00\",\"content_rating\":[\"unrated\"],\"license\":null,\"privacy\":{\"view\":\"anybody\",\"embed\":\"public\",\"download\":false,\"add\":true,\"comments\":\"anybody\"},\"pictures\":[{\"type\":\"thumbnail\",\"width\":1280,\"height\":720,\"link\":\"https://i.vimeocdn.com/video/538358523_1280.jpg\"},{\"type\":\"thumbnail\",\"width\":960,\"height\":540,\"link\":\"https://i.vimeocdn.com/video/538358523_960.jpg\"},{\"type\":\"thumbnail\",\"width\":640,\"height\":360,\"link\":\"https://i.vimeocdn.com/video/538358523_640.jpg\"},{\"type\":\"thumbnail\",\"width\":295,\"height\":166,\"link\":\"https://i.vimeocdn.com/video/538358523_295x166.jpg\"},{\"type\":\"thumbnail\",\"width\":200,\"height\":150,\"link\":\"https://i.vimeocdn.com/video/538358523_200x150.jpg\"},{\"type\":\"thumbnail\",\"width\":100,\"height\":75,\"link\":\"https://i.vimeocdn.com/video/538358523_100x75.jpg\"}],\"tags\":[],\"stats\":{\"plays\":273,\"likes\":21,\"comments\":1},\"metadata\":{\"connections\":{\"credits\":\"/videos/141379107/credits\",\"likes\":\"/videos/141379107/likes\",\"texttracks\":{\"uri\":\"/videos/141379107/texttracks\",\"options\":[\"GET\",\"POST\"],\"total\":0},\"related\":{\"uri\":\"/channels/themgoods/videos/141379107?offset=1\",\"options\":[\"GET\"]}},\"interactions\":{\"watchlater\":{\"added\":false,\"added_time\":null,\"uri\":\"/users/4443526/watchlater/141379107\"},\"like\":{\"added\":false,\"added_time\":null,\"uri\":\"/users/4443526/likes/141379107\"}}},\"user\":{\"uri\":\"/users/1044190\",\"name\":\"Themgoods\",\"link\":\"https://vimeo.com/themgoods1\",\"location\":\"Santa Ana, CA\",\"bio\":\"Themgoods Brand distributors of premium blading goods since 2008\\n\\nhttp://themgoods.com\\nhttp://valo-brand.com\",\"created_time\":\"2008-12-16T02:51:21+00:00\",\"account\":\"pro\",\"pictures\":[{\"type\":\"portrait\",\"width\":30,\"height\":30,\"link\":\"https://i.vimeocdn.com/portrait/8024456_30x30.jpg\"},{\"type\":\"portrait\",\"width\":75,\"height\":75,\"link\":\"https://i.vimeocdn.com/portrait/8024456_75x75.jpg\"},{\"type\":\"portrait\",\"width\":100,\"height\":100,\"link\":\"https://i.vimeocdn.com/portrait/8024456_100x100.jpg\"},{\"type\":\"portrait\",\"width\":300,\"height\":300,\"link\":\"https://i.vimeocdn.com/portrait/8024456_300x300.jpg\"}],\"websites\":[],\"metadata\":{\"connections\":{\"activities\":\"/users/1044190/activities\",\"albums\":\"/users/1044190/albums\",\"channels\":\"/users/1044190/channels\",\"feed\":\"/users/1044190/feed\",\"followers\":\"/users/1044190/followers\",\"following\":\"/users/1044190/following\",\"groups\":\"/users/1044190/groups\",\"likes\":\"/users/1044190/likes\",\"portfolios\":\"/users/1044190/portfolios\",\"videos\":\"/users/1044190/videos\",\"shared\":\"/users/1044190/shared/videos\",\"pictures\":\"/users/1044190/pictures\",\"violations\":null,\"watchlater\":null},\"interactions\":{\"follow\":{\"added\":false,\"added_time\":null,\"uri\":\"/users/4443526/following/1044190\"}}},\"preferences\":{\"videos\":{\"privacy\":null}},\"stats\":{}},\"app\":null,\"status\":\"available\",\"embed_presets\":null}",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "application/vnd.vimeo.video+json",
+        "Cache-Control": "no-cache, max-age=315360000",
+        "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
+        "Expires": "Sun, 05 Oct 2025 15:44:21 GMT",
+        "Via": "1.1 varnish",
+        "Set-Cookie": "clip_v=1; expires=Mon, 07 Dec 2015 15:44:21 GMT; path=/;",
+        "Fastly-Debug-Digest": "5e280aef504cfe77c47254d89b83dcb0bc13b3cad0d87e2f1d3d1bb8c0c86605",
+        "Content-Length": "3481",
+        "Accept-Ranges": "bytes",
+        "Date": "Thu, 08 Oct 2015 15:44:21 GMT",
+        "Age": "0",
+        "Connection": "keep-alive",
+        "X-Served-By": "cache-iad2125-IAD, cache-lhr6331-LHR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1444319061.256126,VS0,VE206",
+        "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

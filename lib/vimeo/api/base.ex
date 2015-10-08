@@ -29,6 +29,15 @@ defmodule Vimeo.API.Base do
   end
 
   # @doc """
+  # General HTTP `PUT` request function. Takes a url part, a token
+  # and optionally data Map and list of params.
+  # """
+  def put(url, token, data \\ "", params \\ []) do
+    request!(:put , url, data, build_headers(token), [params: params])
+    |> handle_response
+  end
+
+  # @doc """
   # General HTTP `PATCH` request function. Takes a url part, a token
   # and optionally data Map and list of params.
   # """

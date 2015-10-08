@@ -108,9 +108,68 @@ defmodule VimeoTest do
         data = %{name: "foo", description: "foo desc", privacy: "anybody"}
         assert Vimeo.create_channel(data, context[:token]) == :ok
 
-        channel = List.first(Vimeo.my_channels(context[:token]))
+        channel = Vimeo.my_channels(context[:token]) |> List.first
         assert channel.name == "foo"
         assert channel.description == "foo desc"
+      end
+    end
+
+    should "update a channel's information", context do
+      use_cassette "update_channel_expl" do
+        assert Vimeo.update_channel(975432, %{name: "bar"}, context[:token]) == :ok
+
+        channel = Vimeo.my_channels(context[:token]) |> List.first
+        assert channel.name == "bar"
+      end
+    end
+
+    should "delete a channel", context do
+      use_cassette "delete_channel" do
+        assert Vimeo.delete_channel(975431, context[:token]) == :ok
+
+        channels = Vimeo.my_channels(context[:token])
+        assert length(channels) == 1
+      end
+    end
+
+    should "returns a list of users who follow a channel", context do
+      use_cassette "channel_users_expl" do
+        users = Vimeo.channel_users(:themgoods, context[:token])
+        assert length(users) == 25
+        assert List.first(users).name == "foo"
+      end
+    end
+
+    should "returns a list of videos for a channel", context do
+      use_cassette "channel_videos_expl" do
+        videos = Vimeo.channel_videos(:themgoods, context[:token])
+        assert length(videos) == 25
+        assert List.first(videos).duration == 54
+      end
+    end
+
+    should "returns a video for a channel", context do
+      use_cassette "channel_video_expl" do
+        video = Vimeo.channel_video(:themgoods, 141379107, context[:token])
+        assert video.duration == 54
+      end
+    end
+
+    should "add a video to a channel", context do
+      use_cassette "add_channel_video_expl" do
+        assert Vimeo.add_channel_video(975432, 18629165, context[:token]) == :ok
+
+        video = Vimeo.channel_video(975432, 18629165, context[:token])
+        assert video.name == "WINTERTOUR"
+      end
+    end
+
+    should "remove a video from a channel", context do
+      use_cassette "remove_channel_video_expl" do
+        assert Vimeo.remove_channel_video(975432, 18629165, context[:token]) == :ok
+
+        videos = Vimeo.channel_videos(975432, context[:token])
+        assert length(videos) == 0
       end
     end
 
@@ -190,7 +249,7 @@ defmodule VimeoTest do
       end
     end
 
-    should "return a list videos for category id" do
+    should "return a list of videos for category id" do
       use_cassette "category_videos_glob" do
         videos = Vimeo.category_videos(:animation)
         assert length(videos) == 25
@@ -220,9 +279,69 @@ defmodule VimeoTest do
         data = %{name: "foo", description: "foo desc", privacy: "anybody"}
         assert Vimeo.create_channel(data) == :ok
 
-        channel = List.first(Vimeo.my_channels())
+        channel = Vimeo.my_channels |> List.first
         assert channel.name == "foo"
         assert channel.description == "foo desc"
+      end
+    end
+
+    should "update a channel's information" do
+      use_cassette "update_channel_glob" do
+        assert Vimeo.update_channel(975432, %{name: "foo"}) == :ok
+
+        channel = Vimeo.my_channels |> List.first
+        assert channel.name == "foo"
+      end
+    end
+
+    should "delete a channel" do
+      use_cassette "delete_channel" do
+        assert Vimeo.delete_channel(975431) == :ok
+
+        channels = Vimeo.my_channels
+        assert length(channels) == 1
+      end
+    end
+
+    should "returns a list of users who follow a channel" do
+      use_cassette "channel_users_glob" do
+        users = Vimeo.channel_users(:themgoods)
+        assert length(users) == 25
+        assert List.first(users).name == "foo"
+      end
+    end
+
+
+    should "returns a list of videos for a channel" do
+      use_cassette "channel_videos_glob" do
+        videos = Vimeo.channel_videos(:themgoods)
+        assert length(videos) == 25
+        assert List.first(videos).duration == 54
+      end
+    end
+
+    should "returns a video for a channel" do
+      use_cassette "channel_video_glob" do
+        video = Vimeo.channel_video(:themgoods, 141379107)
+        assert video.duration == 54
+      end
+    end
+
+    should "add a video to a channel" do
+      use_cassette "add_channel_video_glob" do
+        assert Vimeo.add_channel_video(975432, 18629165) == :ok
+
+        video = Vimeo.channel_video(975432, 18629165)
+        assert video.name == "WINTERTOUR"
+      end
+    end
+
+    should "remove a video from a channel" do
+      use_cassette "remove_channel_video_glob" do
+        assert Vimeo.remove_channel_video(975432, 18629165) == :ok
+
+        videos = Vimeo.channel_videos(975432)
+        assert length(videos) == 0
       end
     end
 
