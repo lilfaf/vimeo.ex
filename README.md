@@ -1,6 +1,7 @@
 # Vimeo.ex
 
 [![Build Status](https://travis-ci.org/seshook/vimeo.ex.svg)](https://travis-ci.org/seshook/vimeo.ex)
+[![Coverage Status](https://coveralls.io/repos/seshook/vimeo.ex/badge.svg?branch=master&service=github)](https://coveralls.io/github/seshook/vimeo.ex?branch=master)
 
 ### [Read the docs](https://hexdocs.pm/vimeo.ex)
 
