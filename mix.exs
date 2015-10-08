@@ -3,7 +3,7 @@ defmodule Vimeo.Mixfile do
 
   def project do
     [app: :vimeo,
-     version: "0.1.0-devs",
+     version: "0.1.0-dev",
      elixir: "~> 1.1",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
