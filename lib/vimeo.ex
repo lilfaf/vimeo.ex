@@ -171,6 +171,46 @@ defmodule Vimeo do
   defdelegate category_videos(id, token), to: Vimeo.API.Categories, as: :category_videos
 
 
+  ## ---------- Channels
+
+
+  @doc """
+  Returns a List of channel as `%Elixtagram.Model.Channel`
+
+  ## Example
+      iex(1)> Vimeo.channels()
+      [%Elixtagram.Model.Channel{...}, %Elixtagram.Model.Channel{...}]
+  """
+  defdelegate channels, to: Vimeo.API.Channels, as: :channels
+
+  @doc """
+  Same as `Vimeo.channels/0`, except takes an explicit access token.
+
+  ## Example
+      iex(1)> Vimeo.channels("XXXXXXXXXXXXXXXXX")
+      [%Elixtagram.Model.Channel{...}, %Elixtagram.Model.Channel{...}]
+  """
+  defdelegate channels(token), to: Vimeo.API.Channels, as: :channels
+
+  @doc """
+  Takes an channel id and returns a `%Elixtagram.Model.Channel`
+
+  ## Example
+      iex(1)> Vimeo.channel(20)
+      %Elixtagram.Model.Channel{...}
+  """
+  defdelegate channel(id), to: Vimeo.API.Channels, as: :channel
+
+  @doc """
+  Same as `Vimeo.channel/1`, except takes an explicit access token.
+
+  ## Example
+      iex(1)> Vimeo.channel(20)
+      %Elixtagram.Model.Channel{...}
+  """
+  defdelegate channel(id, token), to: Vimeo.API.Channels, as: :channel
+
+
   ## ---------- Me
 
 

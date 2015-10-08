@@ -138,6 +138,47 @@ defmodule VimeoTest do
   end
 
 
+  # ------- Channels
+
+  test "gets a list channels (explicitly authenticated)" do
+    token = System.get_env("VIMEO_ACCESS_TOKEN")
+
+    use_cassette "channels_auth_explicit" do
+      channels = Vimeo.channels(token)
+      assert length(channels) == 25
+    end
+  end
+
+  test "gets a list channels (implicitly authenticated)" do
+    token = System.get_env("VIMEO_ACCESS_TOKEN")
+    Vimeo.configure(:global, token)
+
+    use_cassette "channels_auth_implicit" do
+      channels = Vimeo.channels()
+      assert length(channels) == 25
+    end
+  end
+
+  test "gets a channel by id (explicitly authenticated)" do
+    token = System.get_env("VIMEO_ACCESS_TOKEN")
+
+    use_cassette "channel_auth_explicit" do
+      channel = Vimeo.channel(2981, token)
+      assert channel.name == "Everything Animated"
+    end
+  end
+
+  test "gets a channel by id (implicitly authenticated)" do
+    token = System.get_env("VIMEO_ACCESS_TOKEN")
+    Vimeo.configure(:global, token)
+
+    use_cassette "channel_auth_implicit" do
+      channel = Vimeo.channel(2981)
+      assert channel.name == "Everything Animated"
+    end
+  end
+
+
   # ------- Me
 
 
