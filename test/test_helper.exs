@@ -1,1 +1,3 @@
-ExUnit.start(formatters: [ShouldI.CLIFormatter])
+# ExUnit.start(formatters: [ShouldI.CLIFormatter])
+
+ExUnit.start
