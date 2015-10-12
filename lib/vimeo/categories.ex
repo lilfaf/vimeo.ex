@@ -11,7 +11,7 @@ defmodule Vimeo.Categories do
   """
   def all(params \\ []) do
     API.get("categories", params).data
-    |> Enum.map(&(Parser.parse_category(&1)))
+    |> Enum.map(&(Parser.parse(&1, :category)))
   end
 
   @doc """
@@ -19,7 +19,7 @@ defmodule Vimeo.Categories do
   """
   def get(id) do
     API.get("categories/#{id}")
-    |> Parser.parse_category
+    |> Parser.parse(:category)
   end
 
   @doc """
@@ -27,7 +27,7 @@ defmodule Vimeo.Categories do
   """
   def channels(id, params \\ []) do
     API.get("categories/#{id}/channels", params).data
-    |> Enum.map(&(Parser.parse_channel(&1)))
+    |> Enum.map(&(Parser.parse(&1, :channel)))
   end
 
   @doc """
@@ -35,7 +35,7 @@ defmodule Vimeo.Categories do
   """
   def groups(id, params \\ []) do
     API.get("categories/#{id}/groups", params).data
-    |> Enum.map(&(Parser.parse_group(&1)))
+    |> Enum.map(&(Parser.parse(&1, :group)))
   end
 
   @doc """
@@ -43,6 +43,6 @@ defmodule Vimeo.Categories do
   """
   def videos(id, params \\ []) do
     API.get("categories/#{id}/videos", params).data
-    |> Enum.map(&(Parser.parse_video(&1)))
+    |> Enum.map(&(Parser.parse(&1, :video)))
   end
 end

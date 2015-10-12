@@ -11,7 +11,7 @@ defmodule Vimeo.Channels do
   """
   def all(params \\ []) do
     API.get("channels", params).data
-    |> Enum.map(&(Parser.parse_channel(&1)))
+    |> Enum.map(&(Parser.parse(&1, :channel)))
   end
 
   @doc """
@@ -19,7 +19,7 @@ defmodule Vimeo.Channels do
   """
   def get(id) do
     API.get("channels/#{id}")
-    |> Parser.parse_channel
+    |> Parser.parse(:channel)
   end
 
   @doc """
@@ -48,7 +48,7 @@ defmodule Vimeo.Channels do
   """
   def users(id) do
     API.get("channels/#{id}/users").data
-    |> Enum.map(&(Parser.parse_user(&1)))
+    |> Enum.map(&(Parser.parse(&1, :user)))
   end
 
   @doc """
@@ -56,7 +56,7 @@ defmodule Vimeo.Channels do
   """
   def videos(id) do
     API.get("channels/#{id}/videos").data
-    |> Enum.map(&(Parser.parse_video(&1)))
+    |> Enum.map(&(Parser.parse(&1, :video)))
   end
 
   @doc """
@@ -64,7 +64,7 @@ defmodule Vimeo.Channels do
   """
   def video(channel_id, video_id) do
     API.get("channels/#{channel_id}/videos/#{video_id}")
-    |> Parser.parse_video
+    |> Parser.parse(:video)
   end
 
   @doc """

@@ -3,6 +3,7 @@ defmodule Vimeo.Resources do
 
   defmodule User do
     @moduledoc """
+    Defines a user schema.
     """
 
     defstruct uri:      nil,
@@ -18,6 +19,7 @@ defmodule Vimeo.Resources do
 
   defmodule Album do
     @moduledoc """
+    Defines a album schema.
     """
 
     defstruct name:          nil,
@@ -31,6 +33,7 @@ defmodule Vimeo.Resources do
 
   defmodule Category do
     @moduledoc """
+    Defines a category schema.
     """
 
     defstruct uri:           nil,
@@ -43,6 +46,7 @@ defmodule Vimeo.Resources do
 
   defmodule Channel do
     @moduledoc """
+    Defines a channel schema.
     """
 
     defstruct uri:           nil,
@@ -56,6 +60,7 @@ defmodule Vimeo.Resources do
 
   defmodule Group do
     @moduledoc """
+    Defines a group schema.
     """
 
     defstruct uri:           nil,
@@ -70,6 +75,7 @@ defmodule Vimeo.Resources do
 
   defmodule Video do
     @moduledoc """
+    Defines a video schema.
     """
 
     defstruct uri:           nil,

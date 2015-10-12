@@ -12,33 +12,39 @@ defmodule Vimeo.API do
   # HTTP methods --------------------------------------------------------------
 
   @doc """
-  # TODO
+  Issues GET request. Takes a url and an optional params list.
   """
+  @spec get(binary, list) :: map
   def get(url, params \\ []), do: json_request(:get, url, "", params)
 
   @doc """
-  # TODO
+  Issues POST request. Takes a url and an optional data Map.
   """
+  @spec post(binary, binary) :: map
   def post(url, body \\ ""), do: json_request(:post, url, body)
 
   @doc """
-  # TODO
+  Issues PUT request. Takes a url and an optional data Map.
   """
+  @spec post(binary, binary) :: map
   def put(url, body \\ ""), do: json_request(:put, url, body)
 
   @doc """
-  # TODO
+  Issues PATCH request. Takes a url and an optional data Map.
   """
+  @spec post(binary, binary) :: map
   def patch(url, body \\ ""), do: json_request(:patch, url, body)
 
   @doc """
-  # TODO
+  Issues DELETE request. Takes a url.
   """
+  @spec post(binary) :: map
   def delete(url), do: json_request(:delete, url)
 
   @doc """
-  # TODO
+  Send HTTP json request formatted for the Vimeo API.
   """
+  @spec json_request(atom, binary, binary, list) :: map
   def json_request(method, url, body \\ "", params \\ []) do
     request!(method, url, body, [], [params: params]) |> handle_response
   end
