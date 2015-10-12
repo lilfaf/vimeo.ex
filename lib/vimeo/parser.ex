@@ -1,26 +1,44 @@
-# defmodule Vimeo.Parser do
+defmodule Vimeo.Parser do
+  @moduledoc """
+  """
 
-#   def parse_user(object) do
-#     struct(Vimeo.Model.User, object)
-#   end
+  @doc """
+  """
+  def parse_user(object) do
+    struct(Vimeo.Resources.User, object)
+  end
 
-#   def parse_category(object) do
-#     struct(Vimeo.Model.Category, object)
-#   end
+  @doc """
+  """
+  def parse_category(object) do
+    struct(Vimeo.Resources.Category, object)
+  end
 
-#   def parse_album(object) do
-#     struct(Vimeo.Model.Album, object)
-#   end
+  @doc """
+  """
+  def parse_album(object) do
+    struct(Vimeo.Resources.Album, object)
+  end
 
-#   def parse_channel(object) do
-#     struct(Vimeo.Model.Channel, object)
-#   end
+  @doc """
+  """
+  def parse_channel(object) do
+    struct(Vimeo.Resources.Channel, object)
+  end
 
-#   def parse_group(object) do
-#     struct(Vimeo.Model.Video, object)
-#   end
+  @doc """
+  """
+  def parse_group(object) do
+    struct(Vimeo.Resources.Group, object)
+  end
 
-#   def parse_video(object) do
-#     struct(Vimeo.Model.Video, object)
-#   end
-# end
+  @doc """
+  """
+  def parse_video(object) do
+    struct(Vimeo.Resources.Video, object)
+  end
+end
+
+
+
+

@@ -1,13 +1,13 @@
 defmodule Vimeo do
   @moduledoc """
-    This module provides access to the Vimeo API v3
+  This module provides access to the Vimeo API v3
   """
 
   # Exception -----------------------------------------------------------------
 
   defmodule Error do
     @moduledoc """
-      Define a vimeo error with an http code and a message
+    Define a vimeo error with an http code and a message
 
       ## TODO
         Description Vimeo errors codes
@@ -18,22 +18,22 @@ defmodule Vimeo do
   # Configuration -------------------------------------------------------------
 
   @doc """
-    # TODO
+  # TODO
   """
   @spec configure(binary, binary, binary) :: atom
   def configure(id, secret, token \\ nil) do
-    configure %{client_id: id, client_secret: secret, token: token}
+    configure %{client_id: id, client_secret: secret, access_token: token}
   end
 
   @doc """
-    # TODO
+  # TODO
   """
   def configure do
     configure(env(:client_id), env(:client_secret), env(:access_token))
   end
 
   @doc """
-    # TODO
+  # TODO
   """
   @spec configure(map) :: atom
   def configure(config) when is_map(config), do: start_link(config)
@@ -41,36 +41,36 @@ defmodule Vimeo do
   # Accessor methods ----------------------------------------------------------
 
   @doc """
-    # TODO
+  # TODO
   """
   @spec env(atom) :: binary
   def env(key), do: get_env(key)
 
   @doc """
-    # TODO
+  # TODO
   """
   def config, do: get_config
 
   @doc """
-    # TODO
+  # TODO
   """
   def client_id, do: config[:client_id]
 
   @doc """
-    # TODO
+  # TODO
   """
   def client_secret, do: config[:client_secret]
 
   @doc """
-    # TODO
+  # TODO
   """
-  def token, do: config[:token]
+  def token, do: config[:access_token]
 
   @doc """
-    # TODO
+  # TODO
   """
   @spec token(binary) :: atom
-  def token(token), do: set_config(:token, token)
+  def token(token), do: set_config(:access_token, token)
 
   # Private -------------------------------------------------------------------
 
