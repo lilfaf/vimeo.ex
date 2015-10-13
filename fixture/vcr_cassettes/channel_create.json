@@ -1,0 +1,79 @@
+[
+  {
+    "request": {
+      "body": "{\"name\":\"foo\",\"description\":\"foo desc\"}",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "<REMOVED>"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.vimeo.com/channels?"
+    },
+    "response": {
+      "body": "",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Cache-Control": "no-cache, max-age=315360000",
+        "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
+        "Location": "/channels/976974",
+        "Expires": "Thu, 09 Oct 2025 21:47:09 GMT",
+        "Accept-Ranges": "bytes",
+        "Via": "1.1 varnish",
+        "Fastly-Debug-Digest": "7aeeac771ee44c2c8969acdd6a9459864c075319bff9bae51c9e312a50806361",
+        "Content-Length": "0",
+        "Date": "Mon, 12 Oct 2015 21:47:09 GMT",
+        "Connection": "keep-alive",
+        "Set-Cookie": "clip_test2=1; expires=Fri, 11 Dec 2015 21:47:09 GMT; path=/;",
+        "X-Served-By": "cache-iad2131-IAD, cache-lhr6334-LHR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1444686429.604414,VS0,VE226",
+        "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
+      },
+      "status_code": 201,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "<REMOVED>"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.vimeo.com/me/channels?"
+    },
+    "response": {
+      "body": "{\"total\":1,\"page\":1,\"per_page\":25,\"paging\":{\"next\":null,\"previous\":null,\"first\":\"/me/channels?page=1\",\"last\":\"/me/channels?page=1\"},\"data\":[{\"uri\":\"/channels/976974\",\"name\":\"foo\",\"description\":\"foo desc\",\"link\":\"https://vimeo.com/channels/976974\",\"created_time\":\"2015-10-12T21:47:09+00:00\",\"modified_time\":\"2015-10-12T21:47:09+00:00\",\"user\":{\"uri\":\"/users/4443526\",\"name\":\"foo\",\"link\":\"https://vimeo.com/user4443526\",\"location\":null,\"bio\":null,\"created_time\":\"2010-08-07T14:22:57+00:00\",\"account\":\"basic\",\"pictures\":[{\"type\":\"portrait\",\"width\":30,\"height\":30,\"link\":\"https://secure.gravatar.com/avatar/8693e24361d64d626c948e69237acc34?d=https%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-gray_30x30.png&s=30\"},{\"type\":\"portrait\",\"width\":75,\"height\":75,\"link\":\"https://secure.gravatar.com/avatar/8693e24361d64d626c948e69237acc34?d=https%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-gray_75x75.png&s=75\"},{\"type\":\"portrait\",\"width\":100,\"height\":100,\"link\":\"https://secure.gravatar.com/avatar/8693e24361d64d626c948e69237acc34?d=https%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-gray_100x100.png&s=100\"},{\"type\":\"portrait\",\"width\":300,\"height\":300,\"link\":\"https://secure.gravatar.com/avatar/8693e24361d64d626c948e69237acc34?d=https%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-gray_300x300.png&s=300\"}],\"websites\":[],\"metadata\":{\"connections\":{\"activities\":\"/users/4443526/activities\",\"albums\":\"/users/4443526/albums\",\"channels\":\"/users/4443526/channels\",\"feed\":\"/users/4443526/feed\",\"followers\":\"/users/4443526/followers\",\"following\":\"/users/4443526/following\",\"groups\":\"/users/4443526/groups\",\"likes\":\"/users/4443526/likes\",\"portfolios\":\"/users/4443526/portfolios\",\"videos\":\"/users/4443526/videos\",\"watchlater\":\"/users/4443526/watchlater\",\"shared\":\"/users/4443526/shared/videos\",\"pictures\":\"/users/4443526/pictures\",\"violations\":null}},\"preferences\":{\"videos\":{\"privacy\":\"anybody\"}},\"content_filter\":[\"language\",\"drugs\",\"violence\",\"nudity\",\"safe\",\"unrated\"],\"stats\":{}},\"pictures\":[],\"privacy\":{\"view\":\"anybody\"},\"metadata\":{\"connections\":{\"users\":\"/channels/976974/users\",\"videos\":\"/channels/976974/videos\"},\"interactions\":{\"follow\":{\"added\":true,\"added_time\":\"2015-10-12T21:47:09+00:00\",\"type\":\"subscriber\",\"uri\":\"/users/4443526/channels/976974\"}}},\"stats\":{\"videos\":0,\"users\":1}}]}",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "application/vnd.vimeo.channel+json",
+        "Last-Modified": "Mon, 12 Oct 2015 17:47:09 -0400",
+        "Cache-Control": "no-cache, max-age=315360000",
+        "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
+        "Expires": "Thu, 09 Oct 2025 21:47:09 GMT",
+        "Via": "1.1 varnish",
+        "Fastly-Debug-Digest": "07b83b5e97ae92cbf2d2b3e5577b792136e3cc22dd3f4ac21cc9ade3d1202025",
+        "Content-Length": "2279",
+        "Accept-Ranges": "bytes",
+        "Date": "Mon, 12 Oct 2015 21:47:10 GMT",
+        "Age": "0",
+        "Connection": "keep-alive",
+        "Set-Cookie": "clip_test2=2; expires=Fri, 11 Dec 2015 21:47:10 GMT; path=/;",
+        "X-Served-By": "cache-iad2121-IAD, cache-lhr6334-LHR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1444686429.936147,VS0,VE183",
+        "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

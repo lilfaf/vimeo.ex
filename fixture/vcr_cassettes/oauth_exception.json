@@ -3,7 +3,7 @@
     "request": {
       "body": "",
       "headers": {
-        "Authorization": "Bearer "
+        "Content-Type": "application/json"
       },
       "method": "get",
       "options": [],
@@ -18,18 +18,18 @@
         "Cache-Control": "no-cache, max-age=315360000",
         "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
         "WWW-Authenticate": "Bearer error=\"invalid_token\"",
-        "Expires": "Sat, 04 Oct 2025 16:13:41 GMT",
+        "Expires": "Thu, 09 Oct 2025 20:39:39 GMT",
         "Via": "1.1 varnish",
-        "Set-Cookie": "clip_v=1; expires=Sun, 06 Dec 2015 16:13:41 GMT; path=/;",
         "Fastly-Debug-Digest": "531aae54deb58da92694b00e6e57afc3f91eafa656f2a974be6d34f493c05e8b",
         "Content-Length": "64",
         "Accept-Ranges": "bytes",
-        "Date": "Wed, 07 Oct 2015 16:13:41 GMT",
+        "Date": "Mon, 12 Oct 2015 20:39:39 GMT",
         "Connection": "keep-alive",
-        "X-Served-By": "cache-iad2123-IAD, cache-lhr6331-LHR",
+        "Set-Cookie": "clip_test2=1; expires=Fri, 11 Dec 2015 20:39:39 GMT; path=/;",
+        "X-Served-By": "cache-iad2142-IAD, cache-lhr6334-LHR",
         "X-Cache": "MISS, MISS",
         "X-Cache-Hits": "0, 0",
-        "X-Timer": "S1444234421.209800,VS0,VE114",
+        "X-Timer": "S1444682379.717665,VS0,VE104",
         "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
       },
       "status_code": 401,

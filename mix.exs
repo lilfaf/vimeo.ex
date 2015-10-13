@@ -22,19 +22,18 @@ defmodule Vimeo.Mixfile do
   defp app_list(:dev), do: [:dotenv | app_list]
   defp app_list(:test), do: [:dotenv | app_list]
   defp app_list(_), do: app_list
-  defp app_list, do: [:logger, :httpoison, :oauth2]
+  defp app_list, do: [:logger, :httpoison]
 
   defp deps do
     [
       {:httpoison, "~> 0.7.2"},
-      {:oauth2, "~> 0.3"},
+      {:poison, "~> 1.5"},
       {:earmark, "~> 0.1", only: [:dev, :docs]},
       {:ex_doc, "~> 0.10.0", only: [:dev, :docs]},
       {:inch_ex, "~> 0.4.0", only: [:dev, :docs]},
       {:excoveralls, "~> 0.3", only: [:dev, :test]},
       {:exvcr, "~> 0.3", only: [:dev, :test]},
-      {:dotenv, "~> 2.0.0", only: [:dev, :test]},
-      {:shouldi, only: :test}
+      {:dotenv, "~> 2.0.0", only: [:dev, :test]}
     ]
   end
 end

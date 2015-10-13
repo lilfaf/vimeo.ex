@@ -1,26 +1,15 @@
 defmodule Vimeo.Parser do
+  @moduledoc """
+  Defines parsing functionality to convert data Maps to the suitable module.
+  """
 
-  def parse_user(object) do
-    struct(Vimeo.Model.User, object)
-  end
-
-  def parse_category(object) do
-    struct(Vimeo.Model.Category, object)
-  end
-
-  def parse_album(object) do
-    struct(Vimeo.Model.Album, object)
-  end
-
-  def parse_channel(object) do
-    struct(Vimeo.Model.Channel, object)
-  end
-
-  def parse_group(object) do
-    struct(Vimeo.Model.Video, object)
-  end
-
-  def parse_video(object) do
-    struct(Vimeo.Model.Video, object)
+  @doc """
+  Parse data Map to struct.
+  """
+  @spec parse(map, atom) :: struct
+  def parse(data, name) do
+    module_name = Atom.to_string(name)
+    |> String.capitalize
+    struct(:"Elixir.Vimeo.Resources.#{module_name}", data)
   end
 end

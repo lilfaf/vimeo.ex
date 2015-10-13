@@ -1,0 +1,40 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "<REMOVED>"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.vimeo.com/channels/2981?"
+    },
+    "response": {
+      "body": "{\"uri\":\"/channels/2981\",\"name\":\"Everything Animated\",\"description\":\"A channel for admirers of animation.  Just sit back, relax and enjoy the greatest animation talent out there carefully handpicked for you!\\n\\nFor all submissions: submit@everythinganimated.tv\\nDon't be shy!  I'll try and add as many great films as possible and the one's that don't make it will go into \\\"Animation\\\" group.\\n\\nCome join us on Facebook & Twitter: https://www.facebook.com/everythinganimated | http://twitter.com/all_animated\",\"link\":\"https://vimeo.com/channels/everythinganimated\",\"created_time\":\"2007-12-09T09:09:54+00:00\",\"modified_time\":\"2015-10-12T20:03:48+00:00\",\"user\":{\"uri\":\"/users/221103\",\"name\":\"Aziz Kocanaogullari\",\"link\":\"https://vimeo.com/azizk\",\"location\":\"London, UK\",\"bio\":\"character animator/designer from Istanbul & all around - curator of everythinganimated vimeo.com/everythinganimated\\nhttp://blog.azizk.com\\nhttp://www.azizk.com\\n\\nand while you're at it, follow me on twitter\\nhttp://www.twitter.com/azizk\",\"created_time\":\"2007-07-09T13:41:15+00:00\",\"account\":\"plus\",\"pictures\":[{\"type\":\"portrait\",\"width\":30,\"height\":30,\"link\":\"https://i.vimeocdn.com/portrait/3246897_30x30.jpg\"},{\"type\":\"portrait\",\"width\":75,\"height\":75,\"link\":\"https://i.vimeocdn.com/portrait/3246897_75x75.jpg\"},{\"type\":\"portrait\",\"width\":100,\"height\":100,\"link\":\"https://i.vimeocdn.com/portrait/3246897_100x100.jpg\"},{\"type\":\"portrait\",\"width\":300,\"height\":300,\"link\":\"https://i.vimeocdn.com/portrait/3246897_300x300.jpg\"}],\"websites\":[{\"name\":\"Portfolio\",\"link\":\"http://www.azizk.com\",\"description\":null},{\"name\":\"Blog\",\"link\":\"http://blog.azizk.com\",\"description\":null},{\"name\":\"Twitter\",\"link\":\"http://www.twitter.com/azizk\",\"description\":null},{\"name\":\"Monoton Film Production Log\",\"link\":\"http://www.monotonfilm.com\",\"description\":null}],\"metadata\":{\"connections\":{\"activities\":\"/users/221103/activities\",\"albums\":\"/users/221103/albums\",\"channels\":\"/users/221103/channels\",\"feed\":\"/users/221103/feed\",\"followers\":\"/users/221103/followers\",\"following\":\"/users/221103/following\",\"groups\":\"/users/221103/groups\",\"likes\":\"/users/221103/likes\",\"portfolios\":\"/users/221103/portfolios\",\"videos\":\"/users/221103/videos\",\"shared\":\"/users/221103/shared/videos\",\"pictures\":\"/users/221103/pictures\",\"violations\":null,\"watchlater\":null},\"interactions\":{\"follow\":{\"added\":false,\"added_time\":null,\"uri\":\"/users/4443526/following/221103\"}}},\"preferences\":{\"videos\":{\"privacy\":null}},\"stats\":{}},\"pictures\":[{\"width\":1280,\"height\":536,\"link\":\"https://i.vimeocdn.com/video/479790518_1280.jpg\",\"type\":\"thumbnail\"},{\"width\":960,\"height\":402,\"link\":\"https://i.vimeocdn.com/video/479790518_960.jpg\",\"type\":\"thumbnail\"},{\"width\":640,\"height\":268,\"link\":\"https://i.vimeocdn.com/video/479790518_640.jpg\",\"type\":\"thumbnail\"},{\"width\":295,\"height\":166,\"link\":\"https://i.vimeocdn.com/video/479790518_295x166.jpg\",\"type\":\"thumbnail\"},{\"width\":200,\"height\":150,\"link\":\"https://i.vimeocdn.com/video/479790518_200x150.jpg\",\"type\":\"thumbnail\"},{\"width\":100,\"height\":75,\"link\":\"https://i.vimeocdn.com/video/479790518_100x75.jpg\",\"type\":\"thumbnail\"},{\"width\":980,\"height\":0,\"link\":\"https://i.vimeocdn.com/channel/303732_980?mh=250\",\"type\":\"header\"}],\"privacy\":{\"view\":\"anybody\"},\"metadata\":{\"connections\":{\"users\":\"/channels/2981/users\",\"videos\":\"/channels/2981/videos\"},\"interactions\":{\"follow\":{\"added\":false,\"added_time\":null,\"type\":null,\"uri\":\"/users/4443526/channels/2981\"}}},\"stats\":{\"videos\":3389,\"users\":35344}}",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "application/vnd.vimeo.channel+json",
+        "Cache-Control": "no-cache, max-age=315360000",
+        "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
+        "Expires": "Thu, 09 Oct 2025 21:33:54 GMT",
+        "Via": "1.1 varnish",
+        "Fastly-Debug-Digest": "be4e2297184e0092738028246eb54644d61dc5d029c5f52f370e6a2c1ad38aa6",
+        "Content-Length": "3468",
+        "Accept-Ranges": "bytes",
+        "Date": "Mon, 12 Oct 2015 21:33:54 GMT",
+        "Age": "0",
+        "Connection": "keep-alive",
+        "Set-Cookie": "clip_test2=1; expires=Fri, 11 Dec 2015 21:33:54 GMT; path=/;",
+        "X-Served-By": "cache-iad2120-IAD, cache-lhr6321-LHR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1444685634.639046,VS0,VE133",
+        "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
