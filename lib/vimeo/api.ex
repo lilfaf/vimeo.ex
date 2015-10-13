@@ -69,12 +69,9 @@ defmodule Vimeo.API do
 
   defp authorization_header do
     case Vimeo.config do
-      %{access_token: nil, client_id: id, client_secret: secret} ->
-        [{ "Authorization", "basic #{Base.encode64("#{id}:#{secret}")}" }]
       %{access_token: token} ->
         [{ "Authorization", "bearer #{token}" }]
       _ -> []
-
     end
   end
 
