@@ -66,7 +66,8 @@ Work in progress, many things are missing:
 * Users endpoint
 * Videos endpoint
 * Handle pagination metadata
-* Improve documentation about Vimeo API query params
+* Handle nested data mapping
+* Improve documentation about Vimeo API query params and expected token scope
 
 ## License
 

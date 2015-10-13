@@ -23,7 +23,7 @@ defmodule Vimeo.Me do
   @doc """
   Get list of authenticated user albums.
   """
-  def albums(params \\ []) do
+  def albums(params \\ %{}) do
     API.get("me/albums", params).data
     |> Enum.map(&(Parser.parse(&1, :album)))
   end
@@ -38,7 +38,7 @@ defmodule Vimeo.Me do
   @doc """
   Get a list of the channels the authenticated user follows
   """
-  def channels(params \\ []) do
+  def channels(params \\ %{}) do
     API.get("me/channels", params).data
     |> Enum.map(&(Parser.parse(&1, :channel)))
   end
@@ -46,7 +46,7 @@ defmodule Vimeo.Me do
   @doc """
   Get a list of the groups the authenticated user follows
   """
-  def groups(params \\ []) do
+  def groups(params \\ %{}) do
     API.get("me/groups", params).data
     |> Enum.map(&(Parser.parse(&1, :group)))
   end

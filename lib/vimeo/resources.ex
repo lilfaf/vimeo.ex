@@ -73,6 +73,17 @@ defmodule Vimeo.Resources do
               modified_time: nil
   end
 
+  defmodule Tag do
+  @doc """
+  Defines a Tag schema
+  """
+
+  defstruct uri:       nil,
+            name:      nil,
+            tag:       nil,
+            canonical: nil
+  end
+
   defmodule Video do
     @moduledoc """
     Defines a video schema.
@@ -89,6 +100,7 @@ defmodule Vimeo.Resources do
               licence:       nil,
               embed:         nil,
               pictures:      nil,
+              tags:          nil,
               created_time:  nil,
               modified_time: nil
   end

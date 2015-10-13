@@ -9,7 +9,7 @@ defmodule Vimeo.Categories do
   @doc """
   Get a list of the top level categories.
   """
-  def all(params \\ []) do
+  def all(params \\ %{}) do
     API.get("categories", params).data
     |> Enum.map(&(Parser.parse(&1, :category)))
   end
@@ -25,24 +25,24 @@ defmodule Vimeo.Categories do
   @doc """
   Get a list of Channels related to a category.
   """
-  def channels(id, params \\ []) do
-    API.get("categories/#{id}/channels", params).data
+  def channels(category_id, params \\ %{}) do
+    API.get("categories/#{category_id}/channels", params).data
     |> Enum.map(&(Parser.parse(&1, :channel)))
   end
 
   @doc """
   Get a list of Groups related to a category.
   """
-  def groups(id, params \\ []) do
-    API.get("categories/#{id}/groups", params).data
+  def groups(category_id, params \\ %{}) do
+    API.get("categories/#{category_id}/groups", params).data
     |> Enum.map(&(Parser.parse(&1, :group)))
   end
 
   @doc """
   Get a list of videos related to a category.
   """
-  def videos(id, params \\ []) do
-    API.get("categories/#{id}/videos", params).data
+  def videos(category_id, params \\ %{}) do
+    API.get("categories/#{category_id}/videos", params).data
     |> Enum.map(&(Parser.parse(&1, :video)))
   end
 end

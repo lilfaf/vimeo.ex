@@ -12,10 +12,10 @@ defmodule Vimeo.API do
   # HTTP methods --------------------------------------------------------------
 
   @doc """
-  Issues GET request. Takes a url and an optional params list.
+  Issues GET request. Takes a url and an optional params map.
   """
-  @spec get(binary, list) :: map
-  def get(url, params \\ []), do: json_request(:get, url, "", params)
+  @spec get(binary, map) :: map
+  def get(url, params \\ %{}), do: json_request(:get, url, "", params)
 
   @doc """
   Issues POST request. Takes a url and an optional data Map.
@@ -44,8 +44,8 @@ defmodule Vimeo.API do
   @doc """
   Send HTTP json request formatted for the Vimeo API.
   """
-  @spec json_request(atom, binary, binary, list) :: map
-  def json_request(method, url, body \\ "", params \\ []) do
+  @spec json_request(atom, binary, binary, map) :: map
+  def json_request(method, url, body \\ "", params \\ %{}) do
     request!(method, url, body, [], [params: params]) |> handle_response
   end
 
