@@ -42,4 +42,12 @@ defmodule Vimeo.Me do
     API.get("me/channels", params).data
     |> Enum.map(&(Parser.parse(&1, :channel)))
   end
+
+  @doc """
+  Get a list of the groups the authenticated user follows
+  """
+  def groups(params \\ []) do
+    API.get("me/groups", params).data
+    |> Enum.map(&(Parser.parse(&1, :group)))
+  end
 end

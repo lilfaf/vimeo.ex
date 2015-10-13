@@ -47,4 +47,11 @@ defmodule Vimeo.MeTest do
       assert length(channels) == 1
     end
   end
+
+  test "should return followed groups for the authenticated user" do
+    use_cassette "my_groups" do
+      groups = Vimeo.Me.groups
+      assert length(groups) == 1
+    end
+  end
 end
