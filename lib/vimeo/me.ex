@@ -6,6 +6,8 @@ defmodule Vimeo.Me do
   alias Vimeo.API
   alias Vimeo.Parser
 
+  # Informations --------------------------------------------------------------
+
   @doc """
   Get authenticated user informations.
   """
@@ -19,6 +21,8 @@ defmodule Vimeo.Me do
   def update(data) do
     API.patch("me", data)
   end
+
+  # Albums --------------------------------------------------------------------
 
   @doc """
   Get list of authenticated user albums.
@@ -36,12 +40,46 @@ defmodule Vimeo.Me do
   end
 
   @doc """
+  """
+  def create_album(data) do
+  end
+
+  @doc """
+  """
+  def delete_album(id) do
+  end
+
+  @doc """
+  """
+  def album_videos(album_id) do
+  end
+
+  @doc """
+  """
+  def album_video(album_id, video_id) do
+  end
+
+  @doc """
+  """
+  def add_album_video(album_id, video_id) do
+  end
+
+  @doc """
+  """
+  def remove_album_video(album_id, video_id) do
+  end
+
+  # Channels ------------------------------------------------------------------
+
+  @doc """
   Get a list of the channels the authenticated user follows
   """
   def channels(params \\ %{}) do
     API.get("me/channels", params).data
     |> Enum.map(&(Parser.parse(&1, :channel)))
   end
+
+  # Groups --------------------------------------------------------------------
 
   @doc """
   Get a list of the groups the authenticated user follows
