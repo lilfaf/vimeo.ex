@@ -1,0 +1,76 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "<REMOVED>"
+      },
+      "method": "delete",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.vimeo.com/me/following/themgoods1?"
+    },
+    "response": {
+      "body": "#Reference<0.0.2.574>",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Cache-Control": "no-cache, max-age=315360000",
+        "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
+        "Expires": "Sat, 11 Oct 2025 14:26:40 GMT",
+        "Accept-Ranges": "bytes",
+        "Via": "1.1 varnish",
+        "Fastly-Debug-Digest": "51f6c2d9c6bf6e79c4c4405e4ac4cfae2456159d43a899022f91f053e3fb0730",
+        "Date": "Wed, 14 Oct 2015 14:26:40 GMT",
+        "Connection": "keep-alive",
+        "Set-Cookie": "clip_test2=1; expires=Sun, 13 Dec 2015 14:26:40 GMT; path=/;",
+        "X-Served-By": "cache-iad2125-IAD, cache-lhr6321-LHR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1444832800.128333,VS0,VE137",
+        "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
+      },
+      "status_code": 204,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "<REMOVED>"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.vimeo.com/me/following?"
+    },
+    "response": {
+      "body": "{\"total\":1,\"page\":1,\"per_page\":25,\"paging\":{\"next\":null,\"previous\":null,\"first\":\"/me/following?page=1\",\"last\":\"/me/following?page=1\"},\"data\":[{\"uri\":\"/users/761928\",\"name\":\"ARTSN Video (Ars\\u00e8ne Jurman)\",\"link\":\"https://vimeo.com/artsnvideo\",\"location\":\"Lyon\",\"bio\":\"Ars\\u00e8ne Jurman, 27 ans / R\\u00e9alisateur / Cadreur / Monteur Vid\\u00e9o -\\nwww.artsn-video.com\\n- DNSEP Option ART - Master II - Bac+5 - (Dipl\\u00f4me Nationale Sup\\u00e9rieur d'Expression Plastique)\\n- Setup : SONY NEX VG 30 EH > 18/200 / Fisheye - Go Pro Hero 2\",\"created_time\":\"2008-09-18T12:19:15+00:00\",\"account\":\"plus\",\"pictures\":[{\"type\":\"portrait\",\"width\":30,\"height\":30,\"link\":\"https://i.vimeocdn.com/portrait/8138095_30x30.jpg\"},{\"type\":\"portrait\",\"width\":75,\"height\":75,\"link\":\"https://i.vimeocdn.com/portrait/8138095_75x75.jpg\"},{\"type\":\"portrait\",\"width\":100,\"height\":100,\"link\":\"https://i.vimeocdn.com/portrait/8138095_100x100.jpg\"},{\"type\":\"portrait\",\"width\":300,\"height\":300,\"link\":\"https://i.vimeocdn.com/portrait/8138095_300x300.jpg\"}],\"websites\":[{\"name\":\"ARTSN Video\",\"link\":\"www.artsn-video.com/\",\"description\":\"site web\"},{\"name\":\"Ars\\u00e8ne Jurman's Tumblr\",\"link\":\"http://arsenejurman.tumblr.com/\",\"description\":\"des tonnes d'images.\"}],\"metadata\":{\"connections\":{\"activities\":\"/users/761928/activities\",\"albums\":\"/users/761928/albums\",\"channels\":\"/users/761928/channels\",\"feed\":\"/users/761928/feed\",\"followers\":\"/users/761928/followers\",\"following\":\"/users/761928/following\",\"groups\":\"/users/761928/groups\",\"likes\":\"/users/761928/likes\",\"portfolios\":\"/users/761928/portfolios\",\"videos\":\"/users/761928/videos\",\"shared\":\"/users/761928/shared/videos\",\"pictures\":\"/users/761928/pictures\",\"violations\":null,\"watchlater\":null},\"interactions\":{\"follow\":{\"added\":true,\"added_time\":\"2015-10-08T12:19:46+00:00\",\"uri\":\"/users/4443526/following/761928\"}}},\"preferences\":{\"videos\":{\"privacy\":null}},\"stats\":{}}]}",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "application/vnd.vimeo.user+json",
+        "Cache-Control": "no-cache, max-age=315360000",
+        "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
+        "Expires": "Sat, 11 Oct 2025 14:26:40 GMT",
+        "Via": "1.1 varnish",
+        "Fastly-Debug-Digest": "9fed81174de7d4721bff80517eecb4e27583faac600274175e83e666da83ba92",
+        "Content-Length": "1900",
+        "Accept-Ranges": "bytes",
+        "Date": "Wed, 14 Oct 2015 14:26:40 GMT",
+        "Age": "0",
+        "Connection": "keep-alive",
+        "Set-Cookie": "clip_test2=1; expires=Sun, 13 Dec 2015 14:26:40 GMT; path=/;",
+        "X-Served-By": "cache-iad2121-IAD, cache-lhr6322-LHR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1444832800.507430,VS0,VE111",
+        "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

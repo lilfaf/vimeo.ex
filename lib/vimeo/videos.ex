@@ -10,7 +10,7 @@ defmodule Vimeo.Videos do
   Search for videos.
   """
   def search(params \\ %{}) do
-    API.get("videos", params).data
-    |> Enum.map(&(Parser.parse(&1, :video)))
+    API.get("videos", params)
+    |> Parser.parse(:video)
   end
 end

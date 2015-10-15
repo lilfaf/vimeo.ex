@@ -15,38 +15,49 @@ defmodule Vimeo.API do
   Issues GET request. Takes a url and an optional params map.
   """
   @spec get(binary, map) :: map
-  def get(url, params \\ %{}), do: json_request(:get, url, "", params)
+  def get(url, params \\ %{}) do
+    json_request(:get, url, "", params)
+  end
 
   @doc """
   Issues POST request. Takes a url and an optional data Map.
   """
-  @spec post(binary, binary) :: map
-  def post(url, body \\ ""), do: json_request(:post, url, body)
+  @spec post(binary, map) :: map
+  def post(url, body \\ "") do
+    json_request(:post, url, body)
+  end
 
   @doc """
   Issues PUT request. Takes a url and an optional data Map.
   """
-  @spec post(binary, binary) :: map
-  def put(url, body \\ ""), do: json_request(:put, url, body)
+  @spec post(binary, map) :: map
+  def put(url, body \\ "") do
+    json_request(:put, url, body)
+  end
 
   @doc """
   Issues PATCH request. Takes a url and an optional data Map.
   """
-  @spec post(binary, binary) :: map
-  def patch(url, body \\ ""), do: json_request(:patch, url, body)
+  @spec post(binary, map) :: map
+  def patch(url, body \\ "") do
+    json_request(:patch, url, body)
+  end
 
   @doc """
   Issues DELETE request. Takes a url.
   """
   @spec post(binary) :: map
-  def delete(url), do: json_request(:delete, url)
+  def delete(url) do
+    json_request(:delete, url)
+  end
 
   @doc """
   Send HTTP json request formatted for the Vimeo API.
   """
   @spec json_request(atom, binary, binary, map) :: map
   def json_request(method, url, body \\ "", params \\ %{}) do
-    request!(method, url, body, [], [params: params]) |> handle_response
+    request!(method, url, body, [], [params: params])
+    |> handle_response
   end
 
   # Private -------------------------------------------------------------------
@@ -59,7 +70,8 @@ defmodule Vimeo.API do
 
   defp process_request_body(""), do: ""
   defp process_request_body(body) do
-    Enum.into(body, %{}) |> Poison.encode!
+    Enum.into(body, %{})
+    |> Poison.encode!
   end
 
   def process_response_body(""), do: ""
@@ -76,9 +88,11 @@ defmodule Vimeo.API do
   end
 
   defp handle_response(response) do
-    case response.status_code do
-      code when code in 200..299 -> response.body
-      code -> raise Vimeo.Error, [code: code, message: response.body.error]
+    res = case response do
+      %{status_code: code, body: body} when code in 200..299 -> {:ok, body}
+      %{status_code: code, body: %{error: message}}  ->
+        {:error, %Vimeo.Error{code: code, message: message}}
+      _ -> {:error, %Vimeo.Error{}}
     end
   end
 end

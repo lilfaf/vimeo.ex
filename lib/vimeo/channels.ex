@@ -10,8 +10,8 @@ defmodule Vimeo.Channels do
   Get a list of all Channels.
   """
   def all(params \\ %{}) do
-    API.get("channels", params).data
-    |> Enum.map(&(Parser.parse(&1, :channel)))
+    API.get("channels", params)
+    |> Parser.parse(:channel)
   end
 
   @doc """
@@ -47,16 +47,16 @@ defmodule Vimeo.Channels do
   Get a list of users who follow a Channel.
   """
   def users(channel_id, params \\ %{}) do
-    API.get("channels/#{channel_id}/users", params).data
-    |> Enum.map(&(Parser.parse(&1, :user)))
+    API.get("channels/#{channel_id}/users", params)
+    |> Parser.parse(:user)
   end
 
   @doc """
   Get a list of videos in a Channel.
   """
   def videos(channel_id, params \\ %{}) do
-    API.get("channels/#{channel_id}/videos", params).data
-    |> Enum.map(&(Parser.parse(&1, :video)))
+    API.get("channels/#{channel_id}/videos", params)
+    |> Parser.parse(:video)
   end
 
   @doc """

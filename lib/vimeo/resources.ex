@@ -74,7 +74,7 @@ defmodule Vimeo.Resources do
   end
 
   defmodule Tag do
-  @doc """
+  @moduledoc """
   Defines a Tag schema
   """
 

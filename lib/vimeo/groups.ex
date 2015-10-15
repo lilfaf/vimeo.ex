@@ -10,8 +10,8 @@ defmodule Vimeo.Groups do
   Get a list of all Groups.
   """
   def all(params \\ %{}) do
-    API.get("groups", params).data
-    |> Enum.map(&(Parser.parse(&1, :group)))
+    API.get("groups", params)
+    |> Parser.parse(:group)
   end
 
   @doc """
@@ -40,16 +40,16 @@ defmodule Vimeo.Groups do
   Get a list of users that joined a Group.
   """
   def users(id, params \\ %{}) do
-    API.get("groups/#{id}/users", params).data
-    |> Enum.map(&(Parser.parse(&1, :user)))
+    API.get("groups/#{id}/users", params)
+    |> Parser.parse(:user)
   end
 
   @doc """
   Get a list of videos in a Group.
   """
   def videos(group_id, params \\ %{}) do
-    API.get("groups/#{group_id}/videos", params).data
-    |> Enum.map(&(Parser.parse(&1, :video)))
+    API.get("groups/#{group_id}/videos", params)
+    |> Parser.parse(:video)
   end
 
   @doc """

@@ -10,7 +10,7 @@ defmodule Vimeo.Users do
   Search for users.
   """
   def search(params \\ %{}) do
-    API.get("users", params).data
-    |> Enum.map(&(Parser.parse(&1, :user)))
+    API.get("users", params)
+    |> Parser.parse(:user)
   end
 end

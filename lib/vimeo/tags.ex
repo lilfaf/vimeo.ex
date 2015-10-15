@@ -18,7 +18,7 @@ defmodule Vimeo.Tags do
   Get a list of videos associated with a tag.
   """
   def videos(tag_id, params \\ %{}) do
-    API.get("tags/#{tag_id}/videos", params).data
-    |> Enum.map(&(Parser.parse(&1, :video)))
+    API.get("tags/#{tag_id}/videos", params)
+    |> Parser.parse(:video)
   end
 end

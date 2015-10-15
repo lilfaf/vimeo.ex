@@ -9,10 +9,14 @@ defmodule Vimeo.APITest do
     :ok
   end
 
-  test "raise an exception when a bad access token is used" do
+  test "return an error when a bad access token is used" do
     Vimeo.configure(%{})
     use_cassette "oauth_exception" do
-      assert_raise Vimeo.Error, fn -> Vimeo.Me.info end
+      error = %Vimeo.Error{
+        code: 401,
+        message: "You must provide a valid authenticated access token."
+      }
+      assert Vimeo.Me.info == error
     end
   end
 end

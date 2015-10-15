@@ -9,7 +9,7 @@ defmodule Vimeo do
     @moduledoc """
     Define a vimeo error with an http code and a message.
     """
-    defexception [:code, :message]
+    defexception [:code, message: "Vimeo API client error"]
   end
 
   # Configuration -------------------------------------------------------------

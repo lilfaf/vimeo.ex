@@ -80,7 +80,7 @@ defmodule Vimeo.ChannelsTest do
 
   test "should add a video to a channel" do
     use_cassette "channel_add_video" do
-      assert Vimeo.Channels.add_video(976979, 18629165)
+      Vimeo.Channels.add_video(976979, 18629165)
 
       video = Vimeo.Channels.video(976979, 18629165)
       assert video.name == "WINTERTOUR"
