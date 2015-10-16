@@ -7,7 +7,10 @@ defmodule Vimeo.API do
 
   @endpoint "https://api.vimeo.com/"
 
-  @headers ["Content-Type": "application/json"]
+  @headers [
+    "Content-Type": "application/json",
+    "Accept": "application/vnd.vimeo.*+json;version=3.2"
+  ]
 
   # HTTP methods --------------------------------------------------------------
 

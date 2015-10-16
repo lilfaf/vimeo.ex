@@ -22,7 +22,7 @@ defmodule Vimeo.MeTest do
   test "should update user informations" do
     new_username = "foo"
     use_cassette "my_info_update" do
-      Vimeo.Me.update(%{name: new_username})
+      assert Vimeo.Me.update(%{name: new_username}) == :ok
       assert Vimeo.Me.info.name == new_username
     end
   end
@@ -36,7 +36,7 @@ defmodule Vimeo.MeTest do
 
   test "should create an album for a user" do
     use_cassette "my_albums_create" do
-      Vimeo.Me.create_album(%{name: "foo", description: "foo desc"})
+      assert Vimeo.Me.create_album(%{name: "foo", description: "foo desc"}) == :ok
       album = Vimeo.Me.albums |> List.first
 
       assert album.name == "foo"
@@ -53,7 +53,7 @@ defmodule Vimeo.MeTest do
 
   test "should update an album" do
     use_cassette "my_album_update" do
-      Vimeo.Me.update_album(3608428, %{name: "bar", description: "bar desc"})
+      assert Vimeo.Me.update_album(3608428, %{name: "bar", description: "bar desc"}) == :ok
 
       album = Vimeo.Me.album(3608428)
       assert album.name == "bar"
@@ -63,7 +63,7 @@ defmodule Vimeo.MeTest do
 
   test "should delete an album" do
     use_cassette "my_album_delete" do
-      Vimeo.Me.delete_album(3608428)
+      assert Vimeo.Me.delete_album(3608428) == :ok
 
       channels = Vimeo.Me.albums
       assert length(channels) == 0
@@ -87,7 +87,7 @@ defmodule Vimeo.MeTest do
 
   test "should add a video to an album" do
     use_cassette "my_album_add_video" do
-      Vimeo.Me.add_album_video(3608474, 18629165)
+      assert Vimeo.Me.add_album_video(3608474, 18629165) == :ok
 
       videos = Vimeo.Me.album_videos(3608474)
       assert length(videos) == 1
@@ -96,7 +96,7 @@ defmodule Vimeo.MeTest do
 
   test "should remove a video from an album" do
     use_cassette "my_album_remove_video" do
-      Vimeo.Me.remove_album_video(3608474, 18629165)
+      assert Vimeo.Me.remove_album_video(3608474, 18629165) == :ok
 
       videos = Vimeo.Me.album_videos(3608474)
       assert length(videos) == 0
@@ -210,10 +210,79 @@ defmodule Vimeo.MeTest do
     end
   end
 
+  test "should retrun a list of videos a user likes" do
+    use_cassette "my_likes" do
+      videos = Vimeo.Me.likes
+      assert length(videos) == 1
+      assert List.first(videos).duration == 122
+    end
+  end
+
   test "should check if a user likes a video" do
     use_cassette "my_like?" do
       assert Vimeo.Me.like?(123) == false
       assert Vimeo.Me.like?(141849348) == true
+    end
+  end
+
+  test "should like a video" do
+    use_cassette "my_like" do
+      assert Vimeo.Me.like(96652365) == :ok
+      assert length(Vimeo.Me.likes) == 2
+    end
+  end
+
+  test "should unlike a video" do
+    use_cassette "my_unlike" do
+      assert Vimeo.Me.unlike(96652365) == :ok
+      assert length(Vimeo.Me.likes) == 1
+    end
+  end
+
+  test "should return a list of user's pictures" do
+    use_cassette "my_pictures" do
+      pictures = Vimeo.Me.pictures
+      assert length(pictures) == 1
+      assert List.first(pictures).active == true
+    end
+  end
+
+  # TODO test picture upload here
+
+  test "should check if a user has a picture" do
+    use_cassette "my_picture?" do
+      assert Vimeo.Me.picture?(123) == false
+      assert Vimeo.Me.picture?(10242203) == true
+    end
+  end
+
+  test "should update a picture" do
+    use_cassette "my_picture_update" do
+      picture = Vimeo.Me.update_picture(10242203, %{active: true})
+      assert picture.active == true
+    end
+  end
+
+  test "should delete a picture" do
+    use_cassette "my_picture_delete" do
+      assert Vimeo.Me.delete_picture(10245785) == :ok
+      assert length(Vimeo.Me.pictures) == 1
+    end
+  end
+
+  test "should return a list of videos" do
+    use_cassette "my_videos" do
+      videos = Vimeo.Me.videos
+      assert length(videos) == 2
+    end
+  end
+
+  # TODO test video upload here
+
+  test "should check if a user owns a video" do
+    use_cassette "my_video?" do
+      assert Vimeo.Me.video?(123) == false
+      assert Vimeo.Me.video?(18629165) == true
     end
   end
 end

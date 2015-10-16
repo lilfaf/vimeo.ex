@@ -73,10 +73,21 @@ defmodule Vimeo.Resources do
               modified_time: nil
   end
 
+  defmodule Picture do
+    @moduledoc """
+    Defines a Picture schema
+    """
+
+    defstruct uri:    nil,
+              active: nil,
+              type:   nil,
+              sizes:  nil
+  end
+
   defmodule Tag do
-  @moduledoc """
-  Defines a Tag schema
-  """
+    @moduledoc """
+    Defines a Tag schema
+    """
 
   defstruct uri:       nil,
             name:      nil,

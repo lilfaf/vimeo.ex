@@ -21,6 +21,7 @@ defmodule Vimeo.Me do
   """
   def update(data) do
     API.patch("me", data)
+    |> Parser.parse
   end
 
   # Albums --------------------------------------------------------------------
@@ -38,6 +39,7 @@ defmodule Vimeo.Me do
   """
   def create_album(data) do
     API.post("me/albums", data)
+    |> Parser.parse
   end
 
   @doc """
@@ -53,6 +55,7 @@ defmodule Vimeo.Me do
   """
   def update_album(id, data) do
     API.patch("me/albums/#{id}", data)
+    |> Parser.parse
   end
 
   @doc """
@@ -60,6 +63,7 @@ defmodule Vimeo.Me do
   """
   def delete_album(id) do
     API.delete("me/albums/#{id}")
+    |> Parser.parse
   end
 
   @doc """
@@ -83,6 +87,7 @@ defmodule Vimeo.Me do
   """
   def add_album_video(album_id, video_id) do
     API.put("me/albums/#{album_id}/videos/#{video_id}")
+    |> Parser.parse
   end
 
   @doc """
@@ -90,6 +95,7 @@ defmodule Vimeo.Me do
   """
   def remove_album_video(album_id, video_id) do
     API.delete("me/albums/#{album_id}/videos/#{video_id}")
+    |> Parser.parse
   end
 
   # Appearances ---------------------------------------------------------------
@@ -236,6 +242,8 @@ defmodule Vimeo.Me do
   Get a list of videos that a user likes.
   """
   def likes(params \\ %{}) do
+    API.get("me/likes", params)
+    |> Parser.parse(:video)
   end
 
   @doc """
@@ -252,12 +260,16 @@ defmodule Vimeo.Me do
   Like a video.
   """
   def like(video_id) do
+    API.put("me/likes/#{video_id}")
+    |> Parser.parse
   end
 
   @doc """
   Unlike a video.
   """
   def unlike(video_id) do
+    API.delete("me/likes/#{video_id}")
+    |> Parser.parse
   end
 
   # Pictures ------------------------------------------------------------------
@@ -265,30 +277,66 @@ defmodule Vimeo.Me do
   @doc """
   Get a list of this user's portrait images.
   """
-  def pictures(params \\ %{}) do
+  def pictures do
+    API.get("me/pictures")
+    |> Parser.parse(:picture)
   end
 
-  @doc """
-  Create a new picture resource.
-  """
-  def create_picture(data) do
-  end
+  # @doc """
+  # Create a new picture resource.
+  # """
+  # def create_picture(data) do
+  # end
 
   @doc """
   Check if a user has a portrait.
   """
   def picture?(picture_id) do
+    case API.get("me/pictures/#{picture_id}") do
+      {:ok, _} -> true
+      {:error, _} -> false
+    end
   end
 
   @doc """
   Edit a portrait.
   """
-  def update_picture(picture_id) do
+  def update_picture(picture_id, params \\ %{}) do
+    API.patch("me/pictures/#{picture_id}", params)
+    |> Parser.parse(:picture)
   end
 
   @doc """
   Remove a portrait from your portrait list.
   """
   def delete_picture(picture_id) do
+    API.delete("me/pictures/#{picture_id}")
+    |> Parser.parse
+  end
+
+  # Videos --------------------------------------------------------------------
+
+  @doc """
+  Get a list of videos uploaded by a user.
+  """
+  def videos(params \\ %{}) do
+    API.get("me/videos", params)
+    |> Parser.parse(:video)
+  end
+
+  # @doc """
+  # Begin the video upload process.
+  # """
+  # def upload_video(data, params \\ %{}) do
+  # end
+
+  @doc """
+  Check if a user owns a clip.
+  """
+  def video?(video_id) do
+    case API.get("me/videos/#{video_id}") do
+      {:ok, _} -> true
+      {:error, _} -> false
+    end
   end
 end
