@@ -121,8 +121,8 @@ defmodule Vimeo.Me do
   @doc """
   Check if a user follows a Channel.
   """
-  def channel?(id) do
-    case API.get("me/channels/#{id}") do
+  def channel?(channel_id) do
+    case API.get("me/channels/#{channel_id}") do
       {:ok, _} -> true
       _ -> false
     end
@@ -131,16 +131,16 @@ defmodule Vimeo.Me do
   @doc """
   Subscribe to a Channel.
   """
-  def subscribe_channel(id) do
-    API.put("me/channels/#{id}")
+  def subscribe_channel(channel_id) do
+    API.put("me/channels/#{channel_id}")
     |> Parser.parse
   end
 
   @doc """
   Unsubscribe from a Channel.
   """
-  def unsubscribe_channel(id) do
-    API.delete("me/channels/#{id}")
+  def unsubscribe_channel(channel_id) do
+    API.delete("me/channels/#{channel_id}")
     |> Parser.parse
   end
 
@@ -157,8 +157,8 @@ defmodule Vimeo.Me do
   @doc """
   Check if a user joined a Group.
   """
-  def group?(id) do
-    case API.get("me/groups/#{id}") do
+  def group?(group_id) do
+    case API.get("me/groups/#{group_id}") do
       {:ok, _} -> true
       _ -> false
     end
@@ -167,16 +167,16 @@ defmodule Vimeo.Me do
   @doc """
   Join a Group.
   """
-  def join_group(id) do
-    API.put("me/groups/#{id}")
+  def join_group(group_id) do
+    API.put("me/groups/#{group_id}")
     |> Parser.parse
   end
 
   @doc """
   Leave a Group.
   """
-  def leave_group(id) do
-    API.delete("me/groups/#{id}")
+  def leave_group(group_id) do
+    API.delete("me/groups/#{group_id}")
     |> Parser.parse
   end
 

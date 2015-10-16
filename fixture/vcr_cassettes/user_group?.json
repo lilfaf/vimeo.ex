@@ -1,0 +1,78 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/vnd.vimeo.*+json;version=3.2",
+        "Authorization": "<REMOVED>"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.vimeo.com/users/4443526/groups/foobar?"
+    },
+    "response": {
+      "body": "{\"error\":\"The requested group could not be found\"}",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "application/vnd.vimeo.error+json",
+        "Cache-Control": "no-cache, max-age=315360000",
+        "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
+        "Expires": "Mon, 13 Oct 2025 16:13:18 GMT",
+        "Via": "1.1 varnish",
+        "Fastly-Debug-Digest": "3d49719c7fdab038355b4ba75f51233d1bffd7be48f419c88341469df24a5f2d",
+        "Content-Length": "50",
+        "Accept-Ranges": "bytes",
+        "Date": "Fri, 16 Oct 2015 16:13:18 GMT",
+        "Age": "0",
+        "Connection": "keep-alive",
+        "Set-Cookie": "clip_test2=1; expires=Tue, 15 Dec 2015 16:13:18 GMT; path=/;",
+        "X-Served-By": "cache-iad2121-IAD, cache-lhr6334-LHR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1445011998.716589,VS0,VE97",
+        "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
+      },
+      "status_code": 404,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/vnd.vimeo.*+json;version=3.2",
+        "Authorization": "<REMOVED>"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.vimeo.com/users/4443526/groups/theconference?"
+    },
+    "response": {
+      "body": "#Reference<0.0.3.236>",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Cache-Control": "no-cache, max-age=315360000",
+        "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
+        "Expires": "Mon, 13 Oct 2025 16:13:18 GMT",
+        "Via": "1.1 varnish",
+        "Fastly-Debug-Digest": "659123505ce49d799cec57117879b5576243adf6e5fb8f4047a2eda032372665",
+        "Accept-Ranges": "bytes",
+        "Date": "Fri, 16 Oct 2015 16:13:18 GMT",
+        "Connection": "keep-alive",
+        "Set-Cookie": "clip_test2=1; expires=Tue, 15 Dec 2015 16:13:18 GMT; path=/;",
+        "X-Served-By": "cache-iad2139-IAD, cache-lhr6334-LHR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1445011998.841481,VS0,VE142",
+        "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
+      },
+      "status_code": 204,
+      "type": "ok"
+    }
+  }
+]

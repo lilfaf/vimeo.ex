@@ -91,7 +91,7 @@ defmodule Vimeo.API do
   end
 
   defp handle_response(response) do
-    res = case response do
+    case response do
       %{status_code: code, body: body} when code in 200..299 -> {:ok, body}
       %{status_code: code, body: %{error: message}}  ->
         {:error, %Vimeo.Error{code: code, message: message}}

@@ -1,0 +1,78 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/vnd.vimeo.*+json;version=3.2",
+        "Authorization": "<REMOVED>"
+      },
+      "method": "put",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.vimeo.com/users/4443526/following/themgoods1?"
+    },
+    "response": {
+      "body": "#Reference<0.0.3.436>",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Cache-Control": "no-cache, max-age=315360000",
+        "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
+        "Expires": "Mon, 13 Oct 2025 16:27:09 GMT",
+        "Accept-Ranges": "bytes",
+        "Via": "1.1 varnish",
+        "Fastly-Debug-Digest": "8be4ece499ee5309fb9b07b5487a6ea8cd79685879197261e2e46d6d841db795",
+        "Date": "Fri, 16 Oct 2015 16:27:09 GMT",
+        "Connection": "keep-alive",
+        "Set-Cookie": "clip_test2=1; expires=Tue, 15 Dec 2015 16:27:09 GMT; path=/;",
+        "X-Served-By": "cache-iad2130-IAD, cache-lhr6324-LHR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1445012829.402854,VS0,VE208",
+        "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
+      },
+      "status_code": 204,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/vnd.vimeo.*+json;version=3.2",
+        "Authorization": "<REMOVED>"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.vimeo.com/users/4443526/following?"
+    },
+    "response": {
+      "body": "{\"total\":2,\"page\":1,\"per_page\":25,\"paging\":{\"next\":null,\"previous\":null,\"first\":\"/users/4443526/following?page=1\",\"last\":\"/users/4443526/following?page=1\"},\"data\":[{\"uri\":\"/users/1044190\",\"name\":\"Themgoods\",\"link\":\"https://vimeo.com/themgoods1\",\"location\":\"Santa Ana, CA\",\"bio\":\"Themgoods Brand distributors of premium blading goods since 2008\\n\\nhttp://themgoods.com\\nhttp://valo-brand.com\",\"created_time\":\"2008-12-16T02:51:21+00:00\",\"account\":\"pro\",\"pictures\":{\"uri\":\"/users/1044190/pictures/8024456\",\"active\":true,\"type\":\"custom\",\"sizes\":[{\"width\":30,\"height\":30,\"link\":\"https://i.vimeocdn.com/portrait/8024456_30x30.jpg\"},{\"width\":75,\"height\":75,\"link\":\"https://i.vimeocdn.com/portrait/8024456_75x75.jpg\"},{\"width\":100,\"height\":100,\"link\":\"https://i.vimeocdn.com/portrait/8024456_100x100.jpg\"},{\"width\":300,\"height\":300,\"link\":\"https://i.vimeocdn.com/portrait/8024456_300x300.jpg\"}]},\"websites\":[],\"metadata\":{\"connections\":{\"activities\":{\"uri\":\"/users/1044190/activities\",\"options\":[\"GET\"]},\"albums\":{\"uri\":\"/users/1044190/albums\",\"options\":[\"GET\"],\"total\":9},\"channels\":{\"uri\":\"/users/1044190/channels\",\"options\":[\"GET\"],\"total\":9},\"feed\":{\"uri\":\"/users/1044190/feed\",\"options\":[\"GET\"]},\"followers\":{\"uri\":\"/users/1044190/followers\",\"options\":[\"GET\"],\"total\":1970},\"following\":{\"uri\":\"/users/1044190/following\",\"options\":[\"GET\"],\"total\":4},\"groups\":{\"uri\":\"/users/1044190/groups\",\"options\":[\"GET\"],\"total\":3},\"likes\":{\"uri\":\"/users/1044190/likes\",\"options\":[\"GET\"],\"total\":346},\"portfolios\":{\"uri\":\"/users/1044190/portfolios\",\"options\":[\"GET\"],\"total\":0},\"videos\":{\"uri\":\"/users/1044190/videos\",\"options\":[\"GET\"],\"total\":285},\"shared\":{\"uri\":\"/users/1044190/shared/videos\",\"options\":[\"GET\"],\"total\":232},\"pictures\":{\"uri\":\"/users/1044190/pictures\",\"options\":[\"GET\",\"POST\"],\"total\":1}},\"interactions\":{\"follow\":{\"added\":true,\"added_time\":\"2015-10-16T16:27:09+00:00\",\"uri\":\"/users/4443526/following/1044190\"}}},\"preferences\":{\"videos\":{\"privacy\":null}}},{\"uri\":\"/users/761928\",\"name\":\"ARTSN Video (Ars\\u00e8ne Jurman)\",\"link\":\"https://vimeo.com/artsnvideo\",\"location\":\"Lyon\",\"bio\":\"Ars\\u00e8ne Jurman, 27 ans / R\\u00e9alisateur / Cadreur / Monteur Vid\\u00e9o -\\nwww.artsn-video.com\\n- DNSEP Option ART - Master II - Bac+5 - (Dipl\\u00f4me Nationale Sup\\u00e9rieur d'Expression Plastique)\\n- Setup : SONY NEX VG 30 EH > 18/200 / Fisheye - Go Pro Hero 2\",\"created_time\":\"2008-09-18T12:19:15+00:00\",\"account\":\"plus\",\"pictures\":{\"uri\":\"/users/761928/pictures/8138095\",\"active\":true,\"type\":\"custom\",\"sizes\":[{\"width\":30,\"height\":30,\"link\":\"https://i.vimeocdn.com/portrait/8138095_30x30.jpg\"},{\"width\":75,\"height\":75,\"link\":\"https://i.vimeocdn.com/portrait/8138095_75x75.jpg\"},{\"width\":100,\"height\":100,\"link\":\"https://i.vimeocdn.com/portrait/8138095_100x100.jpg\"},{\"width\":300,\"height\":300,\"link\":\"https://i.vimeocdn.com/portrait/8138095_300x300.jpg\"}]},\"websites\":[{\"name\":\"ARTSN Video\",\"link\":\"www.artsn-video.com/\",\"description\":\"site web\"},{\"name\":\"Ars\\u00e8ne Jurman's Tumblr\",\"link\":\"http://arsenejurman.tumblr.com/\",\"description\":\"des tonnes d'images.\"}],\"metadata\":{\"connections\":{\"activities\":{\"uri\":\"/users/761928/activities\",\"options\":[\"GET\"]},\"albums\":{\"uri\":\"/users/761928/albums\",\"options\":[\"GET\"],\"total\":3},\"channels\":{\"uri\":\"/users/761928/channels\",\"options\":[\"GET\"],\"total\":1},\"feed\":{\"uri\":\"/users/761928/feed\",\"options\":[\"GET\"]},\"followers\":{\"uri\":\"/users/761928/followers\",\"options\":[\"GET\"],\"total\":73},\"following\":{\"uri\":\"/users/761928/following\",\"options\":[\"GET\"],\"total\":109},\"groups\":{\"uri\":\"/users/761928/groups\",\"options\":[\"GET\"],\"total\":0},\"likes\":{\"uri\":\"/users/761928/likes\",\"options\":[\"GET\"],\"total\":450},\"portfolios\":{\"uri\":\"/users/761928/portfolios\",\"options\":[\"GET\"],\"total\":0},\"videos\":{\"uri\":\"/users/761928/videos\",\"options\":[\"GET\"],\"total\":74},\"shared\":{\"uri\":\"/users/761928/shared/videos\",\"options\":[\"GET\"],\"total\":11},\"pictures\":{\"uri\":\"/users/761928/pictures\",\"options\":[\"GET\",\"POST\"],\"total\":1}},\"interactions\":{\"follow\":{\"added\":true,\"added_time\":\"2015-10-08T12:19:46+00:00\",\"uri\":\"/users/4443526/following/761928\"}}},\"preferences\":{\"videos\":{\"privacy\":null}}}]}",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "application/vnd.vimeo.user+json",
+        "Cache-Control": "no-cache, max-age=315360000",
+        "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
+        "Expires": "Mon, 13 Oct 2025 16:27:10 GMT",
+        "Via": "1.1 varnish",
+        "Fastly-Debug-Digest": "752578ad1b19288c03c1d3baabc74d1d2cfdae7d762aff6e9be03511ded589ef",
+        "Content-Length": "4102",
+        "Accept-Ranges": "bytes",
+        "Date": "Fri, 16 Oct 2015 16:27:10 GMT",
+        "Age": "0",
+        "Connection": "keep-alive",
+        "Set-Cookie": "clip_test2=1; expires=Tue, 15 Dec 2015 16:27:10 GMT; path=/;",
+        "X-Served-By": "cache-iad2138-IAD, cache-lhr6326-LHR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1445012830.416190,VS0,VE248",
+        "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

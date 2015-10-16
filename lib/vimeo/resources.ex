@@ -115,4 +115,17 @@ defmodule Vimeo.Resources do
               created_time:  nil,
               modified_time: nil
   end
+
+  defmodule Credit do
+    @moduledoc """
+    Defines a credit schema
+    """
+
+    defstruct uri:   nil,
+              video: nil,
+              tags:  nil,
+              user:  nil,
+              role:  nil,
+              name:  nil
+  end
 end

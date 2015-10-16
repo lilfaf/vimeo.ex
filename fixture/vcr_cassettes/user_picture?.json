@@ -1,0 +1,80 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/vnd.vimeo.*+json;version=3.2",
+        "Authorization": "<REMOVED>"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.vimeo.com/users/4443526/pictures/123?"
+    },
+    "response": {
+      "body": "{\"error\":\"The requested Picture could not be found\"}",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "application/vnd.vimeo.error+json",
+        "Cache-Control": "no-cache, max-age=315360000",
+        "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
+        "Expires": "Mon, 13 Oct 2025 17:40:41 GMT",
+        "Via": "1.1 varnish",
+        "Fastly-Debug-Digest": "9b0c7bbd8f0fc6d1a90c722478663a2fca62d6c999cbc9ea1856f4edb097cac7",
+        "Content-Length": "52",
+        "Accept-Ranges": "bytes",
+        "Date": "Fri, 16 Oct 2015 17:40:42 GMT",
+        "Age": "0",
+        "Connection": "keep-alive",
+        "Set-Cookie": "clip_test2=1; expires=Tue, 15 Dec 2015 17:40:42 GMT; path=/;",
+        "X-Served-By": "cache-iad2125-IAD, cache-lhr6325-LHR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1445017241.913885,VS0,VE105",
+        "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
+      },
+      "status_code": 404,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/vnd.vimeo.*+json;version=3.2",
+        "Authorization": "<REMOVED>"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.vimeo.com/users/4443526/pictures/10245674?"
+    },
+    "response": {
+      "body": "{\"uri\":\"/users/4443526/pictures/10245674\",\"active\":true,\"type\":\"custom\",\"sizes\":[{\"width\":30,\"height\":30,\"link\":\"https://i.vimeocdn.com/portrait/10245674_30x30.jpg\"},{\"width\":75,\"height\":75,\"link\":\"https://i.vimeocdn.com/portrait/10245674_75x75.jpg\"},{\"width\":100,\"height\":100,\"link\":\"https://i.vimeocdn.com/portrait/10245674_100x100.jpg\"},{\"width\":300,\"height\":300,\"link\":\"https://i.vimeocdn.com/portrait/10245674_300x300.jpg\"}]}",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "application/vnd.vimeo.picture+json",
+        "Cache-Control": "no-cache, max-age=315360000",
+        "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
+        "Expires": "Mon, 13 Oct 2025 17:40:42 GMT",
+        "Via": "1.1 varnish",
+        "Fastly-Debug-Digest": "81486f89a4987cabbfdca8550b9499cafb78c841a579b3d305f3c1c942e13cb3",
+        "Content-Length": "430",
+        "Accept-Ranges": "bytes",
+        "Date": "Fri, 16 Oct 2015 17:40:42 GMT",
+        "Age": "0",
+        "Connection": "keep-alive",
+        "Set-Cookie": "clip_test2=1; expires=Tue, 15 Dec 2015 17:40:42 GMT; path=/;",
+        "X-Served-By": "cache-iad2131-IAD, cache-lhr6325-LHR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1445017242.064962,VS0,VE102",
+        "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

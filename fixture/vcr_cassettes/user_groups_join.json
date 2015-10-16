@@ -1,0 +1,78 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/vnd.vimeo.*+json;version=3.2",
+        "Authorization": "<REMOVED>"
+      },
+      "method": "put",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.vimeo.com/users/4443526/groups/hdxs?"
+    },
+    "response": {
+      "body": "#Reference<0.0.2.216>",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Cache-Control": "no-cache, max-age=315360000",
+        "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
+        "Expires": "Mon, 13 Oct 2025 16:14:03 GMT",
+        "Accept-Ranges": "bytes",
+        "Via": "1.1 varnish",
+        "Fastly-Debug-Digest": "3d67c0f92cba8c2d0d59af08fbd089b47813d41584563b56e5cffe2c1e3a273c",
+        "Date": "Fri, 16 Oct 2015 16:14:07 GMT",
+        "Connection": "keep-alive",
+        "Set-Cookie": "clip_test2=1; expires=Tue, 15 Dec 2015 16:14:07 GMT; path=/;",
+        "X-Served-By": "cache-iad2123-IAD, cache-lhr6330-LHR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1445012043.257729,VS0,VE4403",
+        "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
+      },
+      "status_code": 204,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/vnd.vimeo.*+json;version=3.2",
+        "Authorization": "<REMOVED>"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.vimeo.com/users/4443526/groups?"
+    },
+    "response": {
+      "body": "{\"total\":2,\"page\":1,\"per_page\":25,\"paging\":{\"next\":null,\"previous\":null,\"first\":\"/users/4443526/groups?page=1\",\"last\":\"/users/4443526/groups?page=1\"},\"data\":[{\"uri\":\"/groups/312\",\"name\":\"HD Extreme Sports\",\"description\":\"A group dedicated to extreme sports HD videos. \\n\\nSkateboarding, snowboarding, surfing, paragliding, bunjee jumping, speedriding, freeboarding, base jumping, mountain biking, motocross, wheelchair burnouts, BMX, you name it! \\n\\nIf you can die from your sporting activity and have it taped in HD then it fits in here.\",\"link\":\"https://vimeo.com/groups/hdxs\",\"created_time\":\"2008-06-19T10:32:13+00:00\",\"modified_time\":\"2015-10-16T16:14:07+00:00\",\"privacy\":{\"view\":\"anybody\",\"join\":\"anybody\",\"videos\":\"members\",\"comment\":\"all\",\"forums\":\"mods\",\"invite\":\"members\"},\"pictures\":{\"uri\":\"/videos/141811664/pictures/538933706\",\"active\":true,\"type\":\"custom\",\"sizes\":[{\"width\":100,\"height\":75,\"link\":\"https://i.vimeocdn.com/video/538933706_100x75.jpg\"},{\"width\":200,\"height\":150,\"link\":\"https://i.vimeocdn.com/video/538933706_200x150.jpg\"},{\"width\":295,\"height\":166,\"link\":\"https://i.vimeocdn.com/video/538933706_295x166.jpg\"},{\"width\":640,\"height\":360,\"link\":\"https://i.vimeocdn.com/video/538933706_640x360.jpg\"},{\"width\":960,\"height\":540,\"link\":\"https://i.vimeocdn.com/video/538933706_960x540.jpg\"}]},\"header\":{\"uri\":\"/groups/312/pictures/29901\",\"active\":true,\"type\":\"custom\",\"sizes\":[{\"width\":980,\"height\":250,\"link\":\"https://i.vimeocdn.com/group/29901_980x250?mh=250\"}]},\"metadata\":{\"connections\":{\"users\":{\"uri\":\"/groups/312/users\",\"options\":[\"GET\"],\"users\":14074},\"videos\":{\"uri\":\"/groups/312/videos\",\"options\":[\"GET\"],\"total\":47053}},\"interactions\":{\"join\":{\"added\":true,\"added_time\":\"2015-10-16T16:14:03+00:00\",\"type\":\"member\",\"title\":null,\"uri\":\"/users/4443526/groups/312\"}}},\"user\":{\"uri\":\"/users/396554\",\"name\":\"vinceslas\",\"link\":\"https://vimeo.com/vinceslas\",\"location\":\"Geneva\",\"bio\":\"Vinceslas Productions propose son expertise afin de r\\u00e9pondre \\u00e0 tous vos besoins en mati\\u00e8re de web design, de web-vid\\u00e9o et de photographie \\u00e0 des prix abordables.\\n\\nVisitez notre site afin de mieux vous rendre compte de ce dont nous sommes capables et contactez-nous pour obtenir un devis. \\n\\nNous travaillons afin de r\\u00e9aliser pour vous des supports m\\u00e9dias que vous pourrez facilement int\\u00e9grer sur votre site web afin de promouvoir vos produits et services sur internet sans avoir \\u00e0 y consacrer l'int\\u00e9gralit\\u00e9 de votre budget marketing.\",\"created_time\":\"2008-03-10T08:17:55+00:00\",\"account\":\"basic\",\"pictures\":{\"uri\":\"/users/396554/pictures/1783265\",\"active\":true,\"type\":\"custom\",\"sizes\":[{\"width\":30,\"height\":30,\"link\":\"https://i.vimeocdn.com/portrait/1783265_30x30.jpg\"},{\"width\":75,\"height\":75,\"link\":\"https://i.vimeocdn.com/portrait/1783265_75x75.jpg\"},{\"width\":100,\"height\":100,\"link\":\"https://i.vimeocdn.com/portrait/1783265_100x100.jpg\"},{\"width\":300,\"height\":300,\"link\":\"https://i.vimeocdn.com/portrait/1783265_300x300.jpg\"}]},\"websites\":[{\"name\":null,\"link\":\"http://www.vinceslas.com\",\"description\":null}],\"metadata\":{\"connections\":{\"activities\":{\"uri\":\"/users/396554/activities\",\"options\":[\"GET\"]},\"albums\":{\"uri\":\"/users/396554/albums\",\"options\":[\"GET\"],\"total\":2},\"channels\":{\"uri\":\"/users/396554/channels\",\"options\":[\"GET\"],\"total\":16},\"feed\":{\"uri\":\"/users/396554/feed\",\"options\":[\"GET\"]},\"followers\":{\"uri\":\"/users/396554/followers\",\"options\":[\"GET\"],\"total\":219},\"following\":{\"uri\":\"/users/396554/following\",\"options\":[\"GET\"],\"total\":86},\"groups\":{\"uri\":\"/users/396554/groups\",\"options\":[\"GET\"],\"total\":17},\"likes\":{\"uri\":\"/users/396554/likes\",\"options\":[\"GET\"],\"total\":188},\"portfolios\":{\"uri\":\"/users/396554/portfolios\",\"options\":[\"GET\"],\"total\":0},\"videos\":{\"uri\":\"/users/396554/videos\",\"options\":[\"GET\"],\"total\":58},\"shared\":{\"uri\":\"/users/396554/shared/videos\",\"options\":[\"GET\"],\"total\":252},\"pictures\":{\"uri\":\"/users/396554/pictures\",\"options\":[\"GET\",\"POST\"],\"total\":1}},\"interactions\":{\"follow\":{\"added\":false,\"added_time\":null,\"uri\":\"/users/4443526/following/396554\"}}},\"preferences\":{\"videos\":{\"privacy\":null}}}},{\"uri\":\"/groups/16557\",\"name\":\"TheConference.Org\",\"description\":\"We're here to Support Rolling Life through Representation of our Sport. An expression of Passion in every way whether it be our Crazy Lifestyles or technical tricks and stunts. This is our Life. This is The Conference\\n\\nCompanies Supported by The Conference: www.theconference.org, USD Skates at www.usd-skate.com, Undercover Wheels at www.undercover-wheels.com, Kizer Frames at www.kizer-skate.com, Sifika Liners and Shoes at www.sifika.com, Chimera Wheels at www.myspace.com/chimeraconspiracy and as well as XSJADO Skates.\",\"link\":\"https://vimeo.com/groups/theconference\",\"created_time\":\"2009-05-16T19:16:40+00:00\",\"modified_time\":\"2015-10-14T13:49:45+00:00\",\"privacy\":{\"view\":\"anybody\",\"join\":\"anybody\",\"videos\":\"mods\",\"comment\":\"all\",\"forums\":\"all\",\"invite\":\"members\"},\"pictures\":{\"uri\":\"/videos/132689249/pictures/525455802\",\"active\":true,\"type\":\"custom\",\"sizes\":[{\"width\":100,\"height\":75,\"link\":\"https://i.vimeocdn.com/video/525455802_100x75.jpg\"},{\"width\":200,\"height\":150,\"link\":\"https://i.vimeocdn.com/video/525455802_200x150.jpg\"},{\"width\":295,\"height\":166,\"link\":\"https://i.vimeocdn.com/video/525455802_295x166.jpg\"},{\"width\":640,\"height\":360,\"link\":\"https://i.vimeocdn.com/video/525455802_640x360.jpg\"},{\"width\":960,\"height\":540,\"link\":\"https://i.vimeocdn.com/video/525455802_960x540.jpg\"}]},\"header\":{\"uri\":\"/groups/16557/pictures/32327\",\"active\":true,\"type\":\"custom\",\"sizes\":[{\"width\":980,\"height\":250,\"link\":\"https://i.vimeocdn.com/group/32327_980x250?mh=250\"}]},\"metadata\":{\"connections\":{\"users\":{\"uri\":\"/groups/16557/users\",\"options\":[\"GET\"],\"users\":116},\"videos\":{\"uri\":\"/groups/16557/videos\",\"options\":[\"GET\"],\"total\":77}},\"interactions\":{\"join\":{\"added\":true,\"added_time\":\"2015-10-14T13:49:45+00:00\",\"type\":\"member\",\"title\":null,\"uri\":\"/users/4443526/groups/16557\"}}},\"user\":{\"uri\":\"/users/309842\",\"name\":\"TheConferenceTV\",\"link\":\"https://vimeo.com/conferencetv\",\"location\":null,\"bio\":\"usd-skate.com\\nxsjado.com\\nkizer-skate.com\\nundercover-wheels.com\",\"created_time\":\"2007-12-04T11:32:09+00:00\",\"account\":\"pro\",\"pictures\":{\"uri\":\"/users/309842/pictures/274478\",\"active\":true,\"type\":\"custom\",\"sizes\":[{\"width\":30,\"height\":30,\"link\":\"https://i.vimeocdn.com/portrait/274478_30x30.jpg\"},{\"width\":75,\"height\":75,\"link\":\"https://i.vimeocdn.com/portrait/274478_75x75.jpg\"},{\"width\":100,\"height\":100,\"link\":\"https://i.vimeocdn.com/portrait/274478_100x100.jpg\"},{\"width\":300,\"height\":300,\"link\":\"https://i.vimeocdn.com/portrait/274478_300x300.jpg\"}]},\"websites\":[{\"name\":\"USD Skates\",\"link\":\"www.usd-skate.com\",\"description\":null},{\"name\":\"Xsjado Skates\",\"link\":\"www.xsjado.com\",\"description\":null},{\"name\":\"Kizer Frames\",\"link\":\"http://kizer-skate.com/\",\"description\":null},{\"name\":\"Undercover Wheels\",\"link\":\"http://undercover-wheels.com/\",\"description\":null}],\"metadata\":{\"connections\":{\"activities\":{\"uri\":\"/users/309842/activities\",\"options\":[\"GET\"]},\"albums\":{\"uri\":\"/users/309842/albums\",\"options\":[\"GET\"],\"total\":0},\"channels\":{\"uri\":\"/users/309842/channels\",\"options\":[\"GET\"],\"total\":4},\"feed\":{\"uri\":\"/users/309842/feed\",\"options\":[\"GET\"]},\"followers\":{\"uri\":\"/users/309842/followers\",\"options\":[\"GET\"],\"total\":3382},\"following\":{\"uri\":\"/users/309842/following\",\"options\":[\"GET\"],\"total\":1027},\"groups\":{\"uri\":\"/users/309842/groups\",\"options\":[\"GET\"],\"total\":3},\"likes\":{\"uri\":\"/users/309842/likes\",\"options\":[\"GET\"],\"total\":299},\"portfolios\":{\"uri\":\"/users/309842/portfolios\",\"options\":[\"GET\"],\"total\":0},\"videos\":{\"uri\":\"/users/309842/videos\",\"options\":[\"GET\"],\"total\":519},\"shared\":{\"uri\":\"/users/309842/shared/videos\",\"options\":[\"GET\"],\"total\":354},\"pictures\":{\"uri\":\"/users/309842/pictures\",\"options\":[\"GET\",\"POST\"],\"total\":1}},\"interactions\":{\"follow\":{\"added\":false,\"added_time\":null,\"uri\":\"/users/4443526/following/309842\"}}},\"preferences\":{\"videos\":{\"privacy\":null}}}}]}",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "application/vnd.vimeo.group+json",
+        "Cache-Control": "no-cache, max-age=315360000",
+        "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
+        "Expires": "Mon, 13 Oct 2025 16:14:07 GMT",
+        "Via": "1.1 varnish",
+        "Fastly-Debug-Digest": "4e7d8ea941a85332b8b50bf5287ce184220a39c72c6514d3f49946942e9050c7",
+        "Content-Length": "7969",
+        "Accept-Ranges": "bytes",
+        "Date": "Fri, 16 Oct 2015 16:14:08 GMT",
+        "Age": "0",
+        "Connection": "keep-alive",
+        "Set-Cookie": "clip_test2=1; expires=Tue, 15 Dec 2015 16:14:08 GMT; path=/;",
+        "X-Served-By": "cache-iad2123-IAD, cache-lhr6321-LHR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1445012047.933973,VS0,VE164",
+        "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

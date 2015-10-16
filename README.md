@@ -61,9 +61,9 @@ All of the available methods and the ways to call them are [in the docs](https:/
 
 Work in progress, many things are missing:
 
-* Add endpoints on Videos and Users modules
-* Handle Picture and video upload
-* Handle pagination metadata
+* Add videos endpoints
+* Handle uploads
+* Handle pagination
 * Handle nested data mapping
 * Improve documentation about Vimeo API query params and expected token scope
 
