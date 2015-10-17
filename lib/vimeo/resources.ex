@@ -97,7 +97,7 @@ defmodule Vimeo.Resources do
 
   defmodule Video do
     @moduledoc """
-    Defines a video schema.
+    Defines a Video schema.
     """
 
     defstruct uri:           nil,
@@ -118,7 +118,7 @@ defmodule Vimeo.Resources do
 
   defmodule Credit do
     @moduledoc """
-    Defines a credit schema
+    Defines a Credit schema
     """
 
     defstruct uri:   nil,
@@ -127,5 +127,16 @@ defmodule Vimeo.Resources do
               user:  nil,
               role:  nil,
               name:  nil
+  end
+
+  defmodule Comment do
+    @moduledoc """
+    Defines a Comment schema
+    """
+
+    defstruct uri:  nil,
+              type: nil,
+              text: nil,
+              user: nil
   end
 end

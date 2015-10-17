@@ -78,4 +78,151 @@ defmodule Vimeo.VideosTest do
       assert length(videos) == 25
     end
   end
+
+  test "should return a list of categories for a video" do
+    use_cassette "video_categories" do
+      categories = Vimeo.Videos.categories(139168608)
+      assert length(categories) == 3
+      assert List.first(categories).name == "Sports"
+    end
+  end
+
+  test "should return a list of comments for a video" do
+    use_cassette "video_comments" do
+      comments = Vimeo.Videos.comments(96652365)
+      assert length(comments) == 4
+    end
+  end
+
+  test "should create a comment for a video" do
+    use_cassette "video_comment_create" do
+      text = "Hello from seshook!"
+      comment = Vimeo.Videos.create_comment(96652365, text)
+      assert comment.text == text
+    end
+  end
+
+  test "should check if a video has a comment" do
+    use_cassette "video_comment?" do
+      assert Vimeo.Videos.comment?(96652365, 123) == false
+      assert Vimeo.Videos.comment?(96652365, 13864877) == true
+    end
+  end
+
+  # test "should update a comment for a video" do
+  #   use_cassette "video_comment_update" do
+  #     new_text = "Je suis seshook!"
+  #     comment = Vimeo.Videos.update_comment(96652365, 13864877, new_text)
+  #     assert comment.text == new_text
+  #   end
+  # end
+
+  test "should delete a comment on a video" do
+    use_cassette "video_comment_delete" do
+      assert Vimeo.Videos.delete_comment(96652365, 13864877) == :ok
+      assert Vimeo.Videos.comment?(96652365, 13864877) == false
+    end
+  end
+
+  test "should returns replies on a comment" do
+    use_cassette "video_comment_replies" do
+      comments = Vimeo.Videos.comment_replies(96652365, 11674895)
+      assert length(comments) == 1
+      assert List.first(comments).text == "Agree !"
+    end
+  end
+
+  test "should create a replie on a comment" do
+    use_cassette "video_comment_create_reply" do
+      text = "Agree again !"
+      comment = Vimeo.Videos.create_comment_reply(96652365, 11674895, text)
+      assert comment.text == text
+    end
+  end
+
+  test "should return a list of pictures for a video" do
+    use_cassette "video_pictures" do
+      pictures = Vimeo.Videos.pictures(96652365)
+      assert length(pictures) == 1
+    end
+  end
+
+  test "should return info about a picture for a video" do
+    use_cassette "video_picture" do
+      picture = Vimeo.Videos.picture(96652365, 476766449)
+      assert picture.active == true
+    end
+  end
+
+  test "should update a picture for a video mark it as active" do
+    use_cassette "video_picture_update" do
+      picture = Vimeo.Videos.update_picture(18629165, 117328271, %{active: true})
+      assert picture.active == true
+    end
+  end
+
+  test "should delete a picture for a video" do
+    use_cassette "video_picture_delete" do
+      assert Vimeo.Videos.delete_picture(18629165, 540074942) == :ok
+      assert length(Vimeo.Videos.pictures(18629165)) == 9
+    end
+  end
+
+  test "should return a list of users who like a video" do
+    use_cassette "video_likes" do
+      users = Vimeo.Videos.likes(96652365)
+      assert length(users) == 25
+      assert List.first(users).name == "foo"
+    end
+  end
+
+  test "should return a list of tags for a video" do
+    use_cassette "video_tags" do
+      tags = Vimeo.Videos.tags(96652365)
+      assert length(tags) == 13
+    end
+  end
+
+  test "should check if a video has a tag" do
+    use_cassette "video_tag?" do
+      assert Vimeo.Videos.tag?(96652365, "hello") == :false
+      assert Vimeo.Videos.tag?(96652365, "lyon") == true
+    end
+  end
+
+  test "should create a tag for a video" do
+    use_cassette "video_tag" do
+      tag = Vimeo.Videos.tag(18629165, "friends")
+      assert tag.name == "friends"
+    end
+  end
+
+  test "should remove a tag for a video" do
+    use_cassette "video_tag_remove" do
+      assert Vimeo.Videos.remove_tag(18629165, "friends") == :ok
+      assert length(Vimeo.Videos.tags(18629165)) == 3
+    end
+  end
+
+  test "should return a list of users allowed to see a video" do
+    use_cassette "video_users" do
+      users = Vimeo.Videos.users(18629165)
+      assert length(users) == 1
+      assert List.first(users).name == "ARTSN Video (Arsène Jurman)"
+    end
+  end
+
+  test "should add a user to the allowed users list for a video" do
+    use_cassette "video_add_user" do
+      assert Vimeo.Videos.add_user(18629165, :artsnvideo) == :ok
+      assert length(Vimeo.Videos.users(18629165)) == 1
+    end
+  end
+
+  test "should remove a user from the allowed users list for a video" do
+    use_cassette "video_remove_user" do
+      assert Vimeo.Videos.remove_user(18629165, :artsnvideo) == :ok
+      assert length(Vimeo.Videos.users(18629165)) == 0
+    end
+  end
 end

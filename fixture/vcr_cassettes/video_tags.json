@@ -1,0 +1,41 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/vnd.vimeo.*+json;version=3.2",
+        "Authorization": "<REMOVED>"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.vimeo.com/videos/96652365/tags?"
+    },
+    "response": {
+      "body": "{\"total\":13,\"page\":1,\"per_page\":25,\"paging\":{\"next\":null,\"previous\":null,\"first\":\"/videos/96652365/tags?page=1\",\"last\":\"/videos/96652365/tags?page=1\"},\"data\":[{\"uri\":\"/videos/96652365/tags/roller\",\"name\":\"roller\",\"tag\":\"roller\",\"canonical\":\"roller\",\"metadata\":{\"connections\":{\"videos\":{\"uri\":\"/videos/96652365/tags/roller/videos\",\"options\":[\"GET\"],\"total\":10030}}}},{\"uri\":\"/videos/96652365/tags/lyon\",\"name\":\"lyon\",\"tag\":\"lyon\",\"canonical\":\"lyon\",\"metadata\":{\"connections\":{\"videos\":{\"uri\":\"/videos/96652365/tags/lyon/videos\",\"options\":[\"GET\"],\"total\":10578}}}},{\"uri\":\"/videos/96652365/tags/dijon\",\"name\":\"dijon\",\"tag\":\"dijon\",\"canonical\":\"dijon\",\"metadata\":{\"connections\":{\"videos\":{\"uri\":\"/videos/96652365/tags/dijon/videos\",\"options\":[\"GET\"],\"total\":1233}}}},{\"uri\":\"/videos/96652365/tags/1er\",\"name\":\"1er\",\"tag\":\"1er\",\"canonical\":\"1er\",\"metadata\":{\"connections\":{\"videos\":{\"uri\":\"/videos/96652365/tags/1er/videos\",\"options\":[\"GET\"],\"total\":169}}}},{\"uri\":\"/videos/96652365/tags/semestre\",\"name\":\"semestre\",\"tag\":\"semestre\",\"canonical\":\"semestre\",\"metadata\":{\"connections\":{\"videos\":{\"uri\":\"/videos/96652365/tags/semestre/videos\",\"options\":[\"GET\"],\"total\":109}}}},{\"uri\":\"/videos/96652365/tags/inline\",\"name\":\"in line\",\"tag\":\"in line\",\"canonical\":\"inline\",\"metadata\":{\"connections\":{\"videos\":{\"uri\":\"/videos/96652365/tags/inline/videos\",\"options\":[\"GET\"],\"total\":11555}}}},{\"uri\":\"/videos/96652365/tags/street\",\"name\":\"street\",\"tag\":\"street\",\"canonical\":\"street\",\"metadata\":{\"connections\":{\"videos\":{\"uri\":\"/videos/96652365/tags/street/videos\",\"options\":[\"GET\"],\"total\":55509}}}},{\"uri\":\"/videos/96652365/tags/skating\",\"name\":\"skating\",\"tag\":\"skating\",\"canonical\":\"skating\",\"metadata\":{\"connections\":{\"videos\":{\"uri\":\"/videos/96652365/tags/skating/videos\",\"options\":[\"GET\"],\"total\":26446}}}},{\"uri\":\"/videos/96652365/tags/session\",\"name\":\"session\",\"tag\":\"session\",\"canonical\":\"session\",\"metadata\":{\"connections\":{\"videos\":{\"uri\":\"/videos/96652365/tags/session/videos\",\"options\":[\"GET\"],\"total\":15836}}}},{\"uri\":\"/videos/96652365/tags/rue\",\"name\":\"rue\",\"tag\":\"rue\",\"canonical\":\"rue\",\"metadata\":{\"connections\":{\"videos\":{\"uri\":\"/videos/96652365/tags/rue/videos\",\"options\":[\"GET\"],\"total\":1653}}}},{\"uri\":\"/videos/96652365/tags/freeskate\",\"name\":\"freeskate\",\"tag\":\"freeskate\",\"canonical\":\"freeskate\",\"metadata\":{\"connections\":{\"videos\":{\"uri\":\"/videos/96652365/tags/freeskate/videos\",\"options\":[\"GET\"],\"total\":689}}}},{\"uri\":\"/videos/96652365/tags/ars\\u00e8ne\",\"name\":\"ars\\u00e8ne\",\"tag\":\"ars\\u00e8ne\",\"canonical\":\"ars\\u00e8ne\",\"metadata\":{\"connections\":{\"videos\":{\"uri\":\"/videos/96652365/tags/ars\\u00e8ne/videos\",\"options\":[\"GET\"],\"total\":93}}}},{\"uri\":\"/videos/96652365/tags/jurman\",\"name\":\"jurman\",\"tag\":\"jurman\",\"canonical\":\"jurman\",\"metadata\":{\"connections\":{\"videos\":{\"uri\":\"/videos/96652365/tags/jurman/videos\",\"options\":[\"GET\"],\"total\":92}}}}]}",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "application/vnd.vimeo.tag+json",
+        "Cache-Control": "no-cache, max-age=315360000",
+        "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
+        "Expires": "Tue, 14 Oct 2025 01:40:39 GMT",
+        "Via": "1.1 varnish",
+        "Fastly-Debug-Digest": "17f3f4072030c5481e14abdc452287949fead17651e6d6819c547e0d8afe605e",
+        "Content-Length": "2854",
+        "Accept-Ranges": "bytes",
+        "Date": "Sat, 17 Oct 2015 01:40:39 GMT",
+        "Age": "0",
+        "Connection": "keep-alive",
+        "Set-Cookie": "clip_test2=3; expires=Wed, 16 Dec 2015 01:40:39 GMT; path=/;",
+        "X-Served-By": "cache-iad2141-IAD, cache-lhr6320-LHR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1445046039.594478,VS0,VE97",
+        "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

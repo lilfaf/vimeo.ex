@@ -1,0 +1,41 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/vnd.vimeo.*+json;version=3.2",
+        "Authorization": "<REMOVED>"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.vimeo.com/videos/96652365/pictures/476766449?"
+    },
+    "response": {
+      "body": "{\"uri\":\"/videos/96652365/pictures/476766449\",\"active\":true,\"type\":\"custom\",\"sizes\":[{\"width\":100,\"height\":75,\"link\":\"https://i.vimeocdn.com/video/476766449_100x75.jpg\"},{\"width\":200,\"height\":150,\"link\":\"https://i.vimeocdn.com/video/476766449_200x150.jpg\"},{\"width\":295,\"height\":166,\"link\":\"https://i.vimeocdn.com/video/476766449_295x166.jpg\"},{\"width\":640,\"height\":360,\"link\":\"https://i.vimeocdn.com/video/476766449_640x360.jpg\"},{\"width\":960,\"height\":540,\"link\":\"https://i.vimeocdn.com/video/476766449_960x540.jpg\"}]}",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "application/vnd.vimeo.picture+json",
+        "Cache-Control": "no-cache, max-age=315360000",
+        "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
+        "Expires": "Tue, 14 Oct 2025 01:05:43 GMT",
+        "Via": "1.1 varnish",
+        "Fastly-Debug-Digest": "9fa69109225689f70eb8f30911914f289dd4b452804bf84faef3cb136c9cf4d0",
+        "Content-Length": "518",
+        "Accept-Ranges": "bytes",
+        "Date": "Sat, 17 Oct 2015 01:05:43 GMT",
+        "Age": "0",
+        "Connection": "keep-alive",
+        "Set-Cookie": "clip_test2=1; expires=Wed, 16 Dec 2015 01:05:43 GMT; path=/;",
+        "X-Served-By": "cache-iad2142-IAD, cache-lhr6324-LHR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1445043943.547275,VS0,VE98",
+        "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

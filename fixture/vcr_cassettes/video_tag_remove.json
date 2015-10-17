@@ -1,0 +1,78 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/vnd.vimeo.*+json;version=3.2",
+        "Authorization": "<REMOVED>"
+      },
+      "method": "delete",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.vimeo.com/videos/18629165/tags/friends?"
+    },
+    "response": {
+      "body": "#Reference<0.0.4.273>",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Cache-Control": "no-cache, max-age=315360000",
+        "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
+        "Expires": "Tue, 14 Oct 2025 02:05:28 GMT",
+        "Accept-Ranges": "bytes",
+        "Via": "1.1 varnish",
+        "Fastly-Debug-Digest": "14c9ba677faae9144bfcb17150ecdd27fe88540dc1982b1c8965e2d9bd76870e",
+        "Date": "Sat, 17 Oct 2015 02:05:28 GMT",
+        "Connection": "keep-alive",
+        "Set-Cookie": "clip_test2=1; expires=Wed, 16 Dec 2015 02:05:28 GMT; path=/;",
+        "X-Served-By": "cache-iad2129-IAD, cache-lhr6332-LHR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1445047528.788617,VS0,VE119",
+        "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
+      },
+      "status_code": 204,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/vnd.vimeo.*+json;version=3.2",
+        "Authorization": "<REMOVED>"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.vimeo.com/videos/18629165/tags?"
+    },
+    "response": {
+      "body": "{\"total\":3,\"page\":1,\"per_page\":25,\"paging\":{\"next\":null,\"previous\":null,\"first\":\"/videos/18629165/tags?page=1\",\"last\":\"/videos/18629165/tags?page=1\"},\"data\":[{\"uri\":\"/videos/18629165/tags/roller\",\"name\":\"roller\",\"tag\":\"roller\",\"canonical\":\"roller\",\"metadata\":{\"connections\":{\"videos\":{\"uri\":\"/videos/18629165/tags/roller/videos\",\"options\":[\"GET\"],\"total\":10030}}}},{\"uri\":\"/videos/18629165/tags/dijon\",\"name\":\"dijon\",\"tag\":\"dijon\",\"canonical\":\"dijon\",\"metadata\":{\"connections\":{\"videos\":{\"uri\":\"/videos/18629165/tags/dijon/videos\",\"options\":[\"GET\"],\"total\":1233}}}},{\"uri\":\"/videos/18629165/tags/d3100\",\"name\":\"d3100\",\"tag\":\"d3100\",\"canonical\":\"d3100\",\"metadata\":{\"connections\":{\"videos\":{\"uri\":\"/videos/18629165/tags/d3100/videos\",\"options\":[\"GET\"],\"total\":1727}}}}]}",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "application/vnd.vimeo.tag+json",
+        "Cache-Control": "no-cache, max-age=315360000",
+        "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
+        "Expires": "Tue, 14 Oct 2025 02:05:29 GMT",
+        "Via": "1.1 varnish",
+        "Fastly-Debug-Digest": "594f09fd50e4e991899b9c06563c23ecf5b0fe691f4ac1a512b915768e0b8844",
+        "Content-Length": "768",
+        "Accept-Ranges": "bytes",
+        "Date": "Sat, 17 Oct 2015 02:05:29 GMT",
+        "Age": "0",
+        "Connection": "keep-alive",
+        "Set-Cookie": "clip_test2=1; expires=Wed, 16 Dec 2015 02:05:29 GMT; path=/;",
+        "X-Served-By": "cache-iad2127-IAD, cache-lhr6322-LHR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1445047529.125072,VS0,VE110",
+        "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

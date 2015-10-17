@@ -1,0 +1,40 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/vnd.vimeo.*+json;version=3.2",
+        "Authorization": "<REMOVED>"
+      },
+      "method": "put",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.vimeo.com/videos/18629165/tags/friends?"
+    },
+    "response": {
+      "body": "{\"uri\":\"/tags/friends\",\"name\":\"friends\",\"tag\":\"friends\",\"canonical\":\"friends\",\"metadata\":{\"connections\":{\"videos\":{\"uri\":\"/tags/friends/videos\",\"options\":[\"GET\"],\"total\":46546}}}}",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "application/vnd.vimeo.tag+json",
+        "Cache-Control": "no-cache, max-age=315360000",
+        "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
+        "Expires": "Tue, 14 Oct 2025 01:58:22 GMT",
+        "Accept-Ranges": "bytes",
+        "Via": "1.1 varnish",
+        "Fastly-Debug-Digest": "14c9ba677faae9144bfcb17150ecdd27fe88540dc1982b1c8965e2d9bd76870e",
+        "Content-Length": "179",
+        "Date": "Sat, 17 Oct 2015 01:58:22 GMT",
+        "Connection": "keep-alive",
+        "Set-Cookie": "clip_test2=1; expires=Wed, 16 Dec 2015 01:58:22 GMT; path=/;",
+        "X-Served-By": "cache-iad2144-IAD, cache-lhr6329-LHR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1445047102.578118,VS0,VE125",
+        "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

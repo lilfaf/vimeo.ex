@@ -61,7 +61,6 @@ All of the available methods and the ways to call them are [in the docs](https:/
 
 Work in progress, many things are missing:
 
-* Add videos endpoints
 * Handle uploads
 * Handle pagination
 * Handle nested data mapping
@@ -69,4 +68,4 @@ Work in progress, many things are missing:
 
 ## License
 
-Vimeo.ex is licensed under the MIT License. See the LICENSE file for details.
+Vimeo.ex is licensed under the MIT License.

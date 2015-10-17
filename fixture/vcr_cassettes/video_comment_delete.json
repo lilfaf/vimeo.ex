@@ -1,0 +1,76 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/vnd.vimeo.*+json;version=3.2",
+        "Authorization": "<REMOVED>"
+      },
+      "method": "delete",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.vimeo.com/videos/96652365/comments/13864877?"
+    },
+    "response": {
+      "body": "#Reference<0.0.2.107>",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Cache-Control": "no-cache, max-age=315360000",
+        "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
+        "Expires": "Tue, 14 Oct 2025 00:37:14 GMT",
+        "Accept-Ranges": "bytes",
+        "Via": "1.1 varnish",
+        "Fastly-Debug-Digest": "d9f259074b2bb18fb0b7a78c6d2d89a155ecadc70a00b7ba3d606ffea072cfe1",
+        "Date": "Sat, 17 Oct 2015 00:37:14 GMT",
+        "Connection": "keep-alive",
+        "Set-Cookie": "clip_test2=1; expires=Wed, 16 Dec 2015 00:37:14 GMT; path=/;",
+        "X-Served-By": "cache-iad2149-IAD, cache-lhr6326-LHR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1445042233.988498,VS0,VE118",
+        "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
+      },
+      "status_code": 204,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/vnd.vimeo.*+json;version=3.2",
+        "Authorization": "<REMOVED>"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.vimeo.com/videos/96652365/comments/13864877?"
+    },
+    "response": {
+      "body": "{\"error\":\"An unknown error has occurred. Please let us know!\"}",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Cache-Control": "max-age=315360000",
+        "Expires": "Tue, 14 Oct 2025 00:37:14 GMT",
+        "Fastly-Restarts": "1",
+        "Content-Length": "62",
+        "Accept-Ranges": "bytes",
+        "Date": "Sat, 17 Oct 2015 00:37:14 GMT",
+        "Via": "1.1 varnish",
+        "Connection": "keep-alive",
+        "Set-Cookie": "clip_test2=1; expires=Wed, 16 Dec 2015 00:37:14 GMT; path=/;",
+        "X-Served-By": "cache-lhr6330-LHR",
+        "X-Cache": "MISS",
+        "X-Cache-Hits": "0",
+        "X-Timer": "S1445042234.296728,VS0,VE508",
+        "Vary": "Accept-Encoding"
+      },
+      "status_code": 500,
+      "type": "ok"
+    }
+  }
+]

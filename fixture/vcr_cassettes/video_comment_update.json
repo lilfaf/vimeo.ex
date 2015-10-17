@@ -1,0 +1,39 @@
+[
+  {
+    "request": {
+      "body": "{\"text\":\"Je suis seshook!\"}",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/vnd.vimeo.*+json;version=3.2",
+        "Authorization": "<REMOVED>"
+      },
+      "method": "patch",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.vimeo.com/videos/96652365/comments/13866519?"
+    },
+    "response": {
+      "body": "{\"error\":\"An unknown error has occurred. Please let us know!\"}",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Cache-Control": "max-age=315360000",
+        "Expires": "Tue, 14 Oct 2025 13:41:32 GMT",
+        "Accept-Ranges": "bytes",
+        "Via": "1.1 varnish",
+        "Fastly-Debug-Digest": "5df5595a1514e299b1d3c2e9b02db736bb07f8d57ce07f6b9f4d89641b0c9583",
+        "Content-Length": "62",
+        "Date": "Sat, 17 Oct 2015 13:41:32 GMT",
+        "Connection": "keep-alive",
+        "Set-Cookie": "clip_test2=1; expires=Wed, 16 Dec 2015 13:41:32 GMT; path=/;",
+        "X-Served-By": "cache-iad2124-IAD, cache-lhr6333-LHR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1445089292.718179,VS0,VE114",
+        "Vary": "Accept-Encoding"
+      },
+      "status_code": 500,
+      "type": "ok"
+    }
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/vnd.vimeo.*+json;version=3.2",
+        "Authorization": "<REMOVED>"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.vimeo.com/videos/96652365/tags/hello?"
+    },
+    "response": {
+      "body": "{\"error\":\"The requested tag could not be found\"}",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "application/vnd.vimeo.error+json",
+        "Cache-Control": "no-cache, max-age=315360000",
+        "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
+        "Expires": "Tue, 14 Oct 2025 01:52:31 GMT",
+        "Via": "1.1 varnish",
+        "Fastly-Debug-Digest": "a9633f01101c1eddb5e8e19fecbc528afcf1496721dc47cf3a9eb2fe82511f95",
+        "Content-Length": "48",
+        "Accept-Ranges": "bytes",
+        "Date": "Sat, 17 Oct 2015 01:52:31 GMT",
+        "Age": "0",
+        "Connection": "keep-alive",
+        "Set-Cookie": "clip_test2=1; expires=Wed, 16 Dec 2015 01:52:31 GMT; path=/;",
+        "X-Served-By": "cache-iad2120-IAD, cache-lhr6321-LHR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1445046751.258339,VS0,VE97",
+        "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
+      },
+      "status_code": 404,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/vnd.vimeo.*+json;version=3.2",
+        "Authorization": "<REMOVED>"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.vimeo.com/videos/96652365/tags/lyon?"
+    },
+    "response": {
+      "body": "{\"uri\":\"/tags/lyon\",\"name\":\"lyon\",\"tag\":\"lyon\",\"canonical\":\"lyon\",\"metadata\":{\"connections\":{\"videos\":{\"uri\":\"/tags/lyon/videos\",\"options\":[\"GET\"],\"total\":10578}}}}",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "application/vnd.vimeo.tag+json",
+        "Cache-Control": "no-cache, max-age=315360000",
+        "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
+        "Expires": "Tue, 14 Oct 2025 01:52:31 GMT",
+        "Via": "1.1 varnish",
+        "Fastly-Debug-Digest": "1bb3884ff4e5999f42cf9c647440cf57105eefc1f8d624b03c9aaef7fd812b52",
+        "Content-Length": "164",
+        "Accept-Ranges": "bytes",
+        "Date": "Sat, 17 Oct 2015 01:52:31 GMT",
+        "Age": "0",
+        "Connection": "keep-alive",
+        "Set-Cookie": "clip_test2=1; expires=Wed, 16 Dec 2015 01:52:31 GMT; path=/;",
+        "X-Served-By": "cache-iad2126-IAD, cache-lhr6321-LHR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1445046751.382368,VS0,VE120",
+        "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
