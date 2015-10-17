@@ -72,6 +72,13 @@ defmodule Vimeo.VideosTest do
     end
   end
 
+  # test "should delete a credit on a video" do
+  #   use_cassette "video_credit_delete" do
+  #     assert Vimeo.Videos.delete_credit(18629165, 145920837) == :ok
+  #     assert length(Vimeo.Videos.credits(18629165)) == 1
+  #   end
+  # end
+
   test "should return a list of videos related to a video" do
     use_cassette "video_related_videos" do
       videos = Vimeo.Videos.related_videos(35678857)

@@ -84,13 +84,13 @@ defmodule Vimeo.Videos do
     |> Parser.parse(:credit)
   end
 
-  @doc """
-  Delete a credit on a video.
-  """
-  def delete_credit(video_id, credit_id) do
-    API.delete("videos/#{video_id}/credits/#{credit_id}")
-    |> Parser.parse
-  end
+  # @doc """
+  # Delete a credit on a video.
+  # """
+  # def delete_credit(video_id, credit_id) do
+  #   API.delete("videos/#{video_id}/credits/#{credit_id}")
+  #   |> Parser.parse
+  # end
 
   # Related Videos ------------------------------------------------------------
 
