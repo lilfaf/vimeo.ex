@@ -8,14 +8,14 @@ defmodule VimeoTest do
     assert Vimeo.config == config
     assert Vimeo.client_id == config.client_id
     assert Vimeo.client_secret == config.client_secret
-    assert Vimeo.token == config.access_token
+    assert Vimeo.access_token == config.access_token
   end
 
   test "sets access token at runtime" do
     Vimeo.configure
-    Vimeo.token("123")
+    Vimeo.access_token("123")
 
-    assert Vimeo.token == "123"
+    assert Vimeo.access_token == "123"
   end
 
   test "gets configuration from environment variables" do

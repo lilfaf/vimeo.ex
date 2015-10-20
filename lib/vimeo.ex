@@ -29,7 +29,7 @@ defmodule Vimeo do
   """
   @spec configure :: atom
   def configure do
-    configure(env(:client_id), env(:client_secret), env(:access_token))
+    configure(get_env(:client_id), get_env(:client_secret), get_env(:access_token))
   end
 
   @doc """
@@ -41,12 +41,6 @@ defmodule Vimeo do
   # Accessor methods ----------------------------------------------------------
 
   @doc """
-  Returns environment variable with key.
-  """
-  @spec env(atom) :: binary
-  def env(key), do: get_env(key)
-
-  @doc """
   Returns global configuration Map.
   """
   @spec config :: map
@@ -56,25 +50,25 @@ defmodule Vimeo do
   Returns the `client_id` from configuration.
   """
   @spec client_id :: binary
-  def client_id, do: config[:client_id]
+  def client_id, do: config.client_id
 
   @doc """
   Returns the `client_secret` from configuration.
   """
   @spec client_secret :: binary
-  def client_secret, do: config[:client_secret]
+  def client_secret, do: config.client_secret
 
   @doc """
   Returns the `access_tokens` from configuration.
   """
-  @spec token :: binary
-  def token, do: config[:access_token]
+  @spec access_token :: binary
+  def access_token, do: config.access_token
 
   @doc """
   Sets or updates the `access_tokens` on configuration.
   """
-  @spec token(binary) :: atom
-  def token(token), do: set_config(:access_token, token)
+  @spec access_token(binary) :: atom
+  def access_token(token), do: set_config(:access_token, token)
 
   # Private -------------------------------------------------------------------
 

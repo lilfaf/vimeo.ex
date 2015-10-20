@@ -9,13 +9,14 @@ defmodule Vimeo.Parser do
   @spec parse(tuple, atom) :: list|struct|atom
   def parse(response, name \\ nil) do
     case response do
-      {:ok , ""} -> :ok
       {:ok, body} -> do_parse(body, name)
       {:error, error} -> error
     end
   end
 
   # Private -------------------------------------------------------------------
+
+  defp do_parse("", _), do: :ok
 
   defp do_parse(%{data: data}, name) do
     Enum.map(data, &(do_parse(&1, name)))

@@ -18,50 +18,31 @@ defmodule Vimeo.API do
   Issues GET request. Takes a url and an optional params map.
   """
   @spec get(binary, map) :: map
-  def get(url, params \\ %{}) do
-    json_request(:get, url, "", params)
-  end
+  def get(url, params \\ %{}), do: do_request(:get, url, "", params)
 
   @doc """
   Issues POST request. Takes a url and an optional data Map.
   """
   @spec post(binary, map) :: map
-  def post(url, body \\ "") do
-    json_request(:post, url, body)
-  end
+  def post(url, body \\ ""), do: do_request(:post, url, body)
 
   @doc """
   Issues PUT request. Takes a url and an optional data Map.
   """
   @spec post(binary, map) :: map
-  def put(url, body \\ "") do
-    json_request(:put, url, body)
-  end
+  def put(url, body \\ ""), do: do_request(:put, url, body)
 
   @doc """
   Issues PATCH request. Takes a url and an optional data Map.
   """
   @spec post(binary, map) :: map
-  def patch(url, body \\ "") do
-    json_request(:patch, url, body)
-  end
+  def patch(url, body \\ ""), do: do_request(:patch, url, body)
 
   @doc """
   Issues DELETE request. Takes a url.
   """
   @spec post(binary) :: map
-  def delete(url) do
-    json_request(:delete, url)
-  end
-
-  @doc """
-  Send HTTP json request formatted for the Vimeo API.
-  """
-  @spec json_request(atom, binary, binary, map) :: map
-  def json_request(method, url, body \\ "", params \\ %{}) do
-    request!(method, url, body, [], [params: params])
-    |> handle_response
-  end
+  def delete(url), do: do_request(:delete, url)
 
   # Private -------------------------------------------------------------------
 
@@ -77,17 +58,24 @@ defmodule Vimeo.API do
     |> Poison.encode!
   end
 
-  def process_response_body(""), do: ""
-  def process_response_body(body) do
+  defp process_response_body(""), do: ""
+  defp process_response_body(body) do
     Poison.decode!(body, keys: :atoms)
   end
 
   defp authorization_header do
     case Vimeo.config do
+      %{access_token: nil, client_id: id, client_secret: secret} ->
+        [{ "Authorization", "basic #{Base.encode64("#{id}:#{secret}")}" }]
       %{access_token: token} ->
         [{ "Authorization", "bearer #{token}" }]
       _ -> []
     end
+  end
+
+  defp do_request(method, url, body \\ "", params \\ %{}) do
+    request!(method, url, body, [], [params: params])
+    |> handle_response
   end
 
   defp handle_response(response) do
