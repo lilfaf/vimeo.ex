@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/seshook/vimeo.ex.svg)](https://travis-ci.org/seshook/vimeo.ex)
 [![Coverage Status](https://coveralls.io/repos/seshook/vimeo.ex/badge.svg?branch=master&service=github)](https://coveralls.io/github/seshook/vimeo.ex?branch=master)
 
-#### [Read the docs](https://hexdocs.pm/vimeo.ex)
+#### [Read the docs](https://hexdocs.pm/vimeo)
 
 ## Usage
 
@@ -52,10 +52,10 @@ iex> Vimeo.token("YOUR_ACCESS_TOKEN")
 
 ````elixir
 iex> Vimeo.Me.info
-%Elixtagram.Model.User{...}
+%Elixtagram.Resources.User{...}
 ````
 
-All of the available methods and the ways to call them are [in the docs](https://hexdocs.pm/vimeo.ex/Vimeo.html)
+All of the available methods and the ways to call them are [in the docs](https://hexdocs.pm/vimeo)
 
 ## TODO
 
