@@ -74,7 +74,7 @@ defmodule Vimeo.VideosTest do
 
   # test "should delete a credit on a video" do
   #   use_cassette "video_credit_delete" do
-  #     assert Vimeo.Videos.delete_credit(18629165, 145920837) == :ok
+  #     assert Vimeo.Videos.delete_credit(18629165, 146881376) == :ok
   #     assert length(Vimeo.Videos.credits(18629165)) == 1
   #   end
   # end
@@ -116,13 +116,13 @@ defmodule Vimeo.VideosTest do
     end
   end
 
-  # test "should update a comment for a video" do
-  #   use_cassette "video_comment_update" do
-  #     new_text = "Je suis seshook!"
-  #     comment = Vimeo.Videos.update_comment(96652365, 13864877, new_text)
-  #     assert comment.text == new_text
-  #   end
-  # end
+  test "should update a comment for a video" do
+    use_cassette "video_comment_update" do
+      new_text = "Je suis seshook!"
+      comment = Vimeo.Videos.update_comment(96652365, 13866510, new_text)
+      assert comment.text == new_text
+    end
+  end
 
   test "should delete a comment on a video" do
     use_cassette "video_comment_delete" do

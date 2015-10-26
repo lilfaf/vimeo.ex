@@ -96,7 +96,8 @@ defmodule Vimeo.Videos do
   # Delete a credit on a video.
   # """
   # def delete_credit(video_id, credit_id) do
-  #   API.delete("videos/#{video_id}/credits/#{credit_id}")
+  #   "videos/#{video_id}/credits/#{credit_id}"
+  #   |> API.delete
   #   |> Parser.parse
   # end
 
@@ -161,13 +162,14 @@ defmodule Vimeo.Videos do
     end
   end
 
-  # @doc """
-  # Edit an existing comment on a video
-  # """
-  # def update_comment(video_id, comment_id, text) do
-  #   API.patch("videos/#{video_id}/comments/#{comment_id}", %{text: text})
-  #   |> Parser.parse(:comment)
-  # end
+  @doc """
+  Edit an existing comment on a video
+  """
+  def update_comment(video_id, comment_id, text) do
+    "videos/#{video_id}/comments/#{comment_id}"
+    |> API.patch(%{text: text})
+    |> Parser.parse(:comment)
+  end
 
   @doc """
   Delete a comment from a video.
