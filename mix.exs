@@ -2,16 +2,19 @@ defmodule Vimeo.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :vimeo,
-     version: "0.0.1",
-     elixir: "~> 1.1",
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     deps: deps,
-     docs: [extras: ["README.md"]],
-     test_coverage: [tool: ExCoveralls],
-     preferred_cli_env: [coveralls: :test]
-   ]
+    [
+      app: :vimeo,
+      version: "0.0.1",
+      elixir: "~> 1.1",
+      build_embedded: Mix.env == :prod,
+      start_permanent: Mix.env == :prod,
+      deps: deps,
+      description: description,
+      package: package,
+      docs: [extras: ["README.md"]],
+      test_coverage: [tool: ExCoveralls],
+      preferred_cli_env: [coveralls: :test]
+    ]
   end
 
   # Configuration for the OTP application
@@ -35,6 +38,20 @@ defmodule Vimeo.Mixfile do
       {:exvcr, "~> 0.3", only: [:dev, :test]},
       {:dotenv, "~> 2.0.0", only: [:dev, :test]},
       {:dogma, "~> 0.0", only: :dev}
+    ]
+  end
+
+  defp description do
+    """
+    Vimeo API v3 client library for Elixir.
+    """
+  end
+
+  defp package do
+    [
+      maintainers: ["lilfaf"],
+      licenses: ["MIT"],
+      links: %{"Github" => "https://github.com/seshook/vimeo.ex"}
     ]
   end
 end
