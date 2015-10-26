@@ -23,8 +23,10 @@ defmodule Vimeo.Parser do
   end
 
   defp do_parse(data, name) do
-    module_name = Atom.to_string(name)
-    |> String.capitalize
+    module_name =
+      name
+      |> Atom.to_string
+      |> String.capitalize
     struct(:"Elixir.Vimeo.Resources.#{module_name}", data)
   end
 end

@@ -60,7 +60,7 @@ defmodule Vimeo.VideosTest do
       data = %{name: "foo", role: "bar", email: "foo@bar.com"}
       assert Vimeo.Videos.create_credit(18629165, data) == :ok
 
-      credit = Vimeo.Videos.credits(18629165) |> List.first
+      credit = List.first(Vimeo.Videos.credits(18629165))
       assert credit.name == "foo"
     end
   end
@@ -111,8 +111,8 @@ defmodule Vimeo.VideosTest do
 
   test "should check if a video has a comment" do
     use_cassette "video_comment?" do
-      assert Vimeo.Videos.comment?(96652365, 123) == false
-      assert Vimeo.Videos.comment?(96652365, 13864877) == true
+      refute Vimeo.Videos.comment?(96652365, 123)
+      assert Vimeo.Videos.comment?(96652365, 13864877)
     end
   end
 
@@ -127,7 +127,7 @@ defmodule Vimeo.VideosTest do
   test "should delete a comment on a video" do
     use_cassette "video_comment_delete" do
       assert Vimeo.Videos.delete_comment(96652365, 13864877) == :ok
-      assert Vimeo.Videos.comment?(96652365, 13864877) == false
+      refute Vimeo.Videos.comment?(96652365, 13864877)
     end
   end
 
@@ -157,14 +157,15 @@ defmodule Vimeo.VideosTest do
   test "should return info about a picture for a video" do
     use_cassette "video_picture" do
       picture = Vimeo.Videos.picture(96652365, 476766449)
-      assert picture.active == true
+      assert picture.active
     end
   end
 
   test "should update a picture for a video mark it as active" do
     use_cassette "video_picture_update" do
-      picture = Vimeo.Videos.update_picture(18629165, 117328271, %{active: true})
-      assert picture.active == true
+      params = %{active: true}
+      picture = Vimeo.Videos.update_picture(18629165, 117328271, params)
+      assert picture.active
     end
   end
 
@@ -192,8 +193,8 @@ defmodule Vimeo.VideosTest do
 
   test "should check if a video has a tag" do
     use_cassette "video_tag?" do
-      assert Vimeo.Videos.tag?(96652365, "hello") == :false
-      assert Vimeo.Videos.tag?(96652365, "lyon") == true
+      refute Vimeo.Videos.tag?(96652365, "hello")
+      assert Vimeo.Videos.tag?(96652365, "lyon")
     end
   end
 

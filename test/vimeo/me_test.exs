@@ -36,7 +36,8 @@ defmodule Vimeo.MeTest do
 
   test "should create an album for a user" do
     use_cassette "my_albums_create" do
-      assert Vimeo.Me.create_album(%{name: "foo", description: "foo desc"}) == :ok
+      params = %{name: "foo", description: "foo desc"}
+      assert Vimeo.Me.create_album(params) == :ok
       album = Vimeo.Me.albums |> List.first
 
       assert album.name == "foo"
@@ -53,7 +54,8 @@ defmodule Vimeo.MeTest do
 
   test "should update an album" do
     use_cassette "my_album_update" do
-      assert Vimeo.Me.update_album(3608428, %{name: "bar", description: "bar desc"}) == :ok
+      params = %{name: "bar", description: "bar desc"}
+      assert Vimeo.Me.update_album(3608428,  params) == :ok
 
       album = Vimeo.Me.album(3608428)
       assert album.name == "bar"
@@ -119,8 +121,8 @@ defmodule Vimeo.MeTest do
 
   test "should check if a user follows a channel" do
     use_cassette "my_channel?" do
-      assert Vimeo.Me.channel?(:foobar) == false
-      assert Vimeo.Me.channel?(:themgoods) == true
+      refute Vimeo.Me.channel?(:foobar)
+      assert Vimeo.Me.channel?(:themgoods)
     end
   end
 
@@ -147,8 +149,8 @@ defmodule Vimeo.MeTest do
 
   test "should check if a user joined a group" do
     use_cassette "my_group?" do
-      assert Vimeo.Me.group?(:foobar) == false
-      assert Vimeo.Me.group?(:theconference) == true
+      refute Vimeo.Me.group?(:foobar)
+      assert Vimeo.Me.group?(:theconference)
     end
   end
 
@@ -191,8 +193,8 @@ defmodule Vimeo.MeTest do
 
   test "should check if a user follows another user" do
     use_cassette "my_following?" do
-      assert Vimeo.Me.following?(:foobar) == false
-      assert Vimeo.Me.following?(:artsnvideo) == true
+      refute Vimeo.Me.following?(:foobar)
+      assert Vimeo.Me.following?(:artsnvideo)
     end
   end
 
@@ -220,8 +222,8 @@ defmodule Vimeo.MeTest do
 
   test "should check if a user likes a video" do
     use_cassette "my_like?" do
-      assert Vimeo.Me.like?(123) == false
-      assert Vimeo.Me.like?(141849348) == true
+      refute Vimeo.Me.like?(123)
+      assert Vimeo.Me.like?(141849348)
     end
   end
 
@@ -243,7 +245,7 @@ defmodule Vimeo.MeTest do
     use_cassette "my_pictures" do
       pictures = Vimeo.Me.pictures
       assert length(pictures) == 1
-      assert List.first(pictures).active == true
+      assert List.first(pictures).active
     end
   end
 
@@ -251,15 +253,15 @@ defmodule Vimeo.MeTest do
 
   test "should check if a user has a picture" do
     use_cassette "my_picture?" do
-      assert Vimeo.Me.picture?(123) == false
-      assert Vimeo.Me.picture?(10242203) == true
+      refute Vimeo.Me.picture?(123)
+      assert Vimeo.Me.picture?(10242203)
     end
   end
 
   test "should update a picture" do
     use_cassette "my_picture_update" do
       picture = Vimeo.Me.update_picture(10242203, %{active: true})
-      assert picture.active == true
+      assert picture.active
     end
   end
 
@@ -281,8 +283,8 @@ defmodule Vimeo.MeTest do
 
   test "should check if a user owns a video" do
     use_cassette "my_video?" do
-      assert Vimeo.Me.video?(123) == false
-      assert Vimeo.Me.video?(18629165) == true
+      refute Vimeo.Me.video?(123)
+      assert Vimeo.Me.video?(18629165)
     end
   end
 end

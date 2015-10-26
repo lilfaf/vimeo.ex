@@ -12,7 +12,8 @@ defmodule Vimeo.Users do
   Search for users.
   """
   def search(params \\ %{}) do
-    API.get("users", params)
+    "users"
+    |> API.get(params)
     |> Parser.parse(:user)
   end
 
@@ -20,7 +21,8 @@ defmodule Vimeo.Users do
   Get a user.
   """
   def info(user_id) do
-    API.get("users/#{user_id}")
+    "users/#{user_id}"
+    |> API.get
     |> Parser.parse(:user)
   end
 
@@ -28,7 +30,8 @@ defmodule Vimeo.Users do
   Edit a single user.
   """
   def update(user_id, params) do
-    API.patch("users/#{user_id}", params)
+    "users/#{user_id}"
+    |> API.patch(params)
     |> Parser.parse(:user)
   end
 
@@ -38,7 +41,8 @@ defmodule Vimeo.Users do
   Get a list of a user's Albums.
   """
   def albums(user_id, params \\ %{}) do
-    API.get("users/#{user_id}/albums", params)
+    "users/#{user_id}/albums"
+    |> API.get(params)
     |> Parser.parse(:album)
   end
 
@@ -46,7 +50,8 @@ defmodule Vimeo.Users do
   Create an Album.
   """
   def create_album(user_id, params) do
-    API.post("users/#{user_id}/albums", params)
+    "users/#{user_id}/albums"
+    |> API.post(params)
     |> Parser.parse(:album)
   end
 
@@ -54,7 +59,8 @@ defmodule Vimeo.Users do
   Get info on an Album.
   """
   def album(user_id, album_id) do
-    API.get("users/#{user_id}/albums/#{album_id}")
+    "users/#{user_id}/albums/#{album_id}"
+    |> API.get
     |> Parser.parse(:album)
   end
 
@@ -62,7 +68,8 @@ defmodule Vimeo.Users do
   Edit an Album.
   """
   def update_album(user_id, album_id, params) do
-    API.patch("users/#{user_id}/albums/#{album_id}", params)
+    "users/#{user_id}/albums/#{album_id}"
+    |> API.patch(params)
     |> Parser.parse(:album)
   end
 
@@ -70,7 +77,8 @@ defmodule Vimeo.Users do
   Delete an Album.
   """
   def delete_album(user_id, album_id) do
-    API.delete("users/#{user_id}/albums/#{album_id}")
+    "users/#{user_id}/albums/#{album_id}"
+    |> API.delete
     |> Parser.parse
   end
 
@@ -78,7 +86,8 @@ defmodule Vimeo.Users do
   Get the list of videos in an Album.
   """
   def album_videos(user_id, album_id) do
-    API.get("users/#{user_id}/albums/#{album_id}/videos")
+    "users/#{user_id}/albums/#{album_id}/videos"
+    |> API.get
     |> Parser.parse(:video)
   end
 
@@ -96,7 +105,8 @@ defmodule Vimeo.Users do
   Add a video to an Album.
   """
   def add_album_video(user_id, album_id, video_id) do
-    API.put("users/#{user_id}/albums/#{album_id}/videos/#{video_id}")
+    "users/#{user_id}/albums/#{album_id}/videos/#{video_id}"
+    |> API.put
     |> Parser.parse
   end
 
@@ -104,7 +114,8 @@ defmodule Vimeo.Users do
   Remove a video from an Album.
   """
   def remove_album_video(user_id, album_id, video_id) do
-    API.delete("users/#{user_id}/albums/#{album_id}/videos/#{video_id}")
+    "users/#{user_id}/albums/#{album_id}/videos/#{video_id}"
+    |> API.delete
     |> Parser.parse
   end
 
@@ -114,7 +125,8 @@ defmodule Vimeo.Users do
   Get all videos that a user appears in.
   """
   def appearances(user_id, params \\ %{}) do
-    API.get("users/#{user_id}/appearances", params)
+    "users/#{user_id}/appearances"
+    |> API.get(params)
     |> Parser.parse(:video)
   end
 
@@ -124,7 +136,8 @@ defmodule Vimeo.Users do
   Get a list of the Channels a user follows.
   """
   def channels(user_id, params \\ %{}) do
-    API.get("users/#{user_id}/channels", params)
+    "users/#{user_id}/channels"
+    |> API.get(params)
     |> Parser.parse(:channel)
   end
 
@@ -142,7 +155,8 @@ defmodule Vimeo.Users do
   Subscribe to a Channel.
   """
   def subscribe_channel(user_id, channel_id) do
-    API.put("users/#{user_id}/channels/#{channel_id}")
+    "users/#{user_id}/channels/#{channel_id}"
+    |> API.put
     |> Parser.parse
   end
 
@@ -150,7 +164,8 @@ defmodule Vimeo.Users do
   Unsubscribe from a Channel.
   """
   def unsubscribe_channel(user_id, channel_id) do
-    API.delete("users/#{user_id}/channels/#{channel_id}")
+    "users/#{user_id}/channels/#{channel_id}"
+    |> API.delete
     |> Parser.parse
   end
 
@@ -160,7 +175,8 @@ defmodule Vimeo.Users do
   Get a list of the Groups a user has joined.
   """
   def groups(user_id, params \\ %{}) do
-    API.get("users/#{user_id}/groups", params)
+    "users/#{user_id}/groups"
+    |> API.get(params)
     |> Parser.parse(:group)
   end
 
@@ -178,7 +194,8 @@ defmodule Vimeo.Users do
   Join a Group.
   """
   def join_group(user_id, group_id) do
-    API.put("users/#{user_id}/groups/#{group_id}")
+    "users/#{user_id}/groups/#{group_id}"
+    |> API.put
     |> Parser.parse
   end
 
@@ -186,7 +203,8 @@ defmodule Vimeo.Users do
   Leave a Group.
   """
   def leave_group(user_id, group_id) do
-    API.delete("users/#{user_id}/groups/#{group_id}")
+    "users/#{user_id}/groups/#{group_id}"
+    |> API.delete
     |> Parser.parse
   end
 
@@ -196,7 +214,8 @@ defmodule Vimeo.Users do
   Get a list of the videos in a user feed.
   """
   def feed(user_id, params \\ %{}) do
-    API.get("users/#{user_id}/feed", params)
+    "users/#{user_id}/feed"
+    |> API.get(params)
     |> Parser.parse(:video)
   end
 
@@ -206,7 +225,8 @@ defmodule Vimeo.Users do
   Get a list of the user's followers.
   """
   def followers(user_id, params \\ %{}) do
-    API.get("users/#{user_id}/followers", params)
+    "users/#{user_id}/followers"
+    |> API.get(params)
     |> Parser.parse(:user)
   end
 
@@ -216,7 +236,8 @@ defmodule Vimeo.Users do
   Get a list of the users that a user is following.
   """
   def following(user_id, params \\ %{}) do
-    API.get("users/#{user_id}/following", params)
+    "users/#{user_id}/following"
+    |> API.get(params)
     |> Parser.parse(:user)
   end
 
@@ -234,7 +255,8 @@ defmodule Vimeo.Users do
   Follow a user.
   """
   def follow(user_id, follow_user_id) do
-    API.put("users/#{user_id}/following/#{follow_user_id}")
+    "users/#{user_id}/following/#{follow_user_id}"
+    |> API.put
     |> Parser.parse
   end
 
@@ -242,7 +264,8 @@ defmodule Vimeo.Users do
   Unfollow a user.
   """
   def unfollow(user_id, follow_user_id) do
-    API.delete("users/#{user_id}/following/#{follow_user_id}")
+    "users/#{user_id}/following/#{follow_user_id}"
+    |> API.delete
     |> Parser.parse
   end
 
@@ -252,7 +275,8 @@ defmodule Vimeo.Users do
   Get a list of videos that a user likes.
   """
   def likes(user_id, params \\ %{}) do
-    API.get("users/#{user_id}/likes", params)
+    "users/#{user_id}/likes"
+    |> API.get(params)
     |> Parser.parse(:video)
   end
 
@@ -270,7 +294,8 @@ defmodule Vimeo.Users do
   Like a video.
   """
   def like(user_id, video_id) do
-    API.put("users/#{user_id}/likes/#{video_id}")
+    "users/#{user_id}/likes/#{video_id}"
+    |> API.put
     |> Parser.parse
   end
 
@@ -278,7 +303,8 @@ defmodule Vimeo.Users do
   Unlike a video.
   """
   def unlike(user_id, video_id) do
-    API.delete("users/#{user_id}/likes/#{video_id}")
+    "users/#{user_id}/likes/#{video_id}"
+    |> API.delete
     |> Parser.parse
   end
 
@@ -288,7 +314,8 @@ defmodule Vimeo.Users do
   Get a list of this user's portrait images.
   """
   def pictures(user_id) do
-    API.get("users/#{user_id}/pictures")
+    "users/#{user_id}/pictures"
+    |> API.get
     |> Parser.parse(:picture)
   end
 
@@ -312,7 +339,8 @@ defmodule Vimeo.Users do
   Edit a portrait.
   """
   def update_picture(user_id, picture_id, params \\ %{}) do
-    API.patch("users/#{user_id}/pictures/#{picture_id}", params)
+    "users/#{user_id}/pictures/#{picture_id}"
+    |> API.patch(params)
     |> Parser.parse(:picture)
   end
 
@@ -320,7 +348,8 @@ defmodule Vimeo.Users do
   Remove a portrait from your portrait list.
   """
   def delete_picture(user_id, picture_id) do
-    API.delete("users/#{user_id}/pictures/#{picture_id}")
+    "users/#{user_id}/pictures/#{picture_id}"
+    |> API.delete
     |> Parser.parse
   end
 
@@ -330,7 +359,8 @@ defmodule Vimeo.Users do
   Get a list of videos uploaded by a user.
   """
   def videos(user_id, params \\ %{}) do
-    API.get("users/#{user_id}/videos", params)
+    "users/#{user_id}/videos"
+    |> API.get(params)
     |> Parser.parse(:video)
   end
 

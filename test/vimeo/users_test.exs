@@ -43,7 +43,8 @@ defmodule Vimeo.UsersTest do
 
   test "should create an album for a user" do
     use_cassette "user_albums_create" do
-      album = Vimeo.Users.create_album(4443526, %{name: "bar", description: "bar desc"})
+      params = %{name: "bar", description: "bar desc"}
+      album = Vimeo.Users.create_album(4443526, params)
       assert album.name == "bar"
       assert album.description == "bar desc"
     end
@@ -80,8 +81,8 @@ defmodule Vimeo.UsersTest do
 
   test "should check if a user's album contains a video" do
     use_cassette "user_album_video?" do
-      assert Vimeo.Users.album_video?(4443526, 3608474, 123) == false
-      assert Vimeo.Users.album_video?(4443526, 3608474, 18629165) == true
+      refute Vimeo.Users.album_video?(4443526, 3608474, 123)
+      assert Vimeo.Users.album_video?(4443526, 3608474, 18629165)
     end
   end
 
@@ -115,8 +116,8 @@ defmodule Vimeo.UsersTest do
 
   test "should check if a user follows a channel" do
     use_cassette "user_channel?" do
-      assert Vimeo.Users.channel?(4443526, :foobar) == false
-      assert Vimeo.Users.channel?(4443526, :themgoods) == true
+      refute Vimeo.Users.channel?(4443526, :foobar)
+      assert Vimeo.Users.channel?(4443526, :themgoods)
     end
   end
 
@@ -143,8 +144,8 @@ defmodule Vimeo.UsersTest do
 
   test "should check if a user joined a group" do
     use_cassette "user_group?" do
-      assert Vimeo.Users.group?(4443526, :foobar) == false
-      assert Vimeo.Users.group?(4443526, :theconference) == true
+      refute Vimeo.Users.group?(4443526, :foobar)
+      assert Vimeo.Users.group?(4443526, :theconference)
     end
   end
 
@@ -187,8 +188,8 @@ defmodule Vimeo.UsersTest do
 
   test "should check if a user follows another user" do
     use_cassette "user_following?" do
-      assert Vimeo.Users.following?(4443526, :foobar) == false
-      assert Vimeo.Users.following?(4443526, :artsnvideo) == true
+      refute Vimeo.Users.following?(4443526, :foobar)
+      assert Vimeo.Users.following?(4443526, :artsnvideo)
     end
   end
 
@@ -216,8 +217,8 @@ defmodule Vimeo.UsersTest do
 
   test "should check if a user likes a video" do
     use_cassette "user_like?" do
-      assert Vimeo.Users.like?(4443526, 123) == false
-      assert Vimeo.Users.like?(4443526, 141849348) == true
+      refute Vimeo.Users.like?(4443526, 123)
+      assert Vimeo.Users.like?(4443526, 141849348)
     end
   end
 
@@ -239,7 +240,7 @@ defmodule Vimeo.UsersTest do
     use_cassette "user_pictures" do
       pictures = Vimeo.Users.pictures(4443526)
       assert length(pictures) == 1
-      assert List.first(pictures).active == true
+      assert List.first(pictures).active
     end
   end
 
@@ -247,15 +248,15 @@ defmodule Vimeo.UsersTest do
 
   test "should check if a user has a picture" do
     use_cassette "user_picture?" do
-      assert Vimeo.Users.picture?(4443526, 123) == false
-      assert Vimeo.Users.picture?(4443526, 10245674) == true
+      refute Vimeo.Users.picture?(4443526, 123)
+      assert Vimeo.Users.picture?(4443526, 10245674)
     end
   end
 
   test "should update a picture" do
     use_cassette "user_picture_update" do
       picture = Vimeo.Users.update_picture(4443526, 10246691, %{active: true})
-      assert picture.active == true
+      assert picture.active
     end
   end
 
@@ -277,8 +278,8 @@ defmodule Vimeo.UsersTest do
 
   test "should check if a user owns a video" do
     use_cassette "user_video?" do
-      assert Vimeo.Users.video?(4443526, 123) == false
-      assert Vimeo.Users.video?(4443526, 18629165) == true
+      refute Vimeo.Users.video?(4443526, 123)
+      assert Vimeo.Users.video?(4443526, 18629165)
     end
   end
 end

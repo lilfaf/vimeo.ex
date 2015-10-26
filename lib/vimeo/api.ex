@@ -15,25 +15,29 @@ defmodule Vimeo.API do
   # HTTP methods --------------------------------------------------------------
 
   @doc """
-  Issues GET request. Takes a url and an optional params map.
+  Issues GET request.
+  Takes a url and an optional params map.
   """
   @spec get(binary, map) :: map
   def get(url, params \\ %{}), do: do_request(:get, url, "", params)
 
   @doc """
-  Issues POST request. Takes a url and an optional data Map.
+  Issues POST request.
+  Takes a url and an optional data Map.
   """
   @spec post(binary, map) :: map
   def post(url, body \\ ""), do: do_request(:post, url, body)
 
   @doc """
-  Issues PUT request. Takes a url and an optional data Map.
+  Issues PUT request.
+  Takes a url and an optional data Map.
   """
   @spec post(binary, map) :: map
   def put(url, body \\ ""), do: do_request(:put, url, body)
 
   @doc """
-  Issues PATCH request. Takes a url and an optional data Map.
+  Issues PATCH request.
+  Takes a url and an optional data Map.
   """
   @spec post(binary, map) :: map
   def patch(url, body \\ ""), do: do_request(:patch, url, body)
@@ -54,7 +58,8 @@ defmodule Vimeo.API do
 
   defp process_request_body(""), do: ""
   defp process_request_body(body) do
-    Enum.into(body, %{})
+    body
+    |> Enum.into(%{})
     |> Poison.encode!
   end
 
@@ -74,7 +79,8 @@ defmodule Vimeo.API do
   end
 
   defp do_request(method, url, body \\ "", params \\ %{}) do
-    request!(method, url, body, [], [params: params])
+    method
+    |> request!(url, body, [], [params: params])
     |> handle_response
   end
 

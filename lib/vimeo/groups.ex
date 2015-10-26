@@ -10,7 +10,8 @@ defmodule Vimeo.Groups do
   Get a list of all Groups.
   """
   def all(params \\ %{}) do
-    API.get("groups", params)
+    "groups"
+    |> API.get(params)
     |> Parser.parse(:group)
   end
 
@@ -18,7 +19,8 @@ defmodule Vimeo.Groups do
   Get a Group.
   """
   def get(id) do
-    API.get("groups/#{id}")
+    "groups/#{id}"
+    |> API.get
     |> Parser.parse(:group)
   end
 
@@ -40,7 +42,8 @@ defmodule Vimeo.Groups do
   Get a list of users that joined a Group.
   """
   def users(id, params \\ %{}) do
-    API.get("groups/#{id}/users", params)
+    "groups/#{id}/users"
+    |> API.get(params)
     |> Parser.parse(:user)
   end
 
@@ -48,7 +51,8 @@ defmodule Vimeo.Groups do
   Get a list of videos in a Group.
   """
   def videos(group_id, params \\ %{}) do
-    API.get("groups/#{group_id}/videos", params)
+    "groups/#{group_id}/videos"
+    |> API.get(params)
     |> Parser.parse(:video)
   end
 
@@ -56,7 +60,8 @@ defmodule Vimeo.Groups do
   Check if a Group has a video.
   """
   def video(group_id, video_id) do
-    API.get("groups/#{group_id}/videos/#{video_id}")
+    "groups/#{group_id}/videos/#{video_id}"
+    |> API.get
     |> Parser.parse(:video)
   end
 

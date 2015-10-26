@@ -29,7 +29,9 @@ defmodule Vimeo do
   """
   @spec configure :: atom
   def configure do
-    configure(get_env(:client_id), get_env(:client_secret), get_env(:access_token))
+    configure(get_env(:client_id),
+              get_env(:client_secret),
+              get_env(:access_token))
   end
 
   @doc """

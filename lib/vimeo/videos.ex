@@ -12,7 +12,8 @@ defmodule Vimeo.Videos do
   Search for videos.
   """
   def search(params \\ %{}) do
-    API.get("videos", params)
+    "videos"
+    |>API.get(params)
     |> Parser.parse(:video)
   end
 
@@ -22,7 +23,8 @@ defmodule Vimeo.Videos do
   Get a video.
   """
   def info(video_id) do
-    API.get("videos/#{video_id}")
+    "videos/#{video_id}"
+    |> API.get
     |> Parser.parse(:video)
   end
 
@@ -30,7 +32,8 @@ defmodule Vimeo.Videos do
   Edit video metadata.
   """
   def update(video_id, params \\ %{}) do
-    API.patch("videos/#{video_id}", params)
+    "videos/#{video_id}"
+    |>API.patch(params)
     |> Parser.parse(:video)
   end
 
@@ -38,7 +41,8 @@ defmodule Vimeo.Videos do
   Delete a video.
   """
   def delete(video_id) do
-    API.delete("videos/#{video_id}")
+    "videos/#{video_id}"
+    |> API.delete
     |> Parser.parse
   end
 
@@ -56,7 +60,8 @@ defmodule Vimeo.Videos do
   Get a list of users credited on a video.
   """
   def credits(video_id, params \\ %{}) do
-    API.get("videos/#{video_id}/credits", params)
+    "videos/#{video_id}/credits"
+    |> API.get(params)
     |> Parser.parse(:credit)
   end
 
@@ -64,7 +69,8 @@ defmodule Vimeo.Videos do
   Get a single credit.
   """
   def credit(video_id, credit_id) do
-    API.get("videos/#{video_id}/credits/#{credit_id}")
+    "videos/#{video_id}/credits/#{credit_id}"
+    |> API.get
     |> Parser.parse(:credit)
   end
 
@@ -72,7 +78,8 @@ defmodule Vimeo.Videos do
   Add a credit to a video
   """
   def create_credit(video_id, data) do
-    API.post("videos/#{video_id}/credits", data)
+    "videos/#{video_id}/credits"
+    |> API.post(data)
     |> Parser.parse
   end
 
@@ -80,7 +87,8 @@ defmodule Vimeo.Videos do
   Edit information about a single credit.
   """
   def update_credit(video_id, credit_id, data) do
-    API.patch("videos/#{video_id}/credits/#{credit_id}", data)
+    "videos/#{video_id}/credits/#{credit_id}"
+    |> API.patch(data)
     |> Parser.parse(:credit)
   end
 
@@ -98,7 +106,8 @@ defmodule Vimeo.Videos do
   Get related videos.
   """
   def related_videos(video_id, params \\ %{}) do
-    API.get("videos/#{video_id}/videos", Map.put(params, :filter, "related"))
+    "videos/#{video_id}/videos"
+    |> API.get(Map.put(params, :filter, "related"))
     |> Parser.parse(:video)
   end
 
@@ -108,7 +117,8 @@ defmodule Vimeo.Videos do
   Get a list of all categories this video is in.
   """
   def categories(video_id, params \\ %{}) do
-    API.get("videos/#{video_id}/categories", params)
+    "videos/#{video_id}/categories"
+    |> API.get(params)
     |> Parser.parse(:category)
   end
 
@@ -127,7 +137,8 @@ defmodule Vimeo.Videos do
   Get comments on this video.
   """
   def comments(video_id, params \\ %{}) do
-    API.get("videos/#{video_id}/comments", params)
+    "videos/#{video_id}/comments"
+    |> API.get(params)
     |> Parser.parse(:comment)
   end
 
@@ -135,7 +146,8 @@ defmodule Vimeo.Videos do
   Post a comment on the video.
   """
   def create_comment(video_id, text) do
-    API.post("videos/#{video_id}/comments", %{text: text})
+    "videos/#{video_id}/comments"
+    |> API.post(%{text: text})
     |> Parser.parse(:comment)
   end
 
@@ -161,7 +173,8 @@ defmodule Vimeo.Videos do
   Delete a comment from a video.
   """
   def delete_comment(video_id, comment_id) do
-    API.delete("videos/#{video_id}/comments/#{comment_id}")
+    "videos/#{video_id}/comments/#{comment_id}"
+    |> API.delete
     |> Parser.parse
   end
 
@@ -169,7 +182,8 @@ defmodule Vimeo.Videos do
   Gets replies to a comment on a video.
   """
   def comment_replies(video_id, comment_id, params \\ %{}) do
-    API.get("videos/#{video_id}/comments/#{comment_id}/replies", params)
+    "videos/#{video_id}/comments/#{comment_id}/replies"
+    |> API.get(params)
     |> Parser.parse(:comment)
   end
 
@@ -177,7 +191,8 @@ defmodule Vimeo.Videos do
   Post a reply to a comment on the video
   """
   def create_comment_reply(video_id, comment_id, text) do
-    API.post("videos/#{video_id}/comments/#{comment_id}/replies", %{text: text})
+    "videos/#{video_id}/comments/#{comment_id}/replies"
+    |> API.post(%{text: text})
     |> Parser.parse(:comment)
   end
 
@@ -187,7 +202,8 @@ defmodule Vimeo.Videos do
   Get a list of this video's past and present pictures.
   """
   def pictures(video_id) do
-    API.get("videos/#{video_id}/pictures")
+    "videos/#{video_id}/pictures"
+    |> API.get
     |> Parser.parse(:picture)
   end
 
@@ -201,7 +217,8 @@ defmodule Vimeo.Videos do
   Get a single picture resource for a video.
   """
   def picture(video_id, picture_id) do
-    API.get("videos/#{video_id}/pictures/#{picture_id}")
+    "videos/#{video_id}/pictures/#{picture_id}"
+    |> API.get
     |> Parser.parse(:picture)
   end
 
@@ -209,7 +226,8 @@ defmodule Vimeo.Videos do
   Modify an existing picture on a video.
   """
   def update_picture(video_id, picture_id, data) do
-    API.patch("videos/#{video_id}/pictures/#{picture_id}", data)
+    "videos/#{video_id}/pictures/#{picture_id}"
+    |> API.patch(data)
     |> Parser.parse(:picture)
   end
 
@@ -217,7 +235,8 @@ defmodule Vimeo.Videos do
   Remove an existing picture from a video.
   """
   def delete_picture(video_id, picture_id) do
-    API.delete("videos/#{video_id}/pictures/#{picture_id}")
+    "videos/#{video_id}/pictures/#{picture_id}"
+    |> API.delete
     |> Parser.parse
   end
 
@@ -227,7 +246,8 @@ defmodule Vimeo.Videos do
   Get a list of the users who liked this video.
   """
   def likes(video_id, params \\ %{}) do
-    API.get("videos/#{video_id}/likes", params)
+    "videos/#{video_id}/likes"
+    |> API.get(params)
     |> Parser.parse(:user)
   end
 
@@ -237,7 +257,8 @@ defmodule Vimeo.Videos do
   List all of the tags on the video.
   """
   def tags(video_id) do
-    API.get("videos/#{video_id}/tags")
+    "videos/#{video_id}/tags"
+    |> API.get
     |> Parser.parse(:tag)
   end
 
@@ -255,7 +276,8 @@ defmodule Vimeo.Videos do
   Tag a video.
   """
   def tag(video_id, word) do
-    API.put("videos/#{video_id}/tags/#{word}")
+    "videos/#{video_id}/tags/#{word}"
+    |> API.put
     |> Parser.parse(:tag)
   end
 
@@ -263,7 +285,8 @@ defmodule Vimeo.Videos do
   Remove the tag from this video.
   """
   def remove_tag(video_id, word) do
-    API.delete("videos/#{video_id}/tags/#{word}")
+    "videos/#{video_id}/tags/#{word}"
+    |> API.delete
     |> Parser.parse
   end
 
@@ -273,7 +296,8 @@ defmodule Vimeo.Videos do
   Get all users that are allowed to see this video.
   """
   def users(video_id) do
-    API.get("videos/#{video_id}/privacy/users")
+    "videos/#{video_id}/privacy/users"
+    |> API.get
     |> Parser.parse(:user)
   end
 
@@ -281,7 +305,8 @@ defmodule Vimeo.Videos do
   Add a user to the allowed users list.
   """
   def add_user(video_id, user_id) do
-    API.put("videos/#{video_id}/privacy/users/#{user_id}")
+    "videos/#{video_id}/privacy/users/#{user_id}"
+    |> API.put
     |> Parser.parse
   end
 
@@ -289,7 +314,8 @@ defmodule Vimeo.Videos do
   Remove a user from the allowed users list.
   """
   def remove_user(video_id, user_id) do
-    API.delete("videos/#{video_id}/privacy/users/#{user_id}")
+    "videos/#{video_id}/privacy/users/#{user_id}"
+    |> API.delete
     |> Parser.parse
   end
 end

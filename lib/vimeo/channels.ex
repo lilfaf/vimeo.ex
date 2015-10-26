@@ -10,7 +10,8 @@ defmodule Vimeo.Channels do
   Get a list of all Channels.
   """
   def all(params \\ %{}) do
-    API.get("channels", params)
+    "channels"
+    |> API.get(params)
     |> Parser.parse(:channel)
   end
 
@@ -18,7 +19,8 @@ defmodule Vimeo.Channels do
   Get a Channel.
   """
   def get(id) do
-    API.get("channels/#{id}")
+    "channels/#{id}"
+    |> API.get
     |> Parser.parse(:channel)
   end
 
@@ -47,7 +49,8 @@ defmodule Vimeo.Channels do
   Get a list of users who follow a Channel.
   """
   def users(channel_id, params \\ %{}) do
-    API.get("channels/#{channel_id}/users", params)
+    "channels/#{channel_id}/users"
+    |> API.get(params)
     |> Parser.parse(:user)
   end
 
@@ -55,7 +58,8 @@ defmodule Vimeo.Channels do
   Get a list of videos in a Channel.
   """
   def videos(channel_id, params \\ %{}) do
-    API.get("channels/#{channel_id}/videos", params)
+    "channels/#{channel_id}/videos"
+    |> API.get(params)
     |> Parser.parse(:video)
   end
 
@@ -63,7 +67,8 @@ defmodule Vimeo.Channels do
   Check if this Channel contains a video.
   """
   def video(channel_id, video_id) do
-    API.get("channels/#{channel_id}/videos/#{video_id}")
+    "channels/#{channel_id}/videos/#{video_id}"
+    |> API.get
     |> Parser.parse(:video)
   end
 
