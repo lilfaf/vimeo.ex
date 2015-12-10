@@ -4,31 +4,31 @@
       "body": "",
       "headers": {
         "Content-Type": "application/json",
+        "Accept": "application/vnd.vimeo.*+json;version=3.2",
         "Authorization": "<REMOVED>"
       },
       "method": "put",
       "options": [],
       "request_body": "",
-      "url": "https://api.vimeo.com/me/albums/3608474/videos/18629165?"
+      "url": "https://api.vimeo.com/me/albums/3694573/videos/18629165?"
     },
     "response": {
-      "body": "#Reference<0.0.3.1550>",
+      "body": "#Reference<0.0.3.356>",
       "headers": {
         "Server": "nginx",
         "Content-Type": "text/html; charset=UTF-8",
         "Cache-Control": "no-cache, max-age=315360000",
         "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
-        "Expires": "Sat, 11 Oct 2025 12:43:42 GMT",
+        "Expires": "Sun, 07 Dec 2025 12:59:08 GMT",
         "Accept-Ranges": "bytes",
         "Via": "1.1 varnish",
-        "Fastly-Debug-Digest": "d0951b8a1b9e29f9647a55e13c99e90cacf7ffc8a414280f356f0b5fd605d483",
-        "Date": "Wed, 14 Oct 2015 12:43:42 GMT",
+        "Fastly-Debug-Digest": "f2daeae366cd461cf0c21f3e7cd144e6692242398c7b0d64a018dba1a159ce19",
+        "Date": "Thu, 10 Dec 2015 12:59:08 GMT",
         "Connection": "keep-alive",
-        "Set-Cookie": "clip_test2=1; expires=Sun, 13 Dec 2015 12:43:42 GMT; path=/;",
-        "X-Served-By": "cache-iad2125-IAD, cache-lhr6323-LHR",
+        "X-Served-By": "cache-iad2127-IAD, cache-lhr6330-LHR",
         "X-Cache": "MISS, MISS",
         "X-Cache-Hits": "0, 0",
-        "X-Timer": "S1444826622.202936,VS0,VE152",
+        "X-Timer": "S1449752348.116831,VS0,VE148",
         "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
       },
       "status_code": 204,
@@ -40,33 +40,33 @@
       "body": "",
       "headers": {
         "Content-Type": "application/json",
+        "Accept": "application/vnd.vimeo.*+json;version=3.2",
         "Authorization": "<REMOVED>"
       },
       "method": "get",
       "options": [],
       "request_body": "",
-      "url": "https://api.vimeo.com/me/albums/3608474/videos?"
+      "url": "https://api.vimeo.com/me/albums/3694573/videos?"
     },
     "response": {
-      "body": "{\"total\":1,\"page\":1,\"per_page\":25,\"paging\":{\"next\":null,\"previous\":null,\"first\":\"/me/albums/3608474/videos?page=1\",\"last\":\"/me/albums/3608474/videos?page=1\"},\"data\":[{\"uri\":\"/videos/18629165\",\"name\":\"WINTERTOUR\",\"description\":\"Lieu: Le Mans, Nantes, Bordeaux\\nMusique: The Penelopes feat Dierdre Dubois - Demian\\n\\nBANG!\",\"link\":\"https://vimeo.com/18629165\",\"duration\":143,\"width\":1280,\"language\":null,\"height\":720,\"embed\":{\"uri\":null,\"html\":\"<iframe src=\\\"https://player.vimeo.com/video/18629165?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0\\\" width=\\\"1280\\\" height=\\\"720\\\" frameborder=\\\"0\\\" title=\\\"WINTERTOUR\\\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>\",\"buttons\":{\"like\":true,\"watchlater\":true,\"share\":true,\"embed\":true,\"hd\":false,\"fullscreen\":true,\"scaling\":true},\"logos\":{\"vimeo\":true,\"custom\":{\"active\":false,\"link\":null,\"sticky\":false}},\"title\":{\"name\":\"user\",\"owner\":\"user\",\"portrait\":\"user\"},\"playbar\":true,\"volume\":true,\"color\":\"00adef\"},\"created_time\":\"2011-01-10T17:10:44+00:00\",\"modified_time\":\"2015-08-29T19:26:14+00:00\",\"content_rating\":[\"unrated\"],\"license\":null,\"privacy\":{\"view\":\"anybody\",\"embed\":\"public\",\"download\":true,\"add\":true,\"comments\":\"anybody\"},\"pictures\":[{\"type\":\"thumbnail\",\"width\":1280,\"height\":720,\"link\":\"https://i.vimeocdn.com/video/117328271_1280.jpg\"},{\"type\":\"thumbnail\",\"width\":960,\"height\":540,\"link\":\"https://i.vimeocdn.com/video/117328271_960.jpg\"},{\"type\":\"thumbnail\",\"width\":640,\"height\":360,\"link\":\"https://i.vimeocdn.com/video/117328271_640.jpg\"},{\"type\":\"thumbnail\",\"width\":295,\"height\":166,\"link\":\"https://i.vimeocdn.com/video/117328271_295x166.jpg\"},{\"type\":\"thumbnail\",\"width\":200,\"height\":150,\"link\":\"https://i.vimeocdn.com/video/117328271_200x150.jpg\"},{\"type\":\"thumbnail\",\"width\":100,\"height\":75,\"link\":\"https://i.vimeocdn.com/video/117328271_100x75.jpg\"}],\"tags\":[{\"uri\":\"/tags/roller\",\"name\":\"roller\",\"tag\":\"roller\",\"canonical\":\"roller\",\"metadata\":{\"connections\":{\"videos\":{\"uri\":\"/tags/roller/videos\",\"options\":[\"GET\"],\"total\":10021}}}},{\"uri\":\"/tags/dijon\",\"name\":\"dijon\",\"tag\":\"dijon\",\"canonical\":\"dijon\",\"metadata\":{\"connections\":{\"videos\":{\"uri\":\"/tags/dijon/videos\",\"options\":[\"GET\"],\"total\":1230}}}},{\"uri\":\"/tags/d3100\",\"name\":\"d3100\",\"tag\":\"d3100\",\"canonical\":\"d3100\",\"metadata\":{\"connections\":{\"videos\":{\"uri\":\"/tags/d3100/videos\",\"options\":[\"GET\"],\"total\":1727}}}}],\"stats\":{\"plays\":196,\"likes\":2,\"comments\":1},\"metadata\":{\"connections\":{\"credits\":\"/videos/18629165/credits\",\"likes\":\"/videos/18629165/likes\",\"texttracks\":{\"uri\":\"/videos/18629165/texttracks\",\"options\":[\"GET\",\"POST\"],\"total\":0},\"related\":null},\"interactions\":{\"watchlater\":{\"added\":false,\"added_time\":null,\"uri\":\"/users/4443526/watchlater/18629165\"}}},\"user\":{\"uri\":\"/users/4443526\",\"name\":\"foo\",\"link\":\"https://vimeo.com/user4443526\",\"location\":null,\"bio\":null,\"created_time\":\"2010-08-07T14:22:57+00:00\",\"account\":\"basic\",\"pictures\":[{\"type\":\"portrait\",\"width\":30,\"height\":30,\"link\":\"https://secure.gravatar.com/avatar/8693e24361d64d626c948e69237acc34?d=https%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-gray_30x30.png&s=30\"},{\"type\":\"portrait\",\"width\":75,\"height\":75,\"link\":\"https://secure.gravatar.com/avatar/8693e24361d64d626c948e69237acc34?d=https%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-gray_75x75.png&s=75\"},{\"type\":\"portrait\",\"width\":100,\"height\":100,\"link\":\"https://secure.gravatar.com/avatar/8693e24361d64d626c948e69237acc34?d=https%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-gray_100x100.png&s=100\"},{\"type\":\"portrait\",\"width\":300,\"height\":300,\"link\":\"https://secure.gravatar.com/avatar/8693e24361d64d626c948e69237acc34?d=https%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-gray_300x300.png&s=300\"}],\"websites\":[],\"metadata\":{\"connections\":{\"activities\":\"/users/4443526/activities\",\"albums\":\"/users/4443526/albums\",\"channels\":\"/users/4443526/channels\",\"feed\":\"/users/4443526/feed\",\"followers\":\"/users/4443526/followers\",\"following\":\"/users/4443526/following\",\"groups\":\"/users/4443526/groups\",\"likes\":\"/users/4443526/likes\",\"portfolios\":\"/users/4443526/portfolios\",\"videos\":\"/users/4443526/videos\",\"watchlater\":\"/users/4443526/watchlater\",\"shared\":\"/users/4443526/shared/videos\",\"pictures\":\"/users/4443526/pictures\",\"violations\":null}},\"preferences\":{\"videos\":{\"privacy\":\"anybody\"}},\"content_filter\":[\"language\",\"drugs\",\"violence\",\"nudity\",\"safe\",\"unrated\"],\"stats\":{}},\"app\":null,\"status\":\"available\",\"embed_presets\":null}]}",
+      "body": "{\"total\":1,\"page\":1,\"per_page\":25,\"paging\":{\"next\":null,\"previous\":null,\"first\":\"/me/albums/3694573/videos?page=1\",\"last\":\"/me/albums/3694573/videos?page=1\"},\"data\":[{\"uri\":\"/videos/18629165\",\"name\":\"WINTERTOUR\",\"description\":null,\"link\":\"https://vimeo.com/18629165\",\"duration\":143,\"width\":1280,\"language\":null,\"height\":720,\"embed\":{\"uri\":null,\"html\":\"<iframe src=\\\"https://player.vimeo.com/video/18629165?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0\\\" width=\\\"1280\\\" height=\\\"720\\\" frameborder=\\\"0\\\" title=\\\"WINTERTOUR\\\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>\",\"buttons\":{\"like\":true,\"watchlater\":true,\"share\":true,\"embed\":true,\"hd\":false,\"fullscreen\":true,\"scaling\":true},\"logos\":{\"vimeo\":true,\"custom\":{\"active\":false,\"link\":null,\"sticky\":false}},\"title\":{\"name\":\"user\",\"owner\":\"user\",\"portrait\":\"user\"},\"playbar\":true,\"volume\":true,\"color\":\"00adef\"},\"created_time\":\"2011-01-10T17:10:44+00:00\",\"modified_time\":\"2015-10-17T13:30:09+00:00\",\"content_rating\":[\"unrated\"],\"license\":null,\"privacy\":{\"view\":\"anybody\",\"embed\":\"public\",\"download\":true,\"add\":true,\"comments\":\"anybody\"},\"pictures\":{\"uri\":\"/videos/18629165/pictures/117328271\",\"active\":true,\"type\":\"custom\",\"sizes\":[{\"width\":100,\"height\":75,\"link\":\"https://i.vimeocdn.com/video/117328271_100x75.jpg?r=pad\"},{\"width\":200,\"height\":150,\"link\":\"https://i.vimeocdn.com/video/117328271_200x150.jpg?r=pad\"},{\"width\":295,\"height\":166,\"link\":\"https://i.vimeocdn.com/video/117328271_295x166.jpg?r=pad\"},{\"width\":640,\"height\":360,\"link\":\"https://i.vimeocdn.com/video/117328271_640x360.jpg?r=pad\"},{\"width\":960,\"height\":540,\"link\":\"https://i.vimeocdn.com/video/117328271_960x540.jpg?r=pad\"},{\"width\":1280,\"height\":720,\"link\":\"https://i.vimeocdn.com/video/117328271_1280x720.jpg?r=pad\"}]},\"tags\":[{\"uri\":\"/tags/roller\",\"name\":\"roller\",\"tag\":\"roller\",\"canonical\":\"roller\",\"metadata\":{\"connections\":{\"videos\":{\"uri\":\"/tags/roller/videos\",\"options\":[\"GET\"],\"total\":10145}}}},{\"uri\":\"/tags/dijon\",\"name\":\"dijon\",\"tag\":\"dijon\",\"canonical\":\"dijon\",\"metadata\":{\"connections\":{\"videos\":{\"uri\":\"/tags/dijon/videos\",\"options\":[\"GET\"],\"total\":1254}}}},{\"uri\":\"/tags/d3100\",\"name\":\"d3100\",\"tag\":\"d3100\",\"canonical\":\"d3100\",\"metadata\":{\"connections\":{\"videos\":{\"uri\":\"/tags/d3100/videos\",\"options\":[\"GET\"],\"total\":1733}}}}],\"stats\":{\"plays\":196},\"metadata\":{\"connections\":{\"comments\":{\"uri\":\"/videos/18629165/comments\",\"options\":[\"GET\",\"POST\"],\"total\":1},\"credits\":{\"uri\":\"/videos/18629165/credits\",\"options\":[\"GET\",\"POST\"],\"total\":3},\"likes\":{\"uri\":\"/videos/18629165/likes\",\"options\":[\"GET\"],\"total\":2},\"pictures\":{\"uri\":\"/videos/18629165/pictures\",\"options\":[\"GET\",\"POST\"],\"total\":9},\"texttracks\":{\"uri\":\"/videos/18629165/texttracks\",\"options\":[\"GET\",\"POST\"],\"total\":0},\"related\":null},\"interactions\":{\"watchlater\":{\"added\":false,\"added_time\":null,\"uri\":\"/users/4443526/watchlater/18629165\"}}},\"user\":{\"uri\":\"/users/4443526\",\"name\":\"foo\",\"link\":\"https://vimeo.com/user4443526\",\"location\":null,\"bio\":null,\"created_time\":\"2010-08-07T14:22:57+00:00\",\"account\":\"basic\",\"pictures\":{\"uri\":\"/users/4443526/pictures/10245674\",\"active\":true,\"type\":\"custom\",\"sizes\":[{\"width\":30,\"height\":30,\"link\":\"https://i.vimeocdn.com/portrait/10245674_30x30.jpg?r=pad\"},{\"width\":75,\"height\":75,\"link\":\"https://i.vimeocdn.com/portrait/10245674_75x75.jpg?r=pad\"},{\"width\":100,\"height\":100,\"link\":\"https://i.vimeocdn.com/portrait/10245674_100x100.jpg?r=pad\"},{\"width\":300,\"height\":300,\"link\":\"https://i.vimeocdn.com/portrait/10245674_300x300.jpg?r=pad\"}]},\"websites\":[],\"metadata\":{\"connections\":{\"activities\":{\"uri\":\"/users/4443526/activities\",\"options\":[\"GET\"]},\"albums\":{\"uri\":\"/users/4443526/albums\",\"options\":[\"GET\"],\"total\":1},\"channels\":{\"uri\":\"/users/4443526/channels\",\"options\":[\"GET\"],\"total\":1},\"feed\":{\"uri\":\"/users/4443526/feed\",\"options\":[\"GET\"]},\"followers\":{\"uri\":\"/users/4443526/followers\",\"options\":[\"GET\"],\"total\":2},\"following\":{\"uri\":\"/users/4443526/following\",\"options\":[\"GET\"],\"total\":2},\"groups\":{\"uri\":\"/users/4443526/groups\",\"options\":[\"GET\"],\"total\":1},\"likes\":{\"uri\":\"/users/4443526/likes\",\"options\":[\"GET\"],\"total\":1},\"portfolios\":{\"uri\":\"/users/4443526/portfolios\",\"options\":[\"GET\"],\"total\":0},\"videos\":{\"uri\":\"/users/4443526/videos\",\"options\":[\"GET\"],\"total\":2},\"watchlater\":{\"uri\":\"/users/4443526/watchlater\",\"options\":[\"GET\"],\"total\":0},\"shared\":{\"uri\":\"/users/4443526/shared/videos\",\"options\":[\"GET\"],\"total\":0},\"pictures\":{\"uri\":\"/users/4443526/pictures\",\"options\":[\"GET\",\"POST\"],\"total\":2}}},\"preferences\":{\"videos\":{\"privacy\":\"anybody\"}},\"content_filter\":[\"language\",\"drugs\",\"violence\",\"nudity\",\"safe\",\"unrated\"]},\"app\":null,\"status\":\"available\",\"embed_presets\":null}]}",
       "headers": {
         "Server": "nginx",
         "Content-Type": "application/vnd.vimeo.video+json",
         "Cache-Control": "no-cache, max-age=315360000",
         "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
-        "Expires": "Sat, 11 Oct 2025 12:43:42 GMT",
+        "Expires": "Sun, 07 Dec 2025 12:59:08 GMT",
         "Via": "1.1 varnish",
-        "Fastly-Debug-Digest": "4a2925df34a466c35eab03ae76c6764137ae214eef1806eab4ad88620037a40d",
-        "Content-Length": "4410",
+        "Fastly-Debug-Digest": "de4bc4eb163fe02716e1395620a997d5d4ebe9d825f3ac15007a323601898f9f",
+        "Content-Length": "4658",
         "Accept-Ranges": "bytes",
-        "Date": "Wed, 14 Oct 2015 12:43:42 GMT",
+        "Date": "Thu, 10 Dec 2015 12:59:08 GMT",
         "Age": "0",
         "Connection": "keep-alive",
-        "Set-Cookie": "clip_test2=1; expires=Sun, 13 Dec 2015 12:43:42 GMT; path=/;",
-        "X-Served-By": "cache-iad2128-IAD, cache-lhr6322-LHR",
+        "X-Served-By": "cache-iad2125-IAD, cache-lhr6326-LHR",
         "X-Cache": "MISS, MISS",
         "X-Cache-Hits": "0, 0",
-        "X-Timer": "S1444826622.550854,VS0,VE143",
+        "X-Timer": "S1449752348.489894,VS0,VE169",
         "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
       },
       "status_code": 200,

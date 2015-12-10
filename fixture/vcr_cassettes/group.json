@@ -4,33 +4,33 @@
       "body": "",
       "headers": {
         "Content-Type": "application/json",
+        "Accept": "application/vnd.vimeo.*+json;version=3.2",
         "Authorization": "<REMOVED>"
       },
       "method": "get",
       "options": [],
       "request_body": "",
-      "url": "https://api.vimeo.com/groups/333707?"
+      "url": "https://api.vimeo.com/groups/342295?"
     },
     "response": {
-      "body": "{\"uri\":\"/groups/333707\",\"name\":\"foo\",\"description\":null,\"link\":\"https://vimeo.com/groups/333707\",\"created_time\":\"2015-10-13T01:01:27+00:00\",\"modified_time\":\"2015-10-13T01:01:27+00:00\",\"privacy\":{\"view\":\"anybody\",\"join\":\"anybody\",\"videos\":\"all\",\"comment\":\"all\",\"forums\":\"all\",\"invite\":\"members\"},\"pictures\":[],\"metadata\":{\"connections\":{\"users\":\"/groups/333707/users\",\"videos\":\"/groups/333707/videos\"},\"interactions\":{\"join\":{\"added\":true,\"added_time\":\"2015-10-13T01:01:27+00:00\",\"type\":\"moderator\",\"title\":null,\"uri\":\"/users/4443526/groups/333707\"}}},\"user\":{\"uri\":\"/users/4443526\",\"name\":\"foo\",\"link\":\"https://vimeo.com/user4443526\",\"location\":null,\"bio\":null,\"created_time\":\"2010-08-07T14:22:57+00:00\",\"account\":\"basic\",\"pictures\":[{\"type\":\"portrait\",\"width\":30,\"height\":30,\"link\":\"https://secure.gravatar.com/avatar/8693e24361d64d626c948e69237acc34?d=https%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-gray_30x30.png&s=30\"},{\"type\":\"portrait\",\"width\":75,\"height\":75,\"link\":\"https://secure.gravatar.com/avatar/8693e24361d64d626c948e69237acc34?d=https%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-gray_75x75.png&s=75\"},{\"type\":\"portrait\",\"width\":100,\"height\":100,\"link\":\"https://secure.gravatar.com/avatar/8693e24361d64d626c948e69237acc34?d=https%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-gray_100x100.png&s=100\"},{\"type\":\"portrait\",\"width\":300,\"height\":300,\"link\":\"https://secure.gravatar.com/avatar/8693e24361d64d626c948e69237acc34?d=https%3A%2F%2Fi.vimeocdn.com%2Fportrait%2Fdefault-gray_300x300.png&s=300\"}],\"websites\":[],\"metadata\":{\"connections\":{\"activities\":\"/users/4443526/activities\",\"albums\":\"/users/4443526/albums\",\"channels\":\"/users/4443526/channels\",\"feed\":\"/users/4443526/feed\",\"followers\":\"/users/4443526/followers\",\"following\":\"/users/4443526/following\",\"groups\":\"/users/4443526/groups\",\"likes\":\"/users/4443526/likes\",\"portfolios\":\"/users/4443526/portfolios\",\"videos\":\"/users/4443526/videos\",\"watchlater\":\"/users/4443526/watchlater\",\"shared\":\"/users/4443526/shared/videos\",\"pictures\":\"/users/4443526/pictures\",\"violations\":null}},\"preferences\":{\"videos\":{\"privacy\":\"anybody\"}},\"content_filter\":[\"language\",\"drugs\",\"violence\",\"nudity\",\"safe\",\"unrated\"],\"stats\":{}},\"stats\":{\"videos\":0,\"users\":1,\"moderators\":1,\"topics\":0,\"albums\":0}}",
+      "body": "{\"uri\":\"/groups/342295\",\"name\":\"foo\",\"description\":\"foo desc\",\"link\":\"https://vimeo.com/groups/342295\",\"created_time\":\"2015-12-09T17:56:22+00:00\",\"modified_time\":\"2015-12-09T17:56:22+00:00\",\"privacy\":{\"view\":\"anybody\",\"join\":\"anybody\",\"videos\":\"all\",\"comment\":\"all\",\"forums\":\"all\",\"invite\":\"members\"},\"pictures\":null,\"header\":null,\"metadata\":{\"connections\":{\"users\":{\"uri\":\"/groups/342295/users\",\"options\":[\"GET\"],\"users\":1},\"videos\":{\"uri\":\"/groups/342295/videos\",\"options\":[\"GET\"],\"total\":0}},\"interactions\":{\"join\":{\"added\":true,\"added_time\":\"2015-12-09T17:56:22+00:00\",\"type\":\"moderator\",\"title\":null,\"uri\":\"/users/4443526/groups/342295\"}}},\"user\":{\"uri\":\"/users/4443526\",\"name\":\"Louis Larpin\",\"link\":\"https://vimeo.com/user4443526\",\"location\":null,\"bio\":null,\"created_time\":\"2010-08-07T14:22:57+00:00\",\"account\":\"basic\",\"pictures\":{\"uri\":\"/users/4443526/pictures/10245674\",\"active\":true,\"type\":\"custom\",\"sizes\":[{\"width\":30,\"height\":30,\"link\":\"https://i.vimeocdn.com/portrait/10245674_30x30.jpg?r=pad\"},{\"width\":75,\"height\":75,\"link\":\"https://i.vimeocdn.com/portrait/10245674_75x75.jpg?r=pad\"},{\"width\":100,\"height\":100,\"link\":\"https://i.vimeocdn.com/portrait/10245674_100x100.jpg?r=pad\"},{\"width\":300,\"height\":300,\"link\":\"https://i.vimeocdn.com/portrait/10245674_300x300.jpg?r=pad\"}]},\"websites\":[],\"metadata\":{\"connections\":{\"activities\":{\"uri\":\"/users/4443526/activities\",\"options\":[\"GET\"]},\"albums\":{\"uri\":\"/users/4443526/albums\",\"options\":[\"GET\"],\"total\":1},\"channels\":{\"uri\":\"/users/4443526/channels\",\"options\":[\"GET\"],\"total\":1},\"feed\":{\"uri\":\"/users/4443526/feed\",\"options\":[\"GET\"]},\"followers\":{\"uri\":\"/users/4443526/followers\",\"options\":[\"GET\"],\"total\":2},\"following\":{\"uri\":\"/users/4443526/following\",\"options\":[\"GET\"],\"total\":2},\"groups\":{\"uri\":\"/users/4443526/groups\",\"options\":[\"GET\"],\"total\":2},\"likes\":{\"uri\":\"/users/4443526/likes\",\"options\":[\"GET\"],\"total\":1},\"portfolios\":{\"uri\":\"/users/4443526/portfolios\",\"options\":[\"GET\"],\"total\":0},\"videos\":{\"uri\":\"/users/4443526/videos\",\"options\":[\"GET\"],\"total\":2},\"watchlater\":{\"uri\":\"/users/4443526/watchlater\",\"options\":[\"GET\"],\"total\":0},\"shared\":{\"uri\":\"/users/4443526/shared/videos\",\"options\":[\"GET\"],\"total\":0},\"pictures\":{\"uri\":\"/users/4443526/pictures\",\"options\":[\"GET\",\"POST\"],\"total\":2}}},\"preferences\":{\"videos\":{\"privacy\":\"anybody\"}},\"content_filter\":[\"language\",\"drugs\",\"violence\",\"nudity\",\"safe\",\"unrated\"]}}",
       "headers": {
         "Server": "nginx",
         "Content-Type": "application/vnd.vimeo.group+json",
         "Cache-Control": "no-cache, max-age=315360000",
         "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
-        "Expires": "Fri, 10 Oct 2025 01:02:47 GMT",
+        "Expires": "Sat, 06 Dec 2025 17:56:38 GMT",
         "Via": "1.1 varnish",
-        "Fastly-Debug-Digest": "9a371cccc40c159fefd6b4ce558039c5af7a090bffbb3cde115b7cd270ea0b35",
-        "Content-Length": "2250",
+        "Fastly-Debug-Digest": "04fe98ba8638e950da91a8ec76f5dc79b903eb20df0db71bdfb67f0c588e04da",
+        "Content-Length": "2386",
         "Accept-Ranges": "bytes",
-        "Date": "Tue, 13 Oct 2015 01:02:48 GMT",
+        "Date": "Wed, 09 Dec 2015 17:56:38 GMT",
         "Age": "0",
         "Connection": "keep-alive",
-        "Set-Cookie": "clip_test2=1; expires=Sat, 12 Dec 2015 01:02:48 GMT; path=/;",
-        "X-Served-By": "cache-iad2122-IAD, cache-lhr6326-LHR",
+        "X-Served-By": "cache-iad2142-IAD, cache-lhr6323-LHR",
         "X-Cache": "MISS, MISS",
         "X-Cache-Hits": "0, 0",
-        "X-Timer": "S1444698167.882315,VS0,VE124",
+        "X-Timer": "S1449683798.671178,VS0,VE133",
         "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
       },
       "status_code": 200,

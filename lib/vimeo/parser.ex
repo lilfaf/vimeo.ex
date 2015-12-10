@@ -22,6 +22,8 @@ defmodule Vimeo.Parser do
     Enum.map(data, &(do_parse(&1, name)))
   end
 
+  defp do_parse(data, :feed), do: do_parse(data.clip, :video)
+
   defp do_parse(data, name) do
     module_name =
       name

@@ -38,9 +38,9 @@ defmodule Vimeo.ChannelsTest do
 
   test "should update a channel's information" do
     use_cassette "channel_update" do
-      Vimeo.Channels.update(976974, %{name: "bar", description: "bar desc"})
+      Vimeo.Channels.update(999585, %{name: "bar", description: "bar desc"})
 
-      channel = Vimeo.Channels.get(976974)
+      channel = Vimeo.Channels.get(999585)
       assert channel.name == "bar"
       assert channel.description == "bar desc"
     end
@@ -48,7 +48,7 @@ defmodule Vimeo.ChannelsTest do
 
   test "should delete a channel" do
     use_cassette "channel_delete" do
-      Vimeo.Channels.delete(976976)
+      Vimeo.Channels.delete(999585)
 
       channels = Vimeo.Me.channels
       assert length(channels) == 0
@@ -59,7 +59,6 @@ defmodule Vimeo.ChannelsTest do
     use_cassette "channel_users" do
       users = Vimeo.Channels.users(:themgoods)
       assert length(users) == 25
-      assert List.first(users).name == "min"
     end
   end
 
@@ -67,7 +66,6 @@ defmodule Vimeo.ChannelsTest do
     use_cassette "channel_videos" do
       videos = Vimeo.Channels.videos(:themgoods)
       assert length(videos) == 25
-      assert List.first(videos).duration == 54
     end
   end
 
@@ -80,18 +78,18 @@ defmodule Vimeo.ChannelsTest do
 
   test "should add a video to a channel" do
     use_cassette "channel_add_video" do
-      Vimeo.Channels.add_video(976979, 18629165)
+      Vimeo.Channels.add_video(999587, 18629165)
 
-      video = Vimeo.Channels.video(976979, 18629165)
+      video = Vimeo.Channels.video(999587, 18629165)
       assert video.name == "WINTERTOUR"
     end
   end
 
   test "should remove a video from a channel" do
     use_cassette "channel_remove_video" do
-      Vimeo.Channels.remove_video(976979, 18629165)
+      Vimeo.Channels.remove_video(999587, 18629165)
 
-      videos = Vimeo.Channels.videos(976979)
+      videos = Vimeo.Channels.videos(999587)
       assert length(videos) == 0
     end
   end

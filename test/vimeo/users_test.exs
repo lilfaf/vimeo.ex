@@ -12,7 +12,7 @@ defmodule Vimeo.UsersTest do
     :ok
   end
 
-  test "should returns a a list of videos" do
+  test "should returns a list of users" do
     use_cassette "users" do
       users = Vimeo.Users.search(%{query: "foo"})
       List.first(users).name == "foo"
@@ -50,30 +50,30 @@ defmodule Vimeo.UsersTest do
     end
   end
 
-  test "should return an album for a user" do
+  test "should return a user's album" do
     use_cassette "user_album" do
-      album = Vimeo.Users.album(4443526, 3608474)
+      album = Vimeo.Users.album(4443526, 3694573)
       assert album.name == "foo"
     end
   end
 
   test "should update a user's album" do
     use_cassette "user_album_update" do
-      album = Vimeo.Users.update_album(4443526, 3608474, %{name: "foobar"})
+      album = Vimeo.Users.update_album(4443526, 3694573, %{name: "foobar"})
       assert album.name == "foobar"
     end
   end
 
   test "should delete a user's album" do
     use_cassette "user_album_delete" do
-      assert Vimeo.Users.delete_album(4443526, 3612271) == :ok
+      assert Vimeo.Users.delete_album(4443526, 3694639) == :ok
       assert length(Vimeo.Users.albums(4443526)) == 1
     end
   end
 
   test "should return a list of videos for a user's album" do
     use_cassette "user_album_videos" do
-      videos = Vimeo.Users.album_videos(4443526, 3608474)
+      videos = Vimeo.Users.album_videos(4443526, 3694573)
       assert length(videos) == 1
       assert List.first(videos).name == "WINTERTOUR"
     end
@@ -81,22 +81,22 @@ defmodule Vimeo.UsersTest do
 
   test "should check if a user's album contains a video" do
     use_cassette "user_album_video?" do
-      refute Vimeo.Users.album_video?(4443526, 3608474, 123)
-      assert Vimeo.Users.album_video?(4443526, 3608474, 18629165)
+      refute Vimeo.Users.album_video?(4443526, 3694573, 123)
+      assert Vimeo.Users.album_video?(4443526, 3694573, 18629165)
     end
   end
 
   test "should add a video to a user's album" do
     use_cassette "user_album_add_video" do
-      assert Vimeo.Users.add_album_video(4443526, 3608474, 135340447) == :ok
-      assert length(Vimeo.Users.album_videos(4443526, 3608474)) == 2
+      assert Vimeo.Users.add_album_video(4443526, 3694573, 135340447) == :ok
+      assert length(Vimeo.Users.album_videos(4443526, 3694573)) == 2
     end
   end
 
   test "should remove a video from a user's album" do
     use_cassette "user_album_remove_video" do
-      assert Vimeo.Users.remove_album_video(4443526, 3608474, 135340447) == :ok
-      assert length(Vimeo.Users.album_videos(4443526, 3608474)) == 1
+      assert Vimeo.Users.remove_album_video(4443526, 3694573, 135340447) == :ok
+      assert length(Vimeo.Users.album_videos(4443526, 3694573)) == 1
     end
   end
 
@@ -114,17 +114,17 @@ defmodule Vimeo.UsersTest do
     end
   end
 
-  test "should check if a user follows a channel" do
-    use_cassette "user_channel?" do
-      refute Vimeo.Users.channel?(4443526, :foobar)
-      assert Vimeo.Users.channel?(4443526, :themgoods)
-    end
-  end
-
   test "should subscribe user to a channel" do
     use_cassette "user_channels_subscribe" do
       assert Vimeo.Users.subscribe_channel(4443526, :xsjado) == :ok
       assert length(Vimeo.Users.channels(4443526)) == 2
+    end
+  end
+
+  test "should check if a user follows a channel" do
+    use_cassette "user_channel?" do
+      refute Vimeo.Users.channel?(4443526, :foobar)
+      assert Vimeo.Users.channel?(4443526, :xsjado)
     end
   end
 
@@ -142,17 +142,17 @@ defmodule Vimeo.UsersTest do
     end
   end
 
-  test "should check if a user joined a group" do
-    use_cassette "user_group?" do
-      refute Vimeo.Users.group?(4443526, :foobar)
-      assert Vimeo.Users.group?(4443526, :theconference)
-    end
-  end
-
   test "should join user to a group" do
     use_cassette "user_groups_join" do
       assert Vimeo.Users.join_group(4443526, :hdxs) == :ok
       assert length(Vimeo.Users.groups(4443526)) == 2
+    end
+  end
+
+  test "should check if a user joined a group" do
+    use_cassette "user_group?" do
+      refute Vimeo.Users.group?(4443526, :foobar)
+      assert Vimeo.Users.group?(4443526, :hdxs)
     end
   end
 
@@ -167,6 +167,7 @@ defmodule Vimeo.UsersTest do
     use_cassette "user_feed" do
       videos = Vimeo.Users.feed(4443526)
       assert length(videos) == 25
+      assert List.first(videos).name == "Bad Guy #2"
     end
   end
 
@@ -215,24 +216,24 @@ defmodule Vimeo.UsersTest do
     end
   end
 
-  test "should check if a user likes a video" do
-    use_cassette "user_like?" do
-      refute Vimeo.Users.like?(4443526, 123)
-      assert Vimeo.Users.like?(4443526, 141849348)
-    end
-  end
-
   test "should like a video for a user" do
     use_cassette "user_like" do
       assert Vimeo.Users.like(4443526, 96652365) == :ok
-      assert length(Vimeo.Me.likes) == 1
+      assert length(Vimeo.Me.likes) == 2
+    end
+  end
+
+  test "should check if a user likes a video" do
+    use_cassette "user_like?" do
+      refute Vimeo.Users.like?(4443526, 123)
+      assert Vimeo.Users.like?(4443526, 96652365)
     end
   end
 
   test "should unlike a video for a user" do
     use_cassette "user_unlike" do
       assert Vimeo.Users.unlike(4443526, 96652365) == :ok
-      assert length(Vimeo.Users.likes(4443526)) == 0
+      assert length(Vimeo.Users.likes(4443526)) == 1
     end
   end
 
@@ -255,14 +256,14 @@ defmodule Vimeo.UsersTest do
 
   test "should update a picture" do
     use_cassette "user_picture_update" do
-      picture = Vimeo.Users.update_picture(4443526, 10246691, %{active: true})
+      picture = Vimeo.Users.update_picture(4443526, 10739219, %{active: true})
       assert picture.active
     end
   end
 
   test "should delete a picture" do
     use_cassette "user_picture_delete" do
-      assert Vimeo.Users.delete_picture(4443526, 10246705) == :ok
+      assert Vimeo.Users.delete_picture(4443526, 10739219) == :ok
       assert length(Vimeo.Users.pictures(4443526)) == 1
     end
   end

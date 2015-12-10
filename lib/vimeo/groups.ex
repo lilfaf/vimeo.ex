@@ -72,10 +72,13 @@ defmodule Vimeo.Groups do
     API.put("groups/#{group_id}/videos/#{video_id}")
   end
 
-  @doc """
-  Remove a video from a Group.
-  """
-  def remove_video(group_id, video_id) do
-    API.delete("groups/#{group_id}/videos/#{video_id}")
-  end
+  # @doc """
+  # Remove a video from a Group.
+  #
+  # TODO create issue on vimeo's support
+  # This returns 403 error even with valid ownership and token scopes
+  # """
+  # def remove_video(group_id, video_id) do
+  #   API.delete("groups/#{group_id}/videos/#{video_id}")
+  # end
 end

@@ -216,7 +216,7 @@ defmodule Vimeo.Users do
   def feed(user_id, params \\ %{}) do
     "users/#{user_id}/feed"
     |> API.get(params)
-    |> Parser.parse(:video)
+    |> Parser.parse(:feed)
   end
 
   # Followers -----------------------------------------------------------------
