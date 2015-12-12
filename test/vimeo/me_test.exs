@@ -22,8 +22,8 @@ defmodule Vimeo.MeTest do
   test "should update user informations" do
     new_username = "foo"
     use_cassette "my_info_update" do
-      assert Vimeo.Me.update(%{name: new_username}) == :ok
-      assert Vimeo.Me.info.name == new_username
+      info = Vimeo.Me.update(%{name: new_username})
+      assert info.name == new_username
     end
   end
 
@@ -36,10 +36,7 @@ defmodule Vimeo.MeTest do
 
   test "should create an album for a user" do
     use_cassette "my_albums_create" do
-      params = %{name: "foo", description: "foo desc"}
-      assert Vimeo.Me.create_album(params) == :ok
-      album = Vimeo.Me.albums |> List.first
-
+      album = Vimeo.Me.create_album(%{name: "foo", description: "foo desc"})
       assert album.name == "foo"
       assert album.description == "foo desc"
     end
@@ -47,7 +44,7 @@ defmodule Vimeo.MeTest do
 
   test "should return a users's album by id" do
     use_cassette "my_album" do
-      album = Vimeo.Me.album(3600066)
+      album = Vimeo.Me.album(3608474)
       assert album.name == "foo"
     end
   end
@@ -55,9 +52,7 @@ defmodule Vimeo.MeTest do
   test "should update an album" do
     use_cassette "my_album_update" do
       params = %{name: "bar", description: "bar desc"}
-      assert Vimeo.Me.update_album(3608428,  params) == :ok
-
-      album = Vimeo.Me.album(3608428)
+      album = Vimeo.Me.update_album(3608474,  params)
       assert album.name == "bar"
       assert album.description == "bar desc"
     end
@@ -65,7 +60,7 @@ defmodule Vimeo.MeTest do
 
   test "should delete an album" do
     use_cassette "my_album_delete" do
-      assert Vimeo.Me.delete_album(3608428) == :ok
+      assert Vimeo.Me.delete_album(3608474) == :ok
 
       channels = Vimeo.Me.albums
       assert length(channels) == 0
@@ -74,7 +69,7 @@ defmodule Vimeo.MeTest do
 
   test "should return a list of videos in an album" do
     use_cassette "my_album_videos" do
-      videos = Vimeo.Me.album_videos(3608474)
+      videos = Vimeo.Me.album_videos(3694573)
       assert length(videos) == 1
       assert List.first(videos).name == "WINTERTOUR"
     end
@@ -82,25 +77,25 @@ defmodule Vimeo.MeTest do
 
   test "should return a video contained in an album" do
     use_cassette "my_album_video" do
-      video = Vimeo.Me.album_video(3608474, 18629165)
+      video = Vimeo.Me.album_video(3694573, 18629165)
       assert video.name == "WINTERTOUR"
     end
   end
 
   test "should add a video to an album" do
     use_cassette "my_album_add_video" do
-      assert Vimeo.Me.add_album_video(3608474, 18629165) == :ok
+      assert Vimeo.Me.add_album_video(3694573, 18629165) == :ok
 
-      videos = Vimeo.Me.album_videos(3608474)
+      videos = Vimeo.Me.album_videos(3694573)
       assert length(videos) == 1
     end
   end
 
   test "should remove a video from an album" do
     use_cassette "my_album_remove_video" do
-      assert Vimeo.Me.remove_album_video(3608474, 18629165) == :ok
+      assert Vimeo.Me.remove_album_video(3694573, 18629165) == :ok
 
-      videos = Vimeo.Me.album_videos(3608474)
+      videos = Vimeo.Me.album_videos(3694573)
       assert length(videos) == 0
     end
   end
@@ -172,6 +167,7 @@ defmodule Vimeo.MeTest do
     use_cassette "my_feed" do
       videos = Vimeo.Me.feed
       assert length(videos) == 25
+      assert List.first(videos).duration == 346
     end
   end
 
@@ -254,20 +250,20 @@ defmodule Vimeo.MeTest do
   test "should check if a user has a picture" do
     use_cassette "my_picture?" do
       refute Vimeo.Me.picture?(123)
-      assert Vimeo.Me.picture?(10242203)
+      assert Vimeo.Me.picture?(10245674)
     end
   end
 
   test "should update a picture" do
     use_cassette "my_picture_update" do
-      picture = Vimeo.Me.update_picture(10242203, %{active: true})
+      picture = Vimeo.Me.update_picture(10738677, %{active: true})
       assert picture.active
     end
   end
 
   test "should delete a picture" do
     use_cassette "my_picture_delete" do
-      assert Vimeo.Me.delete_picture(10245785) == :ok
+      assert Vimeo.Me.delete_picture(10738677) == :ok
       assert length(Vimeo.Me.pictures) == 1
     end
   end

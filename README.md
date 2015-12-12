@@ -61,9 +61,9 @@ All of the available methods and the ways to call them are [in the docs](https:/
 
 Work in progress, many things are missing:
 
+* Handle authentication
 * Handle uploads
 * Handle pagination
-* Handle nested data mapping
 * Improve documentation about Vimeo API query params and expected token scope
 
 ## License

@@ -23,7 +23,7 @@ defmodule Vimeo.Me do
   def update(data) do
     "me"
     |> API.patch(data)
-    |> Parser.parse
+    |> Parser.parse(:user)
   end
 
   # Albums --------------------------------------------------------------------
@@ -43,7 +43,7 @@ defmodule Vimeo.Me do
   def create_album(data) do
     "me/albums"
     |> API.post(data)
-    |> Parser.parse
+    |> Parser.parse(:album)
   end
 
   @doc """
@@ -61,7 +61,7 @@ defmodule Vimeo.Me do
   def update_album(id, data) do
     "me/albums/#{id}"
     |> API.patch(data)
-    |> Parser.parse
+    |> Parser.parse(:album)
   end
 
   @doc """
@@ -206,7 +206,7 @@ defmodule Vimeo.Me do
   def feed(params \\ %{}) do
     "me/feed"
     |> API.get(params)
-    |> Parser.parse(:video)
+    |> Parser.parse(:feed)
   end
 
   # Followers -----------------------------------------------------------------

@@ -4,6 +4,7 @@
       "body": "",
       "headers": {
         "Content-Type": "application/json",
+        "Accept": "application/vnd.vimeo.*+json;version=3.2",
         "Authorization": "<REMOVED>"
       },
       "method": "get",
@@ -12,25 +13,24 @@
       "url": "https://api.vimeo.com/categories/animation?"
     },
     "response": {
-      "body": "{\"uri\":\"/categories/animation\",\"name\":\"Animation\",\"link\":\"https://vimeo.com/categories/animation\",\"top_level\":true,\"pictures\":[{\"type\":\"thumbnail\",\"width\":1280,\"height\":720,\"link\":null},{\"type\":\"thumbnail\",\"width\":960,\"height\":540,\"link\":null},{\"type\":\"thumbnail\",\"width\":640,\"height\":360,\"link\":null},{\"type\":\"thumbnail\",\"width\":295,\"height\":166,\"link\":null},{\"type\":\"thumbnail\",\"width\":200,\"height\":150,\"link\":null},{\"type\":\"thumbnail\",\"width\":100,\"height\":75,\"link\":null}],\"last_video_featured_time\":null,\"parent\":null,\"metadata\":{\"connections\":{\"channels\":\"/categories/animation/channels\",\"groups\":\"/categories/animation/groups\",\"users\":\"/categories/animation/users\",\"videos\":\"/categories/animation/videos\"}},\"subcategories\":[{\"uri\":\"/categories/2d\",\"name\":\"2D\",\"link\":\"https://vimeo.com/categories/animation/2d\"},{\"uri\":\"/categories/3d\",\"name\":\"3D/CG\",\"link\":\"https://vimeo.com/categories/animation/3d\"},{\"uri\":\"/categories/mograph\",\"name\":\"Mograph\",\"link\":\"https://vimeo.com/categories/animation/mograph\"},{\"uri\":\"/categories/projectionmapping\",\"name\":\"Projection Mapping\",\"link\":\"https://vimeo.com/categories/animation/projectionmapping\"},{\"uri\":\"/categories/stopmotion\",\"name\":\"Stop Frame\",\"link\":\"https://vimeo.com/categories/animation/stopmotion\"},{\"uri\":\"/categories/vfx\",\"name\":\"VFX\",\"link\":\"https://vimeo.com/categories/animation/vfx\"}],\"stats\":{\"videos\":59871,\"channels\":18395,\"groups\":7006,\"users\":1852}}",
+      "body": "{\"uri\":\"/categories/animation\",\"name\":\"Animation\",\"link\":\"https://vimeo.com/categories/animation\",\"top_level\":true,\"pictures\":{\"uri\":\"/videos/148024337/pictures/546868813\",\"active\":true,\"type\":\"custom\",\"sizes\":[{\"width\":100,\"height\":75,\"link\":\"https://i.vimeocdn.com/video/546868813_100x75.jpg?r=pad\"},{\"width\":200,\"height\":150,\"link\":\"https://i.vimeocdn.com/video/546868813_200x150.jpg?r=pad\"},{\"width\":295,\"height\":166,\"link\":\"https://i.vimeocdn.com/video/546868813_295x166.jpg?r=pad\"},{\"width\":640,\"height\":349,\"link\":\"https://i.vimeocdn.com/video/546868813_640x349.jpg?r=pad\"},{\"width\":960,\"height\":524,\"link\":\"https://i.vimeocdn.com/video/546868813_960x524.jpg?r=pad\"}]},\"last_video_featured_time\":null,\"parent\":null,\"metadata\":{\"connections\":{\"channels\":{\"uri\":\"/categories/animation/channels\",\"options\":[\"GET\"],\"total\":32431},\"groups\":{\"uri\":\"/categories/animation/groups\",\"options\":[\"GET\"],\"total\":8315},\"users\":{\"uri\":\"/categories/animation/users\",\"options\":[\"GET\"],\"total\":1819},\"videos\":{\"uri\":\"/categories/animation/videos\",\"options\":[\"GET\"],\"total\":298969}}},\"subcategories\":[{\"uri\":\"/categories/2d\",\"name\":\"2D\",\"link\":\"https://vimeo.com/categories/animation/2d\"},{\"uri\":\"/categories/3d\",\"name\":\"3D/CG\",\"link\":\"https://vimeo.com/categories/animation/3d\"},{\"uri\":\"/categories/mograph\",\"name\":\"Mograph\",\"link\":\"https://vimeo.com/categories/animation/mograph\"},{\"uri\":\"/categories/projectionmapping\",\"name\":\"Projection Mapping\",\"link\":\"https://vimeo.com/categories/animation/projectionmapping\"},{\"uri\":\"/categories/stopmotion\",\"name\":\"Stop Frame\",\"link\":\"https://vimeo.com/categories/animation/stopmotion\"},{\"uri\":\"/categories/vfx\",\"name\":\"VFX\",\"link\":\"https://vimeo.com/categories/animation/vfx\"}]}",
       "headers": {
         "Server": "nginx",
         "Content-Type": "application/vnd.vimeo.category+json",
         "Cache-Control": "no-cache, max-age=315360000",
         "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
-        "Expires": "Thu, 09 Oct 2025 22:16:08 GMT",
+        "Expires": "Sat, 06 Dec 2025 17:19:12 GMT",
         "Via": "1.1 varnish",
         "Fastly-Debug-Digest": "16428efdf1297437712fd176fa0d5c6b473f50711a0d28a9dfee52d1d26dfa94",
-        "Content-Length": "1419",
+        "Content-Length": "1709",
         "Accept-Ranges": "bytes",
-        "Date": "Mon, 12 Oct 2015 22:16:08 GMT",
+        "Date": "Wed, 09 Dec 2015 17:19:12 GMT",
         "Age": "0",
         "Connection": "keep-alive",
-        "Set-Cookie": "clip_test2=1; expires=Fri, 11 Dec 2015 22:16:08 GMT; path=/;",
-        "X-Served-By": "cache-iad2130-IAD, cache-lhr6333-LHR",
+        "X-Served-By": "cache-iad2148-IAD, cache-lhr6329-LHR",
         "X-Cache": "MISS, MISS",
         "X-Cache-Hits": "0, 0",
-        "X-Timer": "S1444688168.645364,VS0,VE178",
+        "X-Timer": "S1449681552.073493,VS0,VE145",
         "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
       },
       "status_code": 200,

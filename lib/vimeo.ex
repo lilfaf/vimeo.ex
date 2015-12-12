@@ -52,19 +52,19 @@ defmodule Vimeo do
   Returns the `client_id` from configuration.
   """
   @spec client_id :: binary
-  def client_id, do: config.client_id
+  def client_id, do: Map.get(config, :client_id)
 
   @doc """
   Returns the `client_secret` from configuration.
   """
   @spec client_secret :: binary
-  def client_secret, do: config.client_secret
+  def client_secret, do: Map.get(config, :client_secret)
 
   @doc """
   Returns the `access_tokens` from configuration.
   """
   @spec access_token :: binary
-  def access_token, do: config.access_token
+  def access_token, do: Map.get(config, :access_token)
 
   @doc """
   Sets or updates the `access_tokens` on configuration.

@@ -4,6 +4,7 @@
       "body": "",
       "headers": {
         "Content-Type": "application/json",
+        "Accept": "application/vnd.vimeo.*+json;version=3.2",
         "Authorization": "<REMOVED>"
       },
       "method": "get",
@@ -12,25 +13,24 @@
       "url": "https://api.vimeo.com/tags/party?"
     },
     "response": {
-      "body": "{\"uri\":\"/tags/party\",\"name\":\"party\",\"tag\":\"party\",\"canonical\":\"party\",\"metadata\":{\"connections\":{\"videos\":{\"uri\":\"/tags/party/videos\",\"options\":[\"GET\"],\"total\":118913}}}}",
+      "body": "{\"uri\":\"/tags/party\",\"name\":\"party\",\"tag\":\"party\",\"canonical\":\"party\",\"metadata\":{\"connections\":{\"videos\":{\"uri\":\"/tags/party/videos\",\"options\":[\"GET\"],\"total\":121931}}}}",
       "headers": {
         "Server": "nginx",
         "Content-Type": "application/vnd.vimeo.tag+json",
         "Cache-Control": "no-cache, max-age=315360000",
         "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
-        "Expires": "Fri, 10 Oct 2025 12:37:44 GMT",
+        "Expires": "Sun, 07 Dec 2025 13:54:27 GMT",
         "Via": "1.1 varnish",
         "Fastly-Debug-Digest": "accd343a261fbcac280a40569cff5c8221b6899f2020ed08563ca69dc5c7c828",
         "Content-Length": "170",
         "Accept-Ranges": "bytes",
-        "Date": "Tue, 13 Oct 2015 12:37:44 GMT",
+        "Date": "Thu, 10 Dec 2015 13:54:27 GMT",
         "Age": "0",
         "Connection": "keep-alive",
-        "Set-Cookie": "clip_test2=1; expires=Sat, 12 Dec 2015 12:37:44 GMT; path=/;",
-        "X-Served-By": "cache-iad2136-IAD, cache-lhr6334-LHR",
+        "X-Served-By": "cache-iad2136-IAD, cache-lhr6327-LHR",
         "X-Cache": "MISS, MISS",
         "X-Cache-Hits": "0, 0",
-        "X-Timer": "S1444739864.020124,VS0,VE198",
+        "X-Timer": "S1449755667.189937,VS0,VE98",
         "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
       },
       "status_code": 200,

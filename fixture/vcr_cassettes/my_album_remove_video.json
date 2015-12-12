@@ -4,31 +4,31 @@
       "body": "",
       "headers": {
         "Content-Type": "application/json",
+        "Accept": "application/vnd.vimeo.*+json;version=3.2",
         "Authorization": "<REMOVED>"
       },
       "method": "delete",
       "options": [],
       "request_body": "",
-      "url": "https://api.vimeo.com/me/albums/3608474/videos/18629165?"
+      "url": "https://api.vimeo.com/me/albums/3694573/videos/18629165?"
     },
     "response": {
-      "body": "#Reference<0.0.1.482>",
+      "body": "#Reference<0.0.1.234>",
       "headers": {
         "Server": "nginx",
         "Content-Type": "text/html; charset=UTF-8",
         "Cache-Control": "no-cache, max-age=315360000",
         "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
-        "Expires": "Sat, 11 Oct 2025 12:42:20 GMT",
+        "Expires": "Sun, 07 Dec 2025 13:00:06 GMT",
         "Accept-Ranges": "bytes",
         "Via": "1.1 varnish",
-        "Fastly-Debug-Digest": "d0951b8a1b9e29f9647a55e13c99e90cacf7ffc8a414280f356f0b5fd605d483",
-        "Date": "Wed, 14 Oct 2015 12:42:20 GMT",
+        "Fastly-Debug-Digest": "f2daeae366cd461cf0c21f3e7cd144e6692242398c7b0d64a018dba1a159ce19",
+        "Date": "Thu, 10 Dec 2015 13:00:06 GMT",
         "Connection": "keep-alive",
-        "Set-Cookie": "clip_test2=1; expires=Sun, 13 Dec 2015 12:42:20 GMT; path=/;",
-        "X-Served-By": "cache-iad2149-IAD, cache-lhr6327-LHR",
+        "X-Served-By": "cache-iad2123-IAD, cache-lhr6328-LHR",
         "X-Cache": "MISS, MISS",
         "X-Cache-Hits": "0, 0",
-        "X-Timer": "S1444826540.664307,VS0,VE284",
+        "X-Timer": "S1449752406.022340,VS0,VE429",
         "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
       },
       "status_code": 204,
@@ -40,33 +40,33 @@
       "body": "",
       "headers": {
         "Content-Type": "application/json",
+        "Accept": "application/vnd.vimeo.*+json;version=3.2",
         "Authorization": "<REMOVED>"
       },
       "method": "get",
       "options": [],
       "request_body": "",
-      "url": "https://api.vimeo.com/me/albums/3608474/videos?"
+      "url": "https://api.vimeo.com/me/albums/3694573/videos?"
     },
     "response": {
-      "body": "{\"total\":0,\"page\":1,\"per_page\":25,\"paging\":{\"next\":null,\"previous\":null,\"first\":\"/me/albums/3608474/videos?page=1\",\"last\":\"/me/albums/3608474/videos?page=1\"},\"data\":[]}",
+      "body": "{\"total\":0,\"page\":1,\"per_page\":25,\"paging\":{\"next\":null,\"previous\":null,\"first\":\"/me/albums/3694573/videos?page=1\",\"last\":\"/me/albums/3694573/videos?page=1\"},\"data\":[]}",
       "headers": {
         "Server": "nginx",
         "Content-Type": "application/vnd.vimeo.video+json",
         "Cache-Control": "no-cache, max-age=315360000",
         "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
-        "Expires": "Sat, 11 Oct 2025 12:42:21 GMT",
+        "Expires": "Sun, 07 Dec 2025 13:00:06 GMT",
         "Via": "1.1 varnish",
-        "Fastly-Debug-Digest": "4a2925df34a466c35eab03ae76c6764137ae214eef1806eab4ad88620037a40d",
+        "Fastly-Debug-Digest": "de4bc4eb163fe02716e1395620a997d5d4ebe9d825f3ac15007a323601898f9f",
         "Content-Length": "168",
         "Accept-Ranges": "bytes",
-        "Date": "Wed, 14 Oct 2015 12:42:21 GMT",
+        "Date": "Thu, 10 Dec 2015 13:00:07 GMT",
         "Age": "0",
         "Connection": "keep-alive",
-        "Set-Cookie": "clip_test2=2; expires=Sun, 13 Dec 2015 12:42:21 GMT; path=/;",
-        "X-Served-By": "cache-iad2133-IAD, cache-lhr6328-LHR",
+        "X-Served-By": "cache-iad2120-IAD, cache-lhr6331-LHR",
         "X-Cache": "MISS, MISS",
         "X-Cache-Hits": "0, 0",
-        "X-Timer": "S1444826541.247853,VS0,VE269",
+        "X-Timer": "S1449752406.718400,VS0,VE344",
         "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
       },
       "status_code": 200,

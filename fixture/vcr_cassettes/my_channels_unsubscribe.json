@@ -4,6 +4,7 @@
       "body": "",
       "headers": {
         "Content-Type": "application/json",
+        "Accept": "application/vnd.vimeo.*+json;version=3.2",
         "Authorization": "<REMOVED>"
       },
       "method": "delete",
@@ -12,23 +13,22 @@
       "url": "https://api.vimeo.com/me/channels/xsjado?"
     },
     "response": {
-      "body": "#Reference<0.0.2.355>",
+      "body": "#Reference<0.0.1.193>",
       "headers": {
         "Server": "nginx",
         "Content-Type": "text/html; charset=UTF-8",
         "Cache-Control": "no-cache, max-age=315360000",
         "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
-        "Expires": "Sat, 11 Oct 2025 13:49:11 GMT",
+        "Expires": "Sun, 07 Dec 2025 13:06:26 GMT",
         "Accept-Ranges": "bytes",
         "Via": "1.1 varnish",
         "Fastly-Debug-Digest": "b8bdc4d85fce5efcdcbbffcb689b328e772be3f83da17fef6fecd30d4358e0e5",
-        "Date": "Wed, 14 Oct 2015 13:49:11 GMT",
+        "Date": "Thu, 10 Dec 2015 13:06:26 GMT",
         "Connection": "keep-alive",
-        "Set-Cookie": "clip_test2=1; expires=Sun, 13 Dec 2015 13:49:11 GMT; path=/;",
-        "X-Served-By": "cache-iad2125-IAD, cache-lhr6322-LHR",
+        "X-Served-By": "cache-iad2139-IAD, cache-lhr6330-LHR",
         "X-Cache": "MISS, MISS",
         "X-Cache-Hits": "0, 0",
-        "X-Timer": "S1444830551.186290,VS0,VE206",
+        "X-Timer": "S1449752786.272131,VS0,VE158",
         "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
       },
       "status_code": 204,
@@ -40,6 +40,7 @@
       "body": "",
       "headers": {
         "Content-Type": "application/json",
+        "Accept": "application/vnd.vimeo.*+json;version=3.2",
         "Authorization": "<REMOVED>"
       },
       "method": "get",
@@ -48,26 +49,25 @@
       "url": "https://api.vimeo.com/me/channels?"
     },
     "response": {
-      "body": "{\"total\":1,\"page\":1,\"per_page\":25,\"paging\":{\"next\":null,\"previous\":null,\"first\":\"/me/channels?page=1\",\"last\":\"/me/channels?page=1\"},\"data\":[{\"uri\":\"/channels/25562\",\"name\":\"Themgoods\",\"description\":null,\"link\":\"https://vimeo.com/channels/themgoods\",\"created_time\":\"2008-12-16T02:51:54+00:00\",\"modified_time\":\"2015-10-14T13:03:23+00:00\",\"user\":{\"uri\":\"/users/1044190\",\"name\":\"Themgoods\",\"link\":\"https://vimeo.com/themgoods1\",\"location\":\"Santa Ana, CA\",\"bio\":\"Themgoods Brand distributors of premium blading goods since 2008\\n\\nhttp://themgoods.com\\nhttp://valo-brand.com\",\"created_time\":\"2008-12-16T02:51:21+00:00\",\"account\":\"pro\",\"pictures\":[{\"type\":\"portrait\",\"width\":30,\"height\":30,\"link\":\"https://i.vimeocdn.com/portrait/8024456_30x30.jpg\"},{\"type\":\"portrait\",\"width\":75,\"height\":75,\"link\":\"https://i.vimeocdn.com/portrait/8024456_75x75.jpg\"},{\"type\":\"portrait\",\"width\":100,\"height\":100,\"link\":\"https://i.vimeocdn.com/portrait/8024456_100x100.jpg\"},{\"type\":\"portrait\",\"width\":300,\"height\":300,\"link\":\"https://i.vimeocdn.com/portrait/8024456_300x300.jpg\"}],\"websites\":[],\"metadata\":{\"connections\":{\"activities\":\"/users/1044190/activities\",\"albums\":\"/users/1044190/albums\",\"channels\":\"/users/1044190/channels\",\"feed\":\"/users/1044190/feed\",\"followers\":\"/users/1044190/followers\",\"following\":\"/users/1044190/following\",\"groups\":\"/users/1044190/groups\",\"likes\":\"/users/1044190/likes\",\"portfolios\":\"/users/1044190/portfolios\",\"videos\":\"/users/1044190/videos\",\"shared\":\"/users/1044190/shared/videos\",\"pictures\":\"/users/1044190/pictures\",\"violations\":null,\"watchlater\":null},\"interactions\":{\"follow\":{\"added\":true,\"added_time\":\"2015-10-14T13:02:44+00:00\",\"uri\":\"/users/4443526/following/1044190\"}}},\"preferences\":{\"videos\":{\"privacy\":null}},\"stats\":{}},\"pictures\":[{\"width\":1280,\"height\":720,\"link\":\"https://i.vimeocdn.com/video/538358523_1280.jpg\",\"type\":\"thumbnail\"},{\"width\":960,\"height\":540,\"link\":\"https://i.vimeocdn.com/video/538358523_960.jpg\",\"type\":\"thumbnail\"},{\"width\":640,\"height\":360,\"link\":\"https://i.vimeocdn.com/video/538358523_640.jpg\",\"type\":\"thumbnail\"},{\"width\":295,\"height\":166,\"link\":\"https://i.vimeocdn.com/video/538358523_295x166.jpg\",\"type\":\"thumbnail\"},{\"width\":200,\"height\":150,\"link\":\"https://i.vimeocdn.com/video/538358523_200x150.jpg\",\"type\":\"thumbnail\"},{\"width\":100,\"height\":75,\"link\":\"https://i.vimeocdn.com/video/538358523_100x75.jpg\",\"type\":\"thumbnail\"},{\"width\":980,\"height\":0,\"link\":\"https://i.vimeocdn.com/channel/491910_980?mh=250\",\"type\":\"header\"}],\"privacy\":{\"view\":\"anybody\"},\"metadata\":{\"connections\":{\"users\":\"/channels/25562/users\",\"videos\":\"/channels/25562/videos\"},\"interactions\":{\"follow\":{\"added\":true,\"added_time\":\"2015-10-14T13:03:23+00:00\",\"type\":\"subscriber\",\"uri\":\"/users/4443526/channels/25562\"}}},\"stats\":{\"videos\":220,\"users\":650}}]}",
+      "body": "{\"total\":1,\"page\":1,\"per_page\":25,\"paging\":{\"next\":null,\"previous\":null,\"first\":\"/me/channels?page=1\",\"last\":\"/me/channels?page=1\"},\"data\":[{\"uri\":\"/channels/25562\",\"name\":\"Themgoods\",\"description\":null,\"link\":\"https://vimeo.com/channels/themgoods\",\"created_time\":\"2008-12-16T02:51:54+00:00\",\"modified_time\":\"2015-12-10T13:02:23+00:00\",\"user\":{\"uri\":\"/users/1044190\",\"name\":\"Themgoods\",\"link\":\"https://vimeo.com/themgoods1\",\"location\":\"Santa Ana, CA\",\"bio\":\"Themgoods Brand distributors of premium blading goods since 2008\\n\\nhttp://themgoods.com\\nhttp://valo-brand.com\",\"created_time\":\"2008-12-16T02:51:21+00:00\",\"account\":\"pro\",\"pictures\":{\"uri\":\"/users/1044190/pictures/8024456\",\"active\":true,\"type\":\"custom\",\"sizes\":[{\"width\":30,\"height\":30,\"link\":\"https://i.vimeocdn.com/portrait/8024456_30x30.jpg?r=pad\"},{\"width\":75,\"height\":75,\"link\":\"https://i.vimeocdn.com/portrait/8024456_75x75.jpg?r=pad\"},{\"width\":100,\"height\":100,\"link\":\"https://i.vimeocdn.com/portrait/8024456_100x100.jpg?r=pad\"},{\"width\":300,\"height\":300,\"link\":\"https://i.vimeocdn.com/portrait/8024456_300x300.jpg?r=pad\"}]},\"websites\":[],\"metadata\":{\"connections\":{\"activities\":{\"uri\":\"/users/1044190/activities\",\"options\":[\"GET\"]},\"albums\":{\"uri\":\"/users/1044190/albums\",\"options\":[\"GET\"],\"total\":9},\"channels\":{\"uri\":\"/users/1044190/channels\",\"options\":[\"GET\"],\"total\":9},\"feed\":{\"uri\":\"/users/1044190/feed\",\"options\":[\"GET\"]},\"followers\":{\"uri\":\"/users/1044190/followers\",\"options\":[\"GET\"],\"total\":1990},\"following\":{\"uri\":\"/users/1044190/following\",\"options\":[\"GET\"],\"total\":4},\"groups\":{\"uri\":\"/users/1044190/groups\",\"options\":[\"GET\"],\"total\":3},\"likes\":{\"uri\":\"/users/1044190/likes\",\"options\":[\"GET\"],\"total\":341},\"portfolios\":{\"uri\":\"/users/1044190/portfolios\",\"options\":[\"GET\"],\"total\":0},\"videos\":{\"uri\":\"/users/1044190/videos\",\"options\":[\"GET\"],\"total\":287},\"shared\":{\"uri\":\"/users/1044190/shared/videos\",\"options\":[\"GET\"],\"total\":234},\"pictures\":{\"uri\":\"/users/1044190/pictures\",\"options\":[\"GET\",\"POST\"],\"total\":1}},\"interactions\":{\"follow\":{\"added\":true,\"added_time\":\"2015-12-10T13:02:02+00:00\",\"uri\":\"/users/4443526/following/1044190\"}}},\"preferences\":{\"videos\":{\"privacy\":null}}},\"pictures\":{\"uri\":\"/videos/141379107/pictures/538358523\",\"active\":true,\"type\":\"custom\",\"sizes\":[{\"width\":100,\"height\":75,\"link\":\"https://i.vimeocdn.com/video/538358523_100x75.jpg?r=pad\"},{\"width\":200,\"height\":150,\"link\":\"https://i.vimeocdn.com/video/538358523_200x150.jpg?r=pad\"},{\"width\":295,\"height\":166,\"link\":\"https://i.vimeocdn.com/video/538358523_295x166.jpg?r=pad\"},{\"width\":640,\"height\":360,\"link\":\"https://i.vimeocdn.com/video/538358523_640x360.jpg?r=pad\"},{\"width\":960,\"height\":540,\"link\":\"https://i.vimeocdn.com/video/538358523_960x540.jpg?r=pad\"}]},\"header\":{\"uri\":\"/channels/25562/pictures/491910\",\"active\":true,\"type\":\"custom\",\"sizes\":[{\"width\":980,\"height\":250,\"link\":\"https://i.vimeocdn.com/channel/491910_980x250?mh=250?r=pad\"}]},\"privacy\":{\"view\":\"anybody\"},\"metadata\":{\"connections\":{\"users\":{\"uri\":\"/channels/25562/users\",\"options\":[\"GET\"],\"total\":654},\"videos\":{\"uri\":\"/channels/25562/videos\",\"options\":[\"GET\"],\"total\":220}},\"interactions\":{\"follow\":{\"added\":true,\"added_time\":\"2015-12-10T13:02:23+00:00\",\"type\":\"subscriber\",\"uri\":\"/users/4443526/channels/25562\"}}}}]}",
       "headers": {
         "Server": "nginx",
         "Content-Type": "application/vnd.vimeo.channel+json",
-        "Last-Modified": "Wed, 14 Oct 2015 09:49:11 -0400",
+        "Last-Modified": "Thu, 10 Dec 2015 08:06:26 -0500",
         "Cache-Control": "no-cache, max-age=315360000",
         "Strict-Transport-Security": "max-age=15120000; includeSubDomains",
-        "Expires": "Sat, 11 Oct 2025 13:49:11 GMT",
+        "Expires": "Sun, 07 Dec 2025 13:06:26 GMT",
         "Via": "1.1 varnish",
         "Fastly-Debug-Digest": "07b83b5e97ae92cbf2d2b3e5577b792136e3cc22dd3f4ac21cc9ade3d1202025",
-        "Content-Length": "2785",
+        "Content-Length": "3250",
         "Accept-Ranges": "bytes",
-        "Date": "Wed, 14 Oct 2015 13:49:11 GMT",
+        "Date": "Thu, 10 Dec 2015 13:06:26 GMT",
         "Age": "0",
         "Connection": "keep-alive",
-        "Set-Cookie": "clip_test2=1; expires=Sun, 13 Dec 2015 13:49:11 GMT; path=/;",
-        "X-Served-By": "cache-iad2125-IAD, cache-lhr6335-LHR",
+        "X-Served-By": "cache-iad2136-IAD, cache-lhr6320-LHR",
         "X-Cache": "MISS, MISS",
         "X-Cache-Hits": "0, 0",
-        "X-Timer": "S1444830551.638902,VS0,VE133",
+        "X-Timer": "S1449752786.655458,VS0,VE143",
         "Vary": "Accept,Vimeo-Client-Id,Accept-Encoding"
       },
       "status_code": 200,
