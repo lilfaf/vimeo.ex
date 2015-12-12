@@ -63,7 +63,6 @@ Work in progress, many things are missing:
 
 * Handle uploads
 * Handle pagination
-* Handle nested data mapping
 * Improve documentation about Vimeo API query params and expected token scope
 
 ## License

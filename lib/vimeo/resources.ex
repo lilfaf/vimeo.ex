@@ -19,7 +19,7 @@ defmodule Vimeo.Resources do
 
   defmodule Album do
     @moduledoc """
-    Defines a album schema.
+    Defines album schema.
     """
 
     defstruct name:          nil,
@@ -27,13 +27,14 @@ defmodule Vimeo.Resources do
               link:          nil,
               duration:      nil,
               pictures:      nil,
+              user:          nil,
               created_time:  nil,
               modified_time: nil
   end
 
   defmodule Category do
     @moduledoc """
-    Defines a category schema.
+    Defines category schema.
     """
 
     defstruct uri:           nil,
@@ -46,7 +47,7 @@ defmodule Vimeo.Resources do
 
   defmodule Channel do
     @moduledoc """
-    Defines a channel schema.
+    Defines channel schema.
     """
 
     defstruct uri:           nil,
@@ -54,13 +55,14 @@ defmodule Vimeo.Resources do
               description:   nil,
               link:          nil,
               pictures:      nil,
+              user:          nil,
               created_time:  nil,
               modified_time: nil
   end
 
   defmodule Group do
     @moduledoc """
-    Defines a group schema.
+    Defines group schema.
     """
 
     defstruct uri:           nil,
@@ -69,13 +71,14 @@ defmodule Vimeo.Resources do
               link:          nil,
               privacy:       nil,
               pictures:      nil,
+              user:          nil,
               created_time:  nil,
               modified_time: nil
   end
 
   defmodule Picture do
     @moduledoc """
-    Defines a Picture schema
+    Defines Picture schema
     """
 
     defstruct uri:    nil,
@@ -86,18 +89,18 @@ defmodule Vimeo.Resources do
 
   defmodule Tag do
     @moduledoc """
-    Defines a Tag schema
+    Defines Tag schema
     """
 
-  defstruct uri:       nil,
-            name:      nil,
-            tag:       nil,
-            canonical: nil
+    defstruct uri:       nil,
+              name:      nil,
+              tag:       nil,
+              canonical: nil
   end
 
   defmodule Video do
     @moduledoc """
-    Defines a Video schema.
+    Defines Video schema.
     """
 
     defstruct uri:           nil,
@@ -112,13 +115,14 @@ defmodule Vimeo.Resources do
               embed:         nil,
               pictures:      nil,
               tags:          nil,
+              user:          nil,
               created_time:  nil,
               modified_time: nil
   end
 
   defmodule Credit do
     @moduledoc """
-    Defines a Credit schema
+    Defines Credit schema
     """
 
     defstruct uri:   nil,
@@ -131,7 +135,7 @@ defmodule Vimeo.Resources do
 
   defmodule Comment do
     @moduledoc """
-    Defines a Comment schema
+    Defines Comment schema
     """
 
     defstruct uri:  nil,
