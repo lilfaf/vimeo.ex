@@ -68,14 +68,8 @@ defmodule Vimeo.API do
     Poison.decode!(body, keys: :atoms)
   end
 
-  defp authorization_header do
-    case Vimeo.config do
-      %{access_token: nil, client_id: id, client_secret: secret} ->
-        [{ "Authorization", "basic #{Base.encode64("#{id}:#{secret}")}" }]
-      %{access_token: token} ->
-        [{ "Authorization", "bearer #{token}" }]
-      _ -> []
-    end
+  defp authorization_header(token \\ Vimeo.access_token) do
+    [{ "Authorization", "bearer #{token}" }]
   end
 
   defp do_request(method, url, body \\ "", params \\ %{}) do
