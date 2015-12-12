@@ -18,7 +18,7 @@ def application do
 end
 
 defp deps do
-  [{:vimeo, "~> 0.1.0-dev"}]
+  [{:vimeo, "~> 0.0.2"}]
 end
 
 ````
