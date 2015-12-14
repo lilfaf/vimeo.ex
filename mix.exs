@@ -37,7 +37,7 @@ defmodule Vimeo.Mixfile do
       {:excoveralls, "~> 0.3", only: [:dev, :test]},
       {:exvcr, "~> 0.3", only: [:dev, :test]},
       {:dotenv, "~> 2.0.0", only: [:dev, :test]},
-      {:dogma, "~> 0.0", only: :dev}
+      {:credo, "~> 0.1.9", only: [:dev, :test]}
     ]
   end
 

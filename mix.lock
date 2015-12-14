@@ -1,4 +1,6 @@
-%{"dogma": {:hex, :dogma, "0.0.10"},
+%{"bunt": {:hex, :bunt, "0.1.4"},
+  "credo": {:hex, :credo, "0.1.10"},
+  "dogma": {:hex, :dogma, "0.0.10"},
   "dotenv": {:hex, :dotenv, "2.0.0"},
   "earmark": {:hex, :earmark, "0.1.18"},
   "ex_doc": {:hex, :ex_doc, "0.10.0"},

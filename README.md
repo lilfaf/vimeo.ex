@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/seshook/vimeo.ex.svg)](https://travis-ci.org/seshook/vimeo.ex)
 [![Coverage Status](https://coveralls.io/repos/seshook/vimeo.ex/badge.svg?branch=master&service=github)](https://coveralls.io/github/seshook/vimeo.ex?branch=master)
+[![Documentation Status](https://inch-ci.org/github/lilfaf/vimeo.ex.svg?branch=master)](https://inch-ci.org/github/lilfaf/vimeo.ex)
 
 #### [Read the docs](https://hexdocs.pm/vimeo)
 

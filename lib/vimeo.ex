@@ -38,7 +38,7 @@ defmodule Vimeo do
   Initialise the process with a configuration Map.
   """
   @spec configure(map) :: atom
-  def configure(config) when is_map(config), do: start_link(config)
+  def configure(conf) when is_map(conf), do: start_link(conf)
 
   # Accessor methods ----------------------------------------------------------
 
@@ -74,17 +74,17 @@ defmodule Vimeo do
 
   # Private -------------------------------------------------------------------
 
-  defp start_link(config) do
-    Agent.start_link(fn -> config end, name: __MODULE__)
+  defp start_link(conf) do
+    Agent.start_link(fn -> conf end, name: __MODULE__)
   end
 
   defp get_config do
-    Agent.get(__MODULE__, fn config -> config end)
+    Agent.get(__MODULE__, fn conf -> conf end)
   end
 
   defp set_config(key, value) do
-    Agent.update(__MODULE__, fn config ->
-      Map.update!(config, key, fn _ -> value end)
+    Agent.update(__MODULE__, fn conf ->
+      Map.update!(conf, key, fn _ -> value end)
     end)
   end
 
