@@ -44,7 +44,11 @@ defmodule Vimeo.Parser do
     resource = struct(resource_module(name), data)
 
     Enum.reduce([:user, :tags, :pictures], resource, fn(key, resource) ->
-      if Map.has_key?(resource, key), do: do_parse(resource, key), else: resource
+      if Map.has_key?(resource, key) do
+        do_parse(resource, key)
+      else
+        resource
+      end
     end)
   end
 
@@ -56,4 +60,3 @@ defmodule Vimeo.Parser do
       :"Elixir.Vimeo.Resources.#{module_name}"
   end
 end
-
