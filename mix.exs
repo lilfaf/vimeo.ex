@@ -51,7 +51,7 @@ defmodule Vimeo.Mixfile do
     [
       maintainers: ["lilfaf"],
       licenses: ["MIT"],
-      links: %{"Github" => "https://github.com/seshook/vimeo.ex"}
+      links: %{"Github" => "https://github.com/lilfaf/vimeo.ex"}
     ]
   end
 end
