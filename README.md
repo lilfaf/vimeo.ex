@@ -31,9 +31,9 @@ Vimeo client will first look for application variables, then environment variabl
 `config/dev.exs`
 ````elixir
 config :vimeo,
-  vimeo_client_id: "YOUR_CLIENT_ID",
-  vimeo_client_secret: "YOUR_CLIENT_SECRET",
-  vimeo_redirect_uri: "YOUR_ACCESS_TOKEN"
+  client_id: "YOUR_CLIENT_ID",
+  client_secret: "YOUR_CLIENT_SECRET",
+  access_token: "YOUR_ACCESS_TOKEN"
 ````
 
 `.env`
